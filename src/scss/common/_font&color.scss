@@ -1,0 +1,31 @@
+//-------------------------------
+//  font-family
+//-------------------------------
+$font: "Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",ヒラギノ角ゴ Pro,"Hiragino Sans", ヒラギノ角ゴシック, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
+$font-h: yamamotoan-stdn, sans-serif;
+
+//-------------------------------
+//  site-color
+//-------------------------------
+$color-black:     #231815;
+$color-white:     #ffffff;
+$color-blue:      #5fc1c7;      
+$color-blue2:     #6c8485;
+$color-blue3:     #a3bce2;
+$color-blue4:     #a2d7d4;
+$color-green:     #c1db81;
+$color-green2:    #a5d4ad;
+$color-green3:    #64a531;
+$color-orange:    #f5b090;
+$color-bg:        #fffde9;
+$color-brown:     #a05c3f;
+$color-red:       #eb613b;
+
+//-------------------------------
+//  font-style mixin
+//-------------------------------
+@mixin font-style($font-size, $font-color, $font-weight){
+    font-size: $font-size;
+    color: $font-color;
+    font-weight: $font-weight;
+}

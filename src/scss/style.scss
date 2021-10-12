@@ -1,0 +1,1739 @@
+@import 'common/_font&color';
+@import 'common/_responsive';
+@import 'common/destyle';
+
+//-------------------------------
+//  All-page-common-css
+//-------------------------------
+
+//IEのみテキストをメイリオに変更
+// @media all and (-ms-high-contrast:none){
+//     html{
+//         font-family: $font-ie;
+//     }
+// }
+html{
+    font-family: $font;
+    /*
+    計算式：10px /  デザインカンプの横幅 * 100
+    画面サイズがデザインカンプ幅の時font-size = 10pxになる
+    */
+    font-size: calc(10 / 1920 * 100) + vw;
+    @include pc{
+        font-size: calc(10 / 1200 * 100) + vw;
+    }
+    @include tab{
+        font-size: calc(10 / 768 * 100) + vw;
+    }
+    @include sp{
+        font-size: calc(10 / 375 * 100) + vw;
+    }
+}
+body{
+    font-size: 1.6rem;
+    width: 100%;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &.fixed{
+        position: relative;
+        z-index: 1;
+        &:after{
+            content: " ";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+    }
+}
+body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.site-content{
+    width: 100%;
+    overflow: hidden;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    &--size-s{
+        width: 960px;
+        margin: 0 auto;
+        @include pc-tab{
+            width: 80vw;
+        }
+        @include tab{
+            width: 84vw;
+        }
+    }
+    @include pc-tab{
+        width: 90vw;
+    }
+    @include tab{
+        width: 84vw;
+    }
+}
+.br-pc{
+    @include tab{
+        display: none
+    }
+}
+.br-sp{
+    display: none;
+    @include sp{
+        display: block;
+    }
+}
+//-------------------------------
+//  Components
+//-------------------------------
+
+//
+//logo
+//
+.logo{
+   @include font-style(40px, $color-blue2, 700);
+   font-family: $font;
+   letter-spacing: 0.1em;
+   display: inline-block;
+   line-height: 1;
+   @include pc{
+       font-size: 4rem;
+   }
+   @include sp{
+       font-size: 2rem;
+   }
+   span{
+    @include font-style(16px, $color-black, 400);
+    display: block;
+    text-align: center;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    margin-bottom: 14px;
+    @include pc{
+        font-size: 1.6rem;
+        margin-bottom: 1.4rem;
+    }
+    @include tab{
+        text-align: left;
+    }
+    @include sp{
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+   }
+}
+
+//
+// Section-margin
+//
+.section-margin{
+    margin-top: 100px;
+    @include sp{
+        margin-top: 8rem;
+    }
+}
+
+//
+// h2
+//
+.h2-title{
+    @include font-style(30px, $color-black, 600);
+    font-family: $font;
+    line-height: 1;
+    letter-spacing: 0.27em;
+    &--color--white{
+        color: $color-white;
+    }
+    &--color--blue2{
+        color: $color-blue2;
+    }
+    &__en{
+        @include font-style(18px, $color-blue2, 300);
+        font-family: $font;
+        line-height: 1;
+        letter-spacing: 0.45em;
+        display: block;
+        text-align: center;
+        @include pc{
+            font-size: 1.8rem;
+        }
+    }
+    @include pc{
+        font-size: 3rem;
+    }
+    @include sp{
+        font-size: 2.4rem;
+        line-height: 2.5;
+    }
+}
+
+//
+// paragraph
+//
+.paragraph{
+    @include font-style(24px, $color-blue2, 600);
+    line-height: 44px;
+    letter-spacing: 0.21em;
+    text-align: center;
+    @include pc{
+        font-size: 2.4rem;
+        line-height: 4.4rem;
+    }
+}
+
+//
+// link
+//
+.link{
+    @include font-style(20px, $color-blue2, 500);
+    line-height: 60px;
+    text-align: center;
+    display: inline-block;
+    width: 350px;
+    background-color: $color-white;
+    border: solid 1.5px $color-blue2;
+    letter-spacing: 0.27em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    &--size--s{
+        font-size: 18px;
+        height: 55px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        @include pc{
+            font-size: 1.8rem;
+            height: 5.5rem;
+        }
+        &__link-icon{
+            display: inline-block;
+            width: 9px;
+            height: 19px;
+            position: relative;
+            margin-left: 10px;
+            background-image: url("../images/svg/arrow-blue2.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            @include pc{
+                width: 0.9rem;
+                height: 1.9rem;
+                margin-left: 1rem;
+            }
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    &:hover{
+        background-color: $color-blue2;
+        color: $color-white;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        .link--size--s__link-icon{
+            background-image: url("../images/svg/arrow-white.svg");
+        }
+    }
+    @include pc{
+        font-size: 2rem;
+        line-height: 6rem;
+        width: 35rem;
+    }
+}
+
+
+
+
+//-------------------------------
+//  header
+//-------------------------------
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: $color-white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    @include pc{
+        height: 8rem;
+    }
+    @include tab{
+        width: 100%;
+        height: 12rem;
+        border-radius: 0;
+        top: 0;
+    }
+    @include sp{
+        height: 6rem;
+    }
+    &__inner{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo{
+        margin-left: 140px;
+        @include pc{
+            margin-left: 6rem;
+        }
+        @include tab{
+            position: relative;
+            top: 0;
+        }
+    }
+    &__cart-btn{
+        margin-right: 40px;
+    }
+    &__right{
+       display: flex;
+       align-items: center;
+       margin-left: auto;
+    }
+}
+.header__custom{
+    position: relative;
+}
+.global-navi{
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+    .menu-item{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 26px;
+        @include pc{
+            margin-bottom: 2.6rem;
+        }
+        @include tab{
+            width: 80%;
+            height: 10rem;
+            margin: 0 auto;
+            justify-content: flex-start;
+        }
+        @include sp{
+            height: 6rem;
+        }
+    }
+    .nav-link{
+        @include font-style(16px, $color-blue2, 500);
+        font-family: $font;
+        width: 100%;
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        line-height: 23px;
+        letter-spacing: 0.16em;
+        transition: filter 0.2s ease, color 0.2s ease;
+        border-bottom: solid 1px $color-blue2;
+        @include pc{
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+        }
+        &:hover{
+            filter: brightness(120%);
+            color: $color-blue2;
+            transition: filter 0.2s ease, color 0.2s ease;
+        }
+        &.is-active{
+            color: $color-green;
+            @include tab{
+                color: $color-white;
+            }
+        }
+    }
+    &__navi-icon{
+        width: 6px;
+        height: 13px;
+        display: inline-block;
+        position: relative;
+        img{
+            position: absolute;
+            top: 0;
+        }
+        @include pc{
+            width: 0.6rem;
+            height: 1.3rem;
+        }
+        @include tab{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 16px 0 0;
+        }
+        @include sp{
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+}
+.cf{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    li{
+        width: 100%;
+    }
+    .user_name{
+        @include font-style(14px, $color-blue2, 500);
+        padding: 10px 0;
+    }
+    .user_login_icon{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+}
+.user-btn{
+    width: 100%;
+    height: 40px;
+    border: solid 2px $color-blue2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include font-style(16px, $color-blue2, 500);
+}
+.user_new_regist{
+    background-color: #eeeeee;
+    margin-top: 24px;
+}
+.navi{
+    width: 360px;
+    height: 100vh;
+    background-color: $color-white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    z-index: 110;
+    padding: 50px 50px 0;
+    @include pc{
+        width: 36rem;
+        padding: 5rem 5rem 0;
+    }
+    &.menu-open{
+        transform: translateX(0%);
+        transition: transform 0.5s ease;
+    }
+    &__logo{
+        margin-bottom: 45px;
+        @include pc{
+            margin-bottom: 4.5rem;
+        }
+    }
+}
+.cart-btn{
+    &:hover{
+        filter: brightness(120%);
+        transition: filter 0.3s ease;
+    }
+    a{
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        position: relative;
+    }
+    .total-quant{
+        @include font-style(12px, $color-white, 300);
+        position: absolute;
+        display: flex;
+        width: 20px;
+        height: 20px;
+        top: -5px;
+        right: -10px;
+        border-radius: 100%;
+        background-color: $color-blue;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.humberger{
+    width: 70px;
+    height: 60px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    cursor: pointer;
+    position: relative;
+    background-color: $color-blue2;
+    @include pc{
+        width: 7rem;
+        height: 6rem;
+    }
+    &__line{
+        width: 35px;
+        height: 3px;
+        background-color: $color-white;
+        margin-bottom: 7px;
+        display: block;
+        @include pc{
+            width: 3.5rem;
+            height: 0.3rem;
+            margin-bottom: 0.7rem;
+        }
+        &:first-child{
+            transition: transform 0.5s ease;
+        }
+        &:nth-child(2){
+            opacity: 1.0;
+            transition: opacity 0.3s ease;
+        }
+        &:last-child{
+            margin-bottom: 0;
+            transition: transform 0.5s ease;
+        }
+        .menu-active &{
+            &:first-child{
+                transition: transform 0.5s ease;
+                transform: translateY(1rem) rotate(45deg);
+            }
+            &:nth-child(2){
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            &:last-child{
+                transition: transform 0.5s ease;
+                transform: translateY(-1rem) rotate(-45deg);
+                @include wide-pc{
+                    transform: translateY(-6px) rotate(-45deg);
+                }
+            }
+        }
+    }
+    &:before{
+        content: "MENU";
+        @include font-style(10px, $color-white, 400);
+        font-family: $font;
+        display: block;
+        text-align: center;
+        line-height: 1;
+        letter-spacing: 0;
+        margin-bottom: 5px;
+    }
+}
+
+//-------------------------------
+//  main-visual
+//-------------------------------
+.top-main-visual-sec{
+    &__inner{
+        width: 100%;
+        height: 450px;
+        position: relative;
+        @include pc{
+            height: 45rem;
+        }
+        @include tab{
+            height: auto;
+            position: static;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @include tab{
+            position: static;
+            height: 380px;
+        }
+    }
+    &__contents{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        @include tab{
+            text-align:center;
+            justify-content: center;
+            display: block;
+        }
+    }
+    &__right{
+        max-width: 559px;
+        margin-top: 100px;
+        margin-right: 90px;
+        @include pc{
+            max-width: 55.9rem;
+            margin-top: 10rem;
+            margin-right: 0;
+        }
+        @include tab{
+            max-width: 100%;
+            margin-top: 0;
+        }
+    }
+    &__main-copy{
+        margin-bottom: 18px;
+        @include pc{
+            margin-bottom: 1.8rem;
+        }
+    }
+}
+.main-copy{
+    @include font-style(60px, $color-blue2, 600);
+    line-height: 84px;
+    z-index: 10;
+    letter-spacing: 0.33em;
+    @include pc{
+        font-size: 6rem;
+        line-height: 8.4rem
+    }
+    span{
+        @include font-style(17px, $color-blue2, 400);
+        line-height: 28px;
+        display: block;
+        letter-spacing: 0.21em;
+        margin-bottom: 5px;  
+        @include pc{
+            font-size: 1.7rem;
+            line-height: 2.8rem;
+        }
+    }
+}
+.main-list{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    z-index: 10;
+    gap: 15px;
+    @include pc{
+        gap: 1.5rem;
+    }
+    @include tab{
+        justify-content: center;
+    }
+    &__item{
+        width: 222px;
+        height: 31px;
+        text-align: center;
+        @include font-style(22px, $color-white, 500);
+        line-height: 31px;
+        letter-spacing: 0.16em;
+        border-radius:100vh;
+        @include pc{
+            width: 22.2rem;
+            height: 3.1rem;
+            font-size: 2.2rem;
+            line-height: 3.1rem;
+        }
+        &--color--green2{
+            background-color: $color-green2;
+        }
+        &--color--orange{
+            background-color: $color-orange;
+        }
+        &--color--blue3{
+            background-color: $color-blue3;
+        }
+        &--color--blue4{
+            background-color: $color-blue4;
+        }
+        &:nth-child(2n + 2){
+            margin-left: 15px;
+            @include pc{
+                margin-left: 1.5rem;
+            }
+        }
+    }
+}
+//-------------------------------
+//  sustainable
+//-------------------------------
+.sustainable-sec{
+    &__inner{
+        width: 100%;
+    }
+    &__h2-title{
+        font-size: 24px;
+        color: $color-blue;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 23px 0;
+        letter-spacing: 0.33em;
+        @include pc{
+            font-size: 2.4rem;
+            padding: 2.3rem;
+        }
+    }
+    &__images{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        @include pc{
+            height: 25rem;
+        }
+    }
+    &__image{
+        display: inline-block;
+        &:nth-child(1){
+            width: 55rem;
+        }
+        &:nth-child(2){
+            width: 41.3rem;
+        }
+        &:nth-child(3){
+            width: 95.7rem;
+        }
+    }
+    &__h3-title{
+        width: 600px;
+        height: 70px;
+        border-top: solid 5px $color-blue;
+        border-left: solid 5px $color-blue;
+        border-right: solid 5px $color-blue;
+        @include pc{
+            width: 60rem;
+            height: 7rem;
+            border-top: solid 0.5px $color-blue;
+            border-left: solid 0.5px $color-blue;
+            border-right: solid 0.5px $color-blue;
+        }
+    }
+    &__text{
+        margin-top: 28px;
+        @include pc{
+            margin-bottom: 2.8rem;
+        }
+    }
+}
+.title{
+    @include font-style(30px, $color-blue, 600);
+    line-height: 65px;
+    letter-spacing: 0.27em;
+    width: 600px;
+    height: 70px;
+    display: block;
+    text-align: center;
+    background-color: $color-white;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    position: relative;
+    @include pc{
+        font-size: 3rem;
+        line-height: 6.5rem;
+        width: 60rem;
+        height: 7rem;
+        border-top: solid 0.5px $color-blue;
+        border-left: solid 0.5px $color-blue;
+        border-right: solid 0.5px $color-blue;
+    }
+    &:after{
+        content: "";
+        display: block;
+        width: 56px;
+        // height: 28px;
+        border-top: solid 28px $color-blue;
+        border-left: solid 28px transparent;
+        border-right: solid 28px transparent;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        @include pc{
+            width: 5.6rem;
+            // height: 28px;
+            border-top: solid 2.8rem $color-blue;
+            border-left: solid 2.8rem transparent;
+            border-right: solid 2.8rem transparent;
+        }
+    }
+}
+//-------------------------------
+//  haccp
+//-------------------------------
+.haccp-sec{
+    width: 100%;
+    padding: 35px 0px;
+    background-image: url("../images/svg/background01.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 73px;
+    @include pc{
+        padding: 3.5rem 0px;
+        margin-top: 7.3rem;
+    }
+    &__h2-title{
+        margin-bottom: 31px;
+        @include pc{
+            margin-bottom: 3.1rem;
+        }
+    }
+    &__media{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__right{
+        width: 220px;
+        height: 170px;
+        background-color: $color-white;
+        display: flex;
+        justify-content: center;
+        @include pc{
+            width: 22rem;
+            height: 17rem;
+        }
+        &-inner{
+            text-align: center;
+        }
+    }
+    &__h3-title{
+        @include font-style(24px, $color-blue2, 600);
+        line-height: 1;
+        letter-spacing: 0.13em;
+        margin-top: 64px;
+        margin-bottom: 8px;
+        @include pc{
+            font-size: 2.4rem;
+            margin-top: 6.4rem;
+            margin-bottom: 0.8rem;
+        }
+    }
+    &__ja{
+        @include font-style(20px, $color-white, 600);
+        line-height: 25px;
+        display: inline-block;
+        width: 121px;
+        height: 25px;
+        background-color: $color-blue2;
+        border-radius: 100vh;
+        text-align: center;
+        @include pc{
+            font-size: 2rem;
+            line-height: 2.5rem;
+            width: 12.1rem;
+            height: 2.5rem;
+        }
+    }
+    &__text{
+        @include font-style(22px, $color-white, 300);
+        line-height: 28px;
+        width: 720px;
+        text-align: left;
+        word-wrap: break-all;
+        overflow-wrap: break-word;
+        @include pc{
+            font-size: 2.2rem;
+            line-height: 2.8rem;
+            width: 72rem;
+        }
+    }
+}
+//-------------------------------
+//  Product
+//-------------------------------
+.product-sec{
+    width: 100%;
+    background-image: url("../images/background02.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 78px 0 105px;
+    @include pc{
+        padding: 7.8rem 0 10.5rem;
+    }
+    &__inner{
+        text-align: center;
+    }
+    &__h2-title{
+        text-align: center;
+        margin-bottom: 45px;
+        @include pc{
+            margin-bottom: 4.5rem;
+        }
+    }
+    &__link{
+        margin-top: 18px;
+        @include pc{
+            margin-top: 1.8rem;
+        }
+    }
+}
+.product-list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 55px;
+    @include pc{
+        gap: 5.5rem;
+    }
+    &__item{
+        width: 445px;
+        display: block;
+        @include pc{
+            width: 44.5rem;
+        }
+        &:nth-child(2n + 2){
+            margin-right: 15px;
+            @include pc{
+                margin-right: 1.5rem;
+            }
+        }
+        &:nth-child(3){
+            margin-top: -16px;
+            @include pc{
+                margin-top: -1.6rem;
+            }
+        }
+        &:nth-child(4){
+            margin-top: -16px;
+            @include pc{
+                margin-top: -1.6rem;
+            }
+        }
+    }
+    &__image{
+        width: 100%;
+        height: 245px;
+        position: relative;
+        @include pc{
+            height: 24.5rem;
+        }
+        &:before{
+            content: "";
+            display: block;
+            width: 390px;
+            height: 160px;
+            position: absolute;
+            z-index: -1;
+            @include pc{
+                width: 39rem;
+                height: 16rem;
+            }
+        }
+        &-01{
+            &:before{
+                background: linear-gradient(90deg, $color-white 0%, #d8ebdd 30%, #5fc1c7);
+                top: 0;
+                right: 0;
+                transform: translate(15px, -15px);
+                @include pc{
+                    transform: translate(1.5rem, -1.5rem);
+                }
+            }
+        }
+        &-02{
+            &:before{
+                background: linear-gradient(180deg, $color-white 0%, #d8ebdd 30%, #5fc1c7);
+                bottom: 0;
+                right: 0;
+                transform: translate(15px, 15px);
+                @include pc{
+                    transform: translate(1.5rem, 1.5rem);
+                }
+            }
+        }
+        &-03{
+            &:before{
+                background: linear-gradient(180deg, $color-white 0%, #d8ebdd 30%, #6ac1ad);
+                bottom: 0;
+                right: 0;
+                transform: translate(15px, 15px);
+                @include pc{
+                    transform: translate(1.5rem, 1.5rem);
+                }
+            }
+        }
+        &-04{
+            &:before{
+                background: linear-gradient(0deg, $color-white 0%, #d8ebdd 30%, #5fc1c7);
+                top: 0;
+                right: 0;
+                transform: translate(15px, -15px);
+                @include pc{
+                    transform: translate(1.5rem, -1.5rem);
+                }
+            }
+        }
+    }
+    &__bottom{
+        width: 405px;
+        height: 160px;
+        padding: 20px;
+        margin: 0 auto;
+        background-color: $color-white;
+        transform: translateY(-30px);
+        @include pc{
+            width: 40.5rem;
+            height: 16rem;
+            padding: 2rem;
+            transform: translateY(-3rem);
+        }
+    }
+    &__media{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        @include pc{
+            margin-bottom: 1.5rem;
+        }
+        span{
+            width: 3px;
+            height: 80px;
+            display: block;
+            background-color: $color-blue;
+            @include pc{
+                width: 0.3rem;
+                height: 8rem;
+            }
+        }
+    }
+    &__left{
+        width: 23.9%;
+    }
+    &__icon{
+        margin: 0 auto;
+        &-01{
+            width: 59px;
+            height: 65px;
+            @include pc{
+                width: 5.9rem;
+                height: 6.5rem;
+            }
+        }
+        &-02{
+           width: 56px;
+           height: 55px; 
+           @include pc{
+                width: 5.6rem;
+                height: 5.5rem;
+            }
+        }
+        &-03{
+            width: 70px;
+            height: 56px;
+            @include pc{
+                width: 7rem;
+                height: 5.6rem;
+            }
+        }
+        &-04{
+            width: 62px;
+            height: 63px;
+            @include pc{
+                width: 6.2rem;
+                height: 6.3rem;
+            }
+        }
+    }
+    &__right{
+        margin-left: 12px;
+        text-align: left;
+        @include pc{
+            margin-left: 1.2rem;
+        }
+    }
+    &__h3-title{
+        @include font-style(22px, $color-black, 500);
+        line-height: 1;
+        letter-spacing: 0.16em;
+        margin-bottom: 12px;
+        @include pc{
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+    &__description{
+        @include font-style(15px, $color-black, 300);
+        line-height: 25px;
+        letter-spacing: 0.08em;
+        @include pc{
+            font-size: 1.5rem;
+        }
+    }
+    &__link{
+        @include font-style(13px, $color-white, 500);
+        line-height: 1;
+        width: 100%;
+        height: 25px;
+        background-color: $color-blue2;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+        @include pc{
+            font-size: 1.3rem;
+            line-height: 2.5rem;
+            height: 2.5rem;
+        }
+        &-icon{
+            width: 6px;
+            height: 10px;
+            display: inline-block;
+            position: relative;
+            @include pc{
+                width: 0.6rem;
+                height: 1rem;
+            }
+            img{
+                position: absolute;
+                top: 0;
+            }
+        }
+        &:hover{
+            background-color: $color-blue;
+            transition: background-color 0.3s ease;
+        }
+    }
+}
+//-------------------------------
+//  functional-water
+//-------------------------------
+.media-block-top{
+    background-color: $color-blue;
+    &__image{
+        top: 0;
+        left: 0;
+    }
+    &__title--en{
+        @include font-style(18px, $color-white, 300);
+        @include pc{
+            font-size: 1.4rem;
+        }
+    }
+    &__text-box{
+        background-color: #f9f8f5;
+        align-items: flex-start;
+        &-inner{
+            margin-left: 150px;
+            @include pc{
+                margin-left: 20rem;
+            }
+        }
+
+    }
+    &__link{
+        margin-left: auto;
+    }
+}
+.media-block-bottom{
+    background-image: url("../images/svg/background03.svg");
+    &__inner{
+        flex-direction: row-reverse;
+    }
+    &__image{
+        top: 0;
+        right: 0;
+    }
+    &__title--en{
+        @include font-style(18px, $color-blue2, 300);
+        @include pc{
+            font-size: 1.4rem;
+        }
+    }
+    &__text-box{
+        background-color: $color-white;
+        align-items: flex-end;
+        &-inner{
+            margin-left: auto;
+            margin-right: 150px;
+            @include pc{
+                margin-right: 20rem;
+            }
+        }
+    }
+    &__link{
+        margin-right: auto;
+    }
+}
+.media-block {
+    width: 100%;
+    &__inner{
+        position: relative;
+        display: flex;
+        @include tab{
+            flex-direction: column;
+        }
+    }
+    &__empty{
+        width: 36.46%;
+        @include tab{
+            width: 100%;
+            order: 2;
+        }
+    }
+    &__image{
+        width: 80rem;
+        height: 40rem;
+        position: absolute;
+        @include pc{
+            width: 60rem;
+            height: 30rem;
+        }
+        @include tab{
+            width: 100%;
+            position: static;
+        }
+    }
+    &__body{
+        width: 63.54%;
+        display: initial;
+        @include tab{
+            display: contents;
+        }
+    }
+    &__title--en{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        letter-spacing: 0.45em;
+        text-transform: uppercase;
+        @include pc{
+            height: 10rem;
+            line-height: 10rem;
+        }
+        @include tab{
+            order: 1;
+        }
+    }
+    &__h2-title{
+        padding-bottom: 13px;
+        border-bottom: solid 1px $color-blue2;
+        margin-bottom: 7px;
+        @include pc{
+            padding-bottom: 1.3rem;
+            margin-bottom: 0.7rem;
+        }
+    }
+    &__description{
+        @include font-style(22px, $color-black, 300);
+        line-height: 36px;
+        margin-bottom: 12px;
+        flex-grow: 1;
+        @include pc{
+            font-size: 2.2rem;
+            line-height: 3.6rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+    &__text-box{
+        height: 400px;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        padding: 50px 0;
+        &-inner{
+            width: 592px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            @include pc{
+                width: 54rem;
+            }
+        }
+        @include pc{
+            padding: 5rem 0;
+            height: 45rem;
+        }
+        @include tab{
+            order: 3;
+        }
+    }
+}
+//-------------------------------
+//  Works
+//-------------------------------
+.works-sec{
+    text-align: center;
+    padding: 114px 0 40PX;
+    @include pc{
+        padding: 11.4rem 0 4rem;
+    }
+    &__inner{
+        width: 100%;
+    }
+    &__h2-title{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 12px;
+        @include pc{
+            margin-bottom: 1.2rem;
+        }
+        &:before{
+            content: "";
+            display: block;
+            width: 2px;
+            height: 31px;
+            background-color: $color-black;
+            transform: rotate(-22deg);
+            margin-right: 7px;
+            @include pc{
+                height: 3.1rem;
+                margin-right: 0.7rem;
+            }
+        }
+        &:after{
+            content: "";
+            display: block;
+            width: 2px;
+            height: 31px;
+            background-color: $color-black;
+            transform: rotate(22deg);
+            margin-left: 7px;
+            @include pc{
+                height: 3.1rem;
+                margin-left: 0.7rem;
+            }
+        }
+    }
+    &__link{
+        margin-top: 44px;
+        @include pc{
+            margin-top: 4.4rem;
+        }
+    }
+}
+.swiper{
+    &-wrap{
+        background-image: url("../images/svg/background04.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 26px 0;
+        margin-top: 24px;
+        @include pc{
+            padding: 2.6rem 0;
+            margin-top: 2.4rem;
+        }
+    }
+    &-container{
+        width: 100%;
+        height: 375px;
+    }
+    &-wrapper{
+        width: 100%;
+        display: flex;
+        gap: 64px;
+        @include pc{
+            gap: 6.4rem;
+        }
+    }
+    &-slide{
+        width: 320px;
+        height: 370px;
+        background-color: $color-white;
+        padding: 10px;
+        display: block;
+        box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+        &:nth-child(2n){
+            .swiper-slide__image{
+                border: solid 10px $color-green;
+            }
+        }
+        &__image{
+            width: 300px;
+            height: 180px;
+            border: solid 10px $color-blue;
+        }
+        &__body{
+            height: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            text-align: left
+        }
+        &__time{
+            @include font-style(12px, $color-blue2, 400);
+            line-height: 1;
+            letter-spacing: 0.05em
+        }
+        &__category{
+            @include font-style(15px, $color-red, 500);
+            width: 100%;
+            height: 30px;
+            letter-spacing: 0.06em;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            border: solid 2px $color-red;
+            padding-left: 10px;
+            margin-top: 5px;
+        }
+        &__h3-title{
+            @include font-style(20px, $color-green3, 600);
+            line-height: 1;
+            letter-spacing: 0.13em;
+            margin-top: 9px;
+        }
+        &__description{
+            @include font-style(15px, $color-black, 300);
+            line-height: 1.4;
+            letter-spacing: 0.06em;
+            flex-grow: 1;
+            margin-top: 9px;
+        }
+    }
+    &-pagination{
+        display: flex;
+        gap: 34px;
+        margin-top: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include pc{
+            gap: 3.4rem;
+        }
+        &-bullet{
+            width: 15px;
+            height: 15px;
+            &-active{
+                background-color: $color-blue;
+            }
+        }
+    }
+}
+//-------------------------------
+// news
+//-------------------------------
+.news-sec{
+    padding-top: 116px;
+    @include pc{
+        padding-top: 11.6rem;
+    }
+    &__inner{
+        text-align: center;
+    }
+    &__h2-title{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 12px;
+        &:before{
+            content: "";
+            display: block;
+            width: 2px;
+            height: 31px;
+            background-color: $color-black;
+            transform: rotate(-22deg);
+            margin-right: 42px;
+        }
+        &:after{
+            content: "";
+            display: block;
+            width: 2px;
+            height: 31px;
+            background-color: $color-black;
+            transform: rotate(22deg);
+            margin-left: 42px;
+        }
+    }
+    &__lists{
+        width: 800px;
+        margin: 15px auto 0 auto;
+        border-bottom: solid 1px $color-blue2;
+        @include pc{
+            width: 80rem;
+            margin: 1.5rem auto 0 auto;
+        }
+    }
+    &__link{
+        margin-top: 44px;
+        @include pc{
+            margin-top: 4.4rem;
+        }
+    }
+}
+.news-list{
+    display: block;
+    height: 70px;
+    border-top: solid 1px $color-blue2;
+    @include pc{
+        height: 7rem;
+    }
+    &:hover{
+        background-color: rgba(95, 193, 199, 0.1);
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 12px 0 39px;
+        @include pc{
+            padding: 0 1.2rem 0 3.9rem;
+        }
+    }
+    &__time{
+        @include font-style(15px, $color-black, 300);
+        line-height: 1;
+        display: inline-block;
+        margin-right: 88px;
+        @include pc{
+            font-size: 1.5rem;
+            margin-right: 8.8rem;
+        }
+    }
+    &__title{
+        @include font-style(15px, $color-black, 300);
+        line-height: 1;
+        display: inline-block;
+        letter-spacing: 0.15em;
+        @include pc{
+            font-size: 1.5rem;
+        }
+    }
+    &__icon{
+        display: block;
+        width: 16px;
+        height: 33px;
+        margin-left: auto;
+        @include pc{
+            width: 1.6rem;
+            height: 3.3rem;
+        }
+    }
+}
+//-------------------------------
+// cta
+//-------------------------------
+.cta-sec{
+    width: 100%;
+    padding-top: 55px;
+    @include pc{
+        padding-top: 5.5rem;
+    }
+    &__inner{
+        width: 100%;
+        height: 215px;
+        background-color: #f6f8f6;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__circle{
+        width: 540px;
+        height: 540px;
+        border-radius: 100%;
+        background-color: $color-blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include pc{
+            width: 54rem;
+            height: 54rem;
+        }
+        &-inner{
+            text-align: center;
+        }
+    }
+    &__h2-title{
+        color: $color-white;
+        letter-spacing: 0.13em;
+        font-weight: 400;
+    }
+    &__lead-text{
+        @include font-style(15px, $color-white, 300);
+        line-height: 1.4;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin: 9px 0;
+        @include pc{
+            font-size: 1.5rem;
+            margin: 0.9rem 0;
+        }
+    }
+    &__contact{
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        @include pc{
+            gap: 2.2rem;
+        }
+    }
+}
+.tel-btn{
+    &__num{
+        @include font-style(22px, $color-white, 500);
+        line-height: 1;
+        letter-spacing: 0.04em;
+        @include pc{
+            font-size: 2.2rem;
+        }
+        span{
+            font-size: 15px;
+            @include pc{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &__open-hours{
+        @include font-style(11px, $color-white, 300);
+        line-height: 1;
+        letter-spacing: 0.05em;
+        text-align: center;
+        margin-top: 4px;
+        @include pc{
+            font-size: 1.1rem;
+            margin-top: 0.4rem;
+        }
+    }
+}
+.mail-btn{
+    @include font-style(15px, $color-white, 300);
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    background-color: transparent;
+    border: solid 1.5px $color-white;
+    letter-spacing: 0.06em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    @include pc{
+        height: 4.5rem;
+        width: 23rem;
+    }
+    &__link-icon{
+        display: inline-block;
+        width: 24px;
+        height: 17px;
+        position: relative;
+        margin-right: 2px;
+        background-image: url("../images/svg/mail.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 0.3s ease;
+        @include pc{
+            width: 2.4rem;
+            height: 1.7rem;
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &:hover{
+        color: $color-blue;
+        background-color: $color-white;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        .mail-btn__link-icon{
+            background-image: url("../images/svg/mail-blue.svg");
+            transition: background-image 0.3s ease;
+        }
+    }
+}
+//-------------------------------
+// Footer
+//-------------------------------
+.footer{
+    width: 100%;
+    padding-top: 38px;
+    @include pc{
+        padding-top: 3.8rem;
+    }
+    &__appeal{
+        @include font-style(17px, $color-blue2, 600);
+        line-height: 1;
+        letter-spacing: 0.21em;
+        text-align: center;
+        @include pc{
+            font-size: 1.7rem;
+        }
+    }
+    &__inner{
+        width: 800px;
+        margin: 16px auto 0 auto;
+        @include pc{
+            width: 80rem;
+        }
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        font-size: 32px;
+        letter-spacing: 0;
+    }
+    &__address{
+        @include font-style(14px, $color-black, 300);
+        line-height: 1;
+        letter-spacing: 0.04em;
+        margin-top: 4px;
+        @include pc{
+            font-size: 1.4rem;
+            margin-top: 0.4rem;
+        }
+    }
+    &__bottom{
+        width: 100%;
+        height: 25px;
+        background-color: $color-blue2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        @include pc{
+            height: 2.5rem;
+            margin-top: 1.6rem;
+        }
+    }
+}
+.copyright{
+    @include font-style(10px, $color-white, 300);
+    text-align: center;
+    letter-spacing: 0.18em;
+}
+.footer-tel{
+    &__copy{
+        @include font-style(15px, $color-blue2, 600);
+        line-height: 1;
+        letter-spacing: 0.21em;
+        @include pc{
+            font-size: 1.5rem;
+        }
+    }
+    &__icon{
+        display: inline-block;
+        width: 37px;
+        height: 41px;
+        position: relative;
+        background-image: url("../images/svg/tel-icon.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include pc{
+            width: 3.7rem;
+            height: 4.1rem;
+        }
+    }
+    &__num{
+        @include font-style(52px, $color-blue, 600);
+        line-height: 1;
+        margin-top: 6px;
+        @include pc{
+            font-size: 5.2rem;
+            margin-top: 0.6rem;
+        }
+    }
+}
