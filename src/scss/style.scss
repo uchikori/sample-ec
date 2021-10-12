@@ -36,9 +36,9 @@ body{
     -ms-overflow-style: none;
     scrollbar-width: none;
     &.fixed{
-        position: relative;
+        position: fixed;
         z-index: 1;
-        &:after{
+        &:before{
             content: " ";
             position: absolute;
             width: 100%;
@@ -265,7 +265,6 @@ img{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 11;
     @include pc{
         height: 8rem;
     }
@@ -284,6 +283,9 @@ img{
         align-items: center;
         justify-content: space-between;
     }
+    &__left{
+        z-index: 9;
+    }
     &__logo{
         margin-left: 140px;
         @include pc{
@@ -296,11 +298,13 @@ img{
     }
     &__cart-btn{
         margin-right: 40px;
+        z-index: 9;
     }
     &__right{
        display: flex;
        align-items: center;
        margin-left: auto;
+    //    z-index: 15;
     }
 }
 .header__custom{
@@ -421,7 +425,7 @@ img{
     right: 0;
     transform: translateX(100%);
     transition: transform 0.5s ease;
-    z-index: 110;
+    z-index: 11;
     padding: 50px 50px 0;
     @include pc{
         width: 36rem;
@@ -471,7 +475,7 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1001;
+    z-index: 1100;
     cursor: pointer;
     position: relative;
     background-color: $color-blue2;
