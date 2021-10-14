@@ -75,6 +75,16 @@ img{
             width: 84vw;
         }
     }
+    &--size-ss{
+        width: 800px;
+        margin: 0 auto;
+        @include pc{
+            width: 80rem;
+        }
+        @include tab{
+            width: 84vw;
+        }
+    }
     @include pc-tab{
         width: 90vw;
     }
@@ -87,9 +97,9 @@ img{
         display: none
     }
 }
-.br-sp{
+.br-tab{
     display: none;
-    @include sp{
+    @include tab{
         display: block;
     }
 }
@@ -787,11 +797,18 @@ img{
         @include pc{
             margin-bottom: 3.1rem;
         }
+        @include tab{
+            text-align: center;
+            line-height: 1.5;
+        }
     }
     &__media{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include tab{
+            flex-direction: column;
+        }
     }
     &__right{
         width: 220px;
@@ -1458,6 +1475,9 @@ img{
             width: 80rem;
             margin: 1.5rem auto 0 auto;
         }
+        @include tab{
+            width: 84vw;
+        }
     }
     &__link{
         margin-top: 44px;
@@ -1669,6 +1689,9 @@ img{
         margin: 16px auto 0 auto;
         @include pc{
             width: 80rem;
+        }
+        @include tab{
+            width: 84vw;
         }
     }
     &__info{
