@@ -16,3 +16,20 @@
          menuToggle.removeClass('menu-open');
      }
  });
+
+ /**
+ * 
+ * サブメニューのアコーディオン
+ * 
+ */
+  let accordion = jQuery('.js-accordion');
+  let siteMap = jQuery('.js-sitemap');
+  accordion.click(function(){
+      if(accordion.hasClass('open')){
+          accordion.removeClass('open');
+          siteMap.slideUp();
+      } else {
+          accordion.addClass('open');
+          siteMap.slideDown();
+      }
+  });

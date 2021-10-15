@@ -7,8 +7,6 @@
   <meta name="description" content="小菅村をもっと楽しくおもしろく。観光やアクセスなど小菅村の魅力を楽しくおもしろい記事で発信中！">
   <meta name="robots" content="noindex">
   <title>新規Webサイトタイトル</title>
-  <!-- スライダー用CSSプラグイン読み込み -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.css">
   <!-- メインCSS読み込み -->
   <link rel="stylesheet" href="dist/css/style.css">
   <!-- AdobeFonts -->
@@ -32,70 +30,98 @@
   <div class="header__inner">
     <div class="header__left">
       <h1 class="logo header__logo">
-        <a href="/">
-          とちぎ衛生環境防衛隊
-        </a>
+
+          <img src="dist/images/svg/logo.svg" alt="とちぎ衛生環境防衛隊">
+
       </h1>
     </div>
     <nav class="navi header__navi">
-      <div class="logo navi__logo">
-        とちぎ衛生環境防衛隊
+      <div class="navi__inner">
+        <div class="logo navi__logo">
+          <img src="dist/images/svg/logo.svg" alt="とちぎ衛生環境防衛隊">
+        </div>
+        <ul class="global-navi">
+            <li class="menu-item">
+              <a href="/" class="nav-link">
+                TOP
+                <div class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></div>
+              </a>
+              
+            </li>
+            <li class="menu-item js-accordion">
+              <div class="nav-link">
+                商品一覧
+              </div>
+              <ul class="sub-menu js-sitemap">
+                <li class="menu-item">
+                  <a href="/category.html" class="nav-link">
+                    除菌ちゃん
+                    <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="/category.html" class="nav-link">
+                    衛生管理機器
+                    <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="/category.html" class="nav-link">
+                    空間除菌機器
+                    <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="/category.html" class="nav-link">
+                    衛生グッズ
+                    <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="/page-water.html" class="nav-link">
+                機能水とは？
+                <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="/page-management.html" class="nav-link">
+                衛星管理トータルサポート
+                <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="/archive-works.html" class="nav-link">
+                施設導入事例
+                <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="/page-company.html" class="nav-link">
+                会社案内
+                <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="/page-contact.html" class="nav-link">
+                お問い合わせ
+                <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
+              </a>
+            </li>
+        </ul>
+        <ul class="cf">
+          <li class="user_name">
+            <div class="user_login_icon">
+              <img src="dist/images/svg/user_login.svg" alt="">
+            </div>
+            ゲスト
+          </li>
+          <li><a href="/member/wc_login_page.html" class="user_login_a user-btn">ログイン</a></li>
+          <li><a href="/member/wc_new_member_page.html" class="user_new_regist user-btn">新規会員登録</a></li>
+        </ul>
       </div>
-      <ul class="global-navi">
-          <li class="menu-item">
-            <a href="/" class="nav-link">
-              TOP
-              <div class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></div>
-            </a>
-            
-          </li>
-          <li class="menu-item">
-            <a href="/category.html" class="nav-link">
-              商品一覧
-              <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="/page-water.html" class="nav-link">
-              機能水とは？
-              <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="/page-management.html" class="nav-link">
-              衛星管理サポート
-              <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="/archive-works.html" class="nav-link">
-              施設導入事例
-              <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="/page-company.html" class="nav-link">
-              会社案内
-              <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="/page-contact.html" class="nav-link">
-              お問い合わせ
-              <span class="global-navi__navi-icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
-            </a>
-          </li>
-      </ul>
-      <ul class="cf">
-        <li class="user_name">
-          <div class="user_login_icon">
-            <img src="dist/images/svg/user_login.svg" alt="">
-          </div>
-          ゲスト
-        </li>
-        <li><a href="/member/wc_login_page.html" class="user_login_a user-btn">ログイン</a></li>
-        <li><a href="/member/wc_new_member_page.html" class="user_new_regist user-btn">新規会員登録</a></li>
-      </ul>
+
 
     </nav>
     <div class="header__right">
@@ -121,9 +147,10 @@
     <!-- main-visual -->
     <section class="top-main-visual-sec">
       <div class="top-main-visual-sec__inner">
-        <figure class="top-main-visual-sec__image">
-          <img src="dist/images/main-visual_1.jpg" alt="">
-        </figure>
+        <picture class="top-main-visual-sec__image">
+          <source media="(max-width: 640px)" srcset="dist/images/main-visual_1_sp.jpg"> 
+          <img srcset="dist/images/main-visual_1.jpg" src="dist/images/main-visual_1.jpg" alt="家族が笑顔で団らんしている様子">
+        </picture>
         <div class="top-main-visual-sec__contents container">
           <div class="top-main-visual-sec__right">
             <div class="main-copy top-main-visual-sec__main-copy">
@@ -141,13 +168,13 @@
                 除菌ちゃん
               </li>
               <li class="main-list__item main-list__item--color--orange">
-                除菌ちゃん
+                衛生管理機器
               </li>
               <li class="main-list__item main-list__item--color--blue3">
-                除菌ちゃん
+                空間除菌機器
               </li>
               <li class="main-list__item main-list__item--color--blue4">
-                除菌ちゃん
+                衛生グッズ
               </li>
             </ul>
           </div>
@@ -159,8 +186,8 @@
     <!-- sustainable -->
     <section class="sustainable-sec">
       <div class="sustainable-sec__inner">
-        <h2 class="h2-title sustainable-sec__h2-title">
-          sustainable
+        <h2 class="h2-title-image sustainable-sec__h2-title">
+          <img src="dist/images/svg/sustainable.svg" alt="sustaineble">
         </h2>
         <ul class="sustainable-sec__images">
           <li class="sustainable-sec__image">
@@ -176,17 +203,33 @@
         <h3 class="title sustainable-sec__h3-title">
           衛生環境コンサルティング
         </h3>
-        <p class="paragraph sustainable-sec__text">
-          私達○○○○○は、「衛生環境」をテーマに取り組んでいる会社です。
-          <br>
-          エコ環境はもちろん衛生環境も人と地球にやさしい商材で
-          <br>
-          新時代の衛生管理（食中毒や感染症予防対策、コロナ対策）に貢献します。
-          <br>
-          さらに、HACCPシステムの導入を目指すみなさまをご支援させていただくため、
-          <br>
-          お客様ごとに最適なHACCP導入プランをご提案いたします。
-        </p>
+        <div class="sustainable-sec__media-block">
+          <p class="paragraph sustainable-sec__text">
+            私達「とちぎ衛生環境防衛隊」は、
+            <br class="br-tab">
+            「衛生環境」をテーマに
+            <br class="br-tab">
+            取り組んでいる会社です。
+            <br>
+            エコ環境はもちろん衛生環境も
+            <br class="br-tab">
+            人と地球にやさしい商材で
+            <br class="br-tab">
+            新時代の衛生管理（食中毒や感染症予防対策、コロナ対策）に貢献します。
+            <br>
+            さらに、HACCPシステムの導入を目指すみなさまを
+            <br class="br-tab">
+            ご支援させていただくため、
+            <br class="br-tab">
+            お客様ごとに最適な
+            <br class="br-tab">
+            HACCP導入プランをご提案いたします。
+          </p>
+          <picture class="sustainable-sec__media-image">
+            <source media="(max-width: 640px)" srcset="dist/images/consul-image_sp.jpg"> 
+            <img srcset="dist/images/consul-image.jpg" src="dist/images/consul-image.jpg" alt="母と小さな娘にモニターを使用して説明している">
+          </picture>
+        </div>
       </div>
     </section>
     <!-- //sustainablve -->
@@ -195,7 +238,7 @@
     <section class="haccp-sec">
       <div class="haccp-sec__inner container--size-s">
         <h2 class="h2-title h2-title--color--white haccp-sec__h2-title">
-          HACCPがいよいよ<br class="br-sp">制度化されます！
+          HACCPがいよいよ<br class="br-tab">制度化されます！
         </h2>
         <div class="haccp-sec__media">
           <div class="haccp-sec__right">
@@ -222,7 +265,7 @@
     <section class="product-sec">
       <div class="product-sec__inner container--size-s">
         <h2 class="h2-title h2-title--color--blue2 product-sec__h2-title">
-          ○○○○○○の商品一覧（事業内容）
+          商品一覧
         </h2>
         <ul class="product-list">
           <li class="product-list__item">
@@ -241,17 +284,14 @@
                 <div class="product-list__right">
                   <h3 class="product-list__h3-title">除菌ちゃん</h3>
                   <p class="product-list__description">
-                    質の高いCSR活動および
-                    <br>
-                    SDGs取り組みのコンサルティング
+                    様々な菌やウィルスに対して除菌効果があり、消臭効果もある除菌水です。
                   </p>
                 </div>
               </div>
               <a href="/category.html" class="product-list__link">
-                除菌ちゃん商品一覧はこちら
-                <span class="product-list__link-icon"><img src="dist/images/svg/arrow-white.svg" alt=""></span>
+                商品一覧はこちら
+                <span class="product-list__link-icon"></span>
               </a>
-            
             </div>
           </li>
           <li class="product-list__item">
@@ -260,7 +300,7 @@
             </figure>
             <div class="product-list__bottom">
               <div class="product-list__media">
-                <div class="product-list__left">
+                <div class="product-list__left list-2n">
                   <div class="product-list__icon product-list__icon-02">
                     <img src="dist/images/svg/product-icon02.svg" alt="衛生管理項目のアイコン">
                   </div>
@@ -270,15 +310,13 @@
                 <div class="product-list__right">
                   <h3 class="product-list__h3-title">衛生管理機器</h3>
                   <p class="product-list__description">
-                    質の高いCSR活動および
-                    <br>
-                    SDGs取り組みのコンサルティング
+                    あらゆる場面で使用されるプロが衛生管理機器を販売しています。
                   </p>
                 </div>
               </div>
               <a href="/category.html" class="product-list__link">
-                除菌ちゃん商品一覧はこちら
-                <span class="product-list__link-icon"><img src="dist/images/svg/arrow-white.svg" alt=""></span>
+                商品一覧はこちら
+                <span class="product-list__link-icon"></span>
               </a>
             
             </div>
@@ -299,15 +337,13 @@
                 <div class="product-list__right">
                   <h3 class="product-list__h3-title">空間除菌機器</h3>
                   <p class="product-list__description">
-                    質の高いCSR活動および
-                    <br>
-                    SDGs取り組みのコンサルティング
+                    空間除菌機器とは空間中に浮遊しているウイルス類を除菌できる商品のことです。
                   </p>
                 </div>
               </div>
               <a href="/category.html" class="product-list__link">
-                除菌ちゃん商品一覧はこちら
-                <span class="product-list__link-icon"><img src="dist/images/svg/arrow-white.svg" alt=""></span>
+                商品一覧はこちら
+                <span class="product-list__link-icon"></span>
               </a>
             
             </div>
@@ -318,7 +354,7 @@
             </figure>
             <div class="product-list__bottom">
               <div class="product-list__media">
-                <div class="product-list__left">
+                <div class="product-list__left list-2n">
                   <div class="product-list__icon product-list__icon-04">
                     <img src="dist/images/svg/product-icon04.svg" alt="">
                   </div>
@@ -328,17 +364,14 @@
                 <div class="product-list__right">
                   <h3 class="product-list__h3-title">衛生グッズ</h3>
                   <p class="product-list__description">
-                    質の高いCSR活動および
-                    <br>
-                    SDGs取り組みのコンサルティング
+                    普段使いから、あったらいいなと思う衛生グッズを取り揃えております。
                   </p>
                 </div>
               </div>
               <a href="/category.html" class="product-list__link">
-                除菌ちゃん商品一覧はこちら
-                <span class="product-list__link-icon"><img src="dist/images/svg/arrow-white.svg" alt=""></span>
+                商品一覧はこちら
+                <span class="product-list__link-icon"></span>
               </a>
-            
             </div>
           </li>
         </ul>
@@ -350,19 +383,24 @@
     <section class="media-block-top media-block">
       <div class="media-block-top__inner media-block__inner">
         <div class="media-block__empty">
-          <figure class="media-block-top__image media-block__image">
-            <img src="dist/images/functional-water.jpg" alt="機能水">
-          </figure>
+          <picture class="media-block-top__image media-block__image">
+            <source media="(max-width: 640px)" srcset="dist/images/functional-water_sp.jpg"> 
+            <img srcset="dist/images/functional-water.jpg" src="dist/images/functional-water.jpg" alt="機能水">
+          </picture>
         </div>
         <div class="media-block-top__right media-block__body">
-          <div class="media-block-top__title--en media-block__title--en">functional water</div>
+          <div class="media-block-top__title--en media-block__title--en">
+            <div class="media-block-top__title-inner">
+              <img src="dist/images/svg/media-block-title-top.svg" alt="functional water">
+            </div>
+          </div>
           <div class="media-block-top__text-box media-block__text-box">
             <div class="media-block-top__text-box-inner media-block__text-box-inner">
               <h2 class="h2-title h2-title--color--black media-block__h2-title">
                 機能水とは?
               </h2>
               <p class="media-block__description">
-                この文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字です。
+                「機能水とは、人為的な処理によって再現性のある有用な機能を獲得した水溶液の中で、処理と機能に関して科学的根拠が明らかにされたもの、及び明らかにされようとしているもの」と日本機能水学会では定義しています。
               </p>
               <a href="/page-water.html" class="link link--size--s media-block-top__link js-link">
                 詳しくはこちら
@@ -376,12 +414,18 @@
     <section class="media-block-bottom media-block">
       <div class="media-block-bottom__inner media-block__inner">
         <div class="media-block__empty">
-          <figure class="media-block-bottom__image media-block__image">
-            <img src="dist/images/hygiene support.jpg" alt="若葉が芽吹いている様子">
-          </figure>
+          <picture class="media-block-bottom__image media-block__image">
+            <source media="(max-width: 640px)" srcset="dist/images/higiene_support_sp.jpg">
+            <img srcset="dist/images/hygiene support.jpg" src="dist/images/hygiene support.jpg" alt="若葉が芽吹いている様子">
+          </picture>
         </div>
         <div class="media-block-bottom__right media-block__body">
-          <div class="media-block-bottom__title--en media-block__title--en">hygiene management support</div>
+          <div class="media-block-bottom__title--en media-block__title--en">
+            <picture class="media-block-bottom__title-inner">
+              <source media="(max-width: 640px)" srcset="dist/images/svg/media-block-title-bottom_sp.svg">
+              <img srcset="dist/images/svg/media-block-title-bottom.svg" src="dist/images/svg/media-block-title-bottom.svg" alt="hygiene management supportv">
+            </picture>
+          </div>
           <div class="media-block-bottom__text-box media-block__text-box">
             <div class="media-block-bottom__text-box-inner media-block__text-box-inner">
               <h2 class="h2-title h2-title--color--black media-block__h2-title">
@@ -406,13 +450,16 @@
     <section class="works-sec">
       <div class="works-sec__inner">
         <h2 class="h2-title works-sec__h2-title">
-          施設導入事例
+          施設導入例
         </h2>
-        <span class="h2-title__en">FACILITY INTRODUCTION EXAMPLE</span>
+        <picture class="works-sec__h2-title--en">
+          <source media="(max-width: 640px)" srcset="dist/images/svg/works-title_sp.svg">
+          <img srcset="dist/images/svg/works-title.svg" src="dist/images/svg/works-title.svg" alt="FACILITY INTRODUCTION EXAMPLE">
+        </picture>
         <div class="swiper-wrap">
-          <div class="swiper-container works-sec__swiper-container">
-            <div class="swiper-wrapper works-sec__swiper-wrapper">
-              <a href="/" class="swiper-slide works-sec__swiper-slide">
+          <div class="works-sec__container">
+            <div class="works-sec__wrapper">
+              <div class="swiper-slide works-sec__swiper-slide">
                 <figure class="swiper-slide__image">
                   <img src="dist/images/works-100.jpg" alt="">
                 </figure>
@@ -424,8 +471,8 @@
                     この文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字です
                   </p>
                 </div>
-              </a>
-              <a href="/" class="swiper-slide works-sec__swiper-slide">
+              </div>
+              <div class="swiper-slide works-sec__swiper-slide">
                 <figure class="swiper-slide__image">
                   <img src="dist/images/works-100.jpg" alt="">
                 </figure>
@@ -437,8 +484,8 @@
                     この文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字です
                   </p>
                 </div>
-              </a>
-              <a href="/" class="swiper-slide works-sec__swiper-slide">
+              </div>
+              <div class="swiper-slide works-sec__swiper-slide">
                 <figure class="swiper-slide__image">
                   <img src="dist/images/works-100.jpg" alt="">
                 </figure>
@@ -450,33 +497,7 @@
                     この文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字です
                   </p>
                 </div>
-              </a>
-              <a href="/" class="swiper-slide works-sec__swiper-slide">
-                <figure class="swiper-slide__image">
-                  <img src="dist/images/works-100.jpg" alt="">
-                </figure>
-                <div class="swiper-slide__body">
-                  <time class="swiper-slide__time" datatime="2021-02-12">2021/02/12</time>
-                  <div class="swiper-slide__category">除菌ちゃん導入</div>
-                  <h3 class="swiper-slide__h3-title">○○○○○保育園</h3>
-                  <p class="swiper-slide__description">
-                    この文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字です
-                  </p>
-                </div>
-              </a>
-              <a href="/" class="swiper-slide works-sec__swiper-slide">
-                <figure class="swiper-slide__image">
-                  <img src="dist/images/works-100.jpg" alt="">
-                </figure>
-                <div class="swiper-slide__body">
-                  <time class="swiper-slide__time" datatime="2021-02-12">2021/02/12</time>
-                  <div class="swiper-slide__category">除菌ちゃん導入</div>
-                  <h3 class="swiper-slide__h3-title">○○○○○保育園</h3>
-                  <p class="swiper-slide__description">
-                    この文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字ですこの文字はアタリ文字です
-                  </p>
-                </div>
-              </a>
+              </div>
             </div>
           </div>
           <a href="/archive-works.html" class="link works-sec__link">View More</a>
@@ -492,26 +513,35 @@
         <h2 class="h2-title news-sec__h2-title">
           新着情報
         </h2>
-        <span class="h2-title__en">NEWS</span>
+        <picture class="news-sec__h2-title--en">
+          <source media="(max-width: 640px)" srcset="dist/images/svg/news-title_sp.svg">
+          <img srcset="dist/images/svg/news-title.svg" src="dist/images/svg/news-title.svg" alt="news">
+        </picture>
         <ul class="news-sec__lists container--size-ss">
           <li class="news-list news-sec__list">
             <a href="/single.html" class="news-list__link">
-              <time class="news-list__time" data-time="2021-02-12">2021-02-12</time>
-              <h3 class="news-list__title">株式会社EQクリエイトホームページリニューアル</h3>
+              <div class="news-list__left">
+                <time class="news-list__time" data-time="2021-02-12">2021-02-12</time>
+                <h3 class="news-list__title">ホームページリニューアル</h3>
+              </div>
               <span class="news-list__icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
             </a>
           </li>
           <li class="news-list news-sec__list">
             <a href="/single.html" class="news-list__link">
-              <time class="news-list__time" data-time="2021-02-12">2021-02-12</time>
-              <h3 class="news-list__title">株式会社EQクリエイトホームページリニューアル</h3>
+              <div class="news-list__left">
+                <time class="news-list__time" data-time="2021-02-12">2021-02-12</time>
+                <h3 class="news-list__title">ホームページリニューアル</h3>
+              </div>
               <span class="news-list__icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
             </a>
           </li>
           <li class="news-list news-sec__list">
             <a href="/single.html" class="news-list__link">
-              <time class="news-list__time" data-time="2021-02-12">2021-02-12</time>
-              <h3 class="news-list__title">株式会社EQクリエイトホームページリニューアル</h3>
+              <div class="news-list__left">
+                <time class="news-list__time" data-time="2021-02-12">2021-02-12</time>
+                <h3 class="news-list__title">ホームページリニューアル</h3>
+              </div>
               <span class="news-list__icon"><img src="dist/images/svg/arrow.svg" alt=""></span>
             </a>
           </li>
@@ -535,10 +565,6 @@
               弊社へのお問い合わせはこちらからどうぞ。
             </p>
             <div class="cta-sec__contact">
-              <div class="tel-btn cta-sec__tel">
-                <div class="tel-btn__num"><span>TEL.</span>0000-00-0000</div>
-                <div class="tel-btn__open-hours">【受付時間】00:00~00:00(土日祝休)</div>
-              </div>
               <a href="/" class="mail-btn cta-sec__mail js-mail">
                 <span class="mail-btn__link-icon js-mailIcon"></span>
                 お問い合わせ
@@ -561,30 +587,24 @@
     <p class="footer__appeal">「衛生環境」をテーマに取り組んでいる会社です</p>
     <div class="footer__inner container--size-ss">
       <div class="footer__info">
-        <a href="/" class="logo footer__logo">
-          とちぎ衛生環境防衛隊
-        </a>
         <div class="footer-tel">
-          <div class="footer-tel__copy">お気軽にお問い合わせください</div>
-          <div class="footer-tel__num">
-            <span class="footer-tel__icon"></span>
-            0285-44-0614
-          </div>
+          <picture class="footer-tel__num">
+            <source media="(max-width: 640px)" srcset="dist/images/svg/footer-cta_sp.svg">
+            <img srcset="dist/images/svg/footer-cta.svg" src="dist/images/svg/footer-cta.svg" alt="お問い合わせ電話番号0285-44-0614">
+          </picture>
         </div>
       </div>
-      <div class="footer__address">〒000-0000 住所アタリです住所アタリです住所アタリです住所アタリです</div>
+      <div class="footer__address">【お電話での受付時間】9:00〜17:00（土日祝日除く）</div>
     </div>
   </div>
   <div class="footer__bottom">
     <p class="copyright">
-      <small>&copy;2021○○○○○○○○LTD.</small>
+      <small>&copy;2021 TOCHIGI EISEIKANKYOBOEITAI LTD.</small>
     </p>
   </div>
 </footer>
 <!-- end footer -->
 
-<!-- Swiper読み込み -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.js"></script>
 <script src="dist/js/common.min.js"></script>
 <script src="dist/js/front-page.min.js"></script>
 </body>

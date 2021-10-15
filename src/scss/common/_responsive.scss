@@ -1,6 +1,6 @@
 $wide-pc: 1921px;//ワイドPC
 $pc: 1199px; // PC
-$tab: 768px; // タブレット
+$tab: 640px; // タブレット
 $sp: 480px;  // スマホ
 
 $pc-size: 1366;
@@ -13,7 +13,7 @@ $tab-size: 768;
   }
 }
 @mixin pc-tab {
-  @media (min-width: (769px))and(max-width: ($pc)) {
+  @media (min-width: (641px))and(max-width: ($pc)) {
     @content;
   }
 }

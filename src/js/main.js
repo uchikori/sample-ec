@@ -28,6 +28,8 @@ jQuery('.global-navi__link').each(function(){
      }
  });
 
+
+
  /**
  * 
  * Swiperの設定
