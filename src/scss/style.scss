@@ -722,6 +722,9 @@ picture{
             height: 30rem;
         }
     }
+    picture{
+        height: 100%;
+    }
 }
 .page__h1-title{
     @include font-style(45px, $color-blue, 600);
@@ -769,131 +772,277 @@ picture{
         }
     }
 }
-/***衛生管理ページスタイル***/
-.management-intro-sec{
-    margin-top: 72px;
+/***会社案内ページスタイル***/
+.company-top-sec{
+    background-image: url("../images/svg/background05.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 120px;
+    padding-bottom: 52px;
     @include pc{
-        margin-top: 7.2rem;
+        margin-top: 12rem;
+        padding-bottom: 5.2rem;
     }
     @include tab{
-        margin-top: 13.3rem;
+        margin-top: 10.3rem;
+        padding-bottom: 5.6rem;
+    }
+}
+.profile-item{
+    text-align: center;
+
+    &__title-flame{
+        width: 500px;
+        height: 60px;
+        margin: 0 auto;
+        background-color: $color-blue2;
+        border-radius: 0 0 10px 10px;
+        margin-top: 60px;
+        @include pc{
+            width: 50rem;
+            height: 6rem;
+            border-radius: 0 0 1rem 1rem;
+            margin-top: 6rem;
+        }
+    }
+    &__title{
+        color: $color-white;
+        line-height: 60px;
+        @include pc{
+            line-height: 6rem;
+        }
     }
     &__text{
-        text-align: center;
-        @include tab{
-            text-align: left;
-            line-height: 4.1rem;
-        }
-
-    }
-    &__tel{
-        display: block;
-        width: 649px;
-        margin: 50px auto 0 auto;
+        @include font-style(46px, $color-blue2, 600);
+        font-family: $font-m;
+        letter-spacing: 0.18em;
+        line-height: 1;
+        margin-top: 40px;
         @include pc{
-            width: 64.9rem;
-            margin: 5rem auto 0 auto;
-        }
-        @include tab{
-            width: 100%;
-            margin-top: 3.9rem;
-        }
-    }
-    &__caption{
-        text-align: center;
-        margin-top: 37px;
-        @include pc{
-            margin-top: 3.7rem;
-        }
-        @include tab{
-            font-size: 2.5rem;
-            line-height: 3.6rem;
-            letter-spacing: -0.08em;
+            font-size: 4.6rem;
             margin-top: 4rem;
         }
-    }
-}
-
-.management-flow-sec{
-    margin-top: 9rem;
-    @include pc{
-        margin-top: 9rem;
-    }
-    @include tab{
-        margin-top: 9.5rem;
-    }
-    &__h2-title{
-        text-align: center;
-    }
-    &__image{
-        margin-top: 35px;
-        @include pc{
-            margin-top: 3.5rem;
-        }
         @include tab{
-            margin-top: 3.3rem;
+            letter-spacing: 0.12em;
         }
     }
 
 }
-.support-flow-sec{
-    margin-top: 112px;
+.company-middle-sec{
+    margin-top: 78px;
     @include pc{
-        margin-top: 11.2rem;
-    }
-    @include tab{
-        margin-top: 10rem;
+        margin-top: 7.8rem;
     }
     &__h2-title{
         text-align: center;
     }
-    &__image{
-        margin-top: 35px;
+    &__h2-title--en{
+        width: 307px;
+        margin: 2px auto 0 auto;
         @include pc{
-            margin-top: 3.5rem;
+            width: 30.7rem;
         }
         @include tab{
-            margin-top: 3.3rem;
+            width: 36rem;
+            margin: 1.6rem auto 0 auto;
         }
     }
-    &__caption{
-        @include font-style(22px, $color-black, 300);
-        line-height: 1;
-        text-align: right;
-        margin-top: 51px;
+}
+.company-overview{
+    margin-top: 51px;
+    @include pc{
+        margin-top: 5.1rem;
+    }@include tab{
+        width: 100vw;
+        margin: 3.2rem calc(50% - 50vw) 0;
+    }
+    table{
+        width: 100%;
+        display: table
+    }
+    tr{
+        display: table-row;
+        border-bottom: solid 1px $color-black;
+        vertical-align: middle;
         @include pc{
+            padding: 2.4rem 0;
+            border-bottom: none;
+        }
+    }
+    th{
+        width: 200px;
+        @include font-style(22px, $color-white, 300);
+        padding: 25px 0 25px 40px;
+        background-color: $color-blue;
+        display: table-cell;
+        vertical-align: middle;
+        @include pc{
+            width: 20rem;
             font-size: 2.2rem;
-            margin-top: 5.1rem;
+            padding: 2.5rem 0 2.5rem 4rem;
         }
         @include tab{
-            font-size: 2.5rem;
-            line-height: 3.6rem;
+            display: block;
+            width: 100%;
             text-align: center;
-            margin-top: 4.9rem;
+            font-size: 2.5rem;
+            padding: 1.6rem 0;
+        }
+    }
+    td{
+        @include font-style(22px, $color-black, 300);
+        display: table-cell;
+        vertical-align: middle;
+        padding: 25px 0 25px 37px;
+        @include tab{
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 2.5rem;
+            padding: 1.6rem 0;
         }
     }
 }
 
-.management-link-sec{
-    text-align: center;
-    margin-top: 60px;
+.company-bottom-sec{
+    margin-top: 80px;
     margin-bottom: 25px;
     @include pc{
-        margin-top: 6rem;
+        margin-top: 8rem;
         margin-bottom: 2.5rem;
     }
     @include tab{
-        margin-top: 5.5rem;
         margin-bottom: 0;
     }
-}
-.management__link{
-    font-size: 2.3rem;
-    letter-spacing: 0.15em;
-    @include pc{
-        font-size: 2.3rem;
+    &__h2-title{
+        background-image: url("../images/svg/background06.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        color: $color-white;
+        padding: 38px 0; 
+        position: relative;
+        @include pc{
+            padding: 3.8rem 0;
+        }
+        @include tab{
+            padding: 3.7rem 0;
+        }
+        span{
+            position: absolute;
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            background-image: url("../images/svg/arrow-bottom.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            top: 50%;
+            transform: translate(15%, -50%);
+            @include pc{
+                width: 4.8rem;
+                height: 4.8rem;
+            }
+        }
     }
 }
+
+.about-tokuteishou{
+    background-color: $color-bg;
+    padding: 25px 0 69px 0;
+    @include pc{
+        padding: 2.5rem 0 6.9rem 0;
+    }
+    @include tab{
+        padding: 0 0 4.6rem 0;
+    }
+    table{
+        @include tab{
+            width: 100vw;
+            margin: 0 calc(50% - 50vw);
+        }
+
+    }
+    tr{
+        display: block;
+        border-bottom: solid 1px $color-black;
+        margin-top: 26px;
+        @include tab{
+            margin-top: 0;
+            border-bottom: none;
+        }
+    }
+    th{
+        width: 200px;
+        @include font-style(22px, $color-black, 300);
+        padding: 9px 0;
+        display: table-cell;
+        // vertical-align: middle;
+        @include pc{
+            width: 20rem;
+            font-size: 2.2rem;
+            padding: 0.9rem 0;
+        }
+        @include tab{
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 2.5rem;
+            padding: 1.6rem 0;
+        }
+    }
+    td{
+        @include font-style(22px, $color-black, 300);
+        display: table-cell;
+        vertical-align: top;
+        padding: 9px 0 9px 37px;
+        @include tab{
+            background-color: $color-white;
+        }
+        ul{
+            // list-style: square;
+        }
+        li{
+            padding-left: 18px;
+            line-height: 1;
+            position: relative;
+            margin-bottom: 16px;
+            @include tab{
+                display: inline-block;
+                margin-bottom: 0;
+            }
+            &:before{
+                content: " ";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-color: $color-blue2;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        p{
+            line-height: 1;
+            margin-bottom: 11px;
+        }
+        @include tab{
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 2.5rem;
+            padding: 1.6rem 0;
+        }
+    }
+}
+
+
+/***衛生管理ページスタイル***/
+@import 'page/_management.scss';
+
 /***お問い合わせページスタイル***/
 @import 'page/_contact.scss';
 
@@ -1137,7 +1286,7 @@ picture{
     @include font-style(10px, $color-white, 300);
     text-align: center;
     letter-spacing: 0.18em;
-    font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", YuMincho, 'Yu Mincho',
+    font-family: $font-m; 
 }
 .footer-tel{
     &__copy{

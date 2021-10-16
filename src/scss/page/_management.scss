@@ -1,0 +1,122 @@
+.management-intro-sec{
+    margin-top: 72px;
+    @include pc{
+        margin-top: 7.2rem;
+    }
+    @include tab{
+        margin-top: 13.3rem;
+    }
+    &__text{
+        text-align: center;
+        @include tab{
+            text-align: left;
+            line-height: 4.1rem;
+        }
+
+    }
+    &__tel{
+        display: block;
+        width: 649px;
+        margin: 50px auto 0 auto;
+        @include pc{
+            width: 64.9rem;
+            margin: 5rem auto 0 auto;
+        }
+        @include tab{
+            width: 100%;
+            margin-top: 3.9rem;
+        }
+    }
+    &__caption{
+        text-align: center;
+        margin-top: 37px;
+        @include pc{
+            margin-top: 3.7rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+            line-height: 3.6rem;
+            letter-spacing: -0.08em;
+            margin-top: 4rem;
+        }
+    }
+}
+.management-flow-sec{
+    margin-top: 9rem;
+    @include pc{
+        margin-top: 9rem;
+    }
+    @include tab{
+        margin-top: 9.5rem;
+    }
+    &__h2-title{
+        text-align: center;
+    }
+    &__image{
+        margin-top: 35px;
+        @include pc{
+            margin-top: 3.5rem;
+        }
+        @include tab{
+            margin-top: 3.3rem;
+        }
+    }
+
+}
+.support-flow-sec{
+    margin-top: 112px;
+    @include pc{
+        margin-top: 11.2rem;
+    }
+    @include tab{
+        margin-top: 10rem;
+    }
+    &__h2-title{
+        text-align: center;
+    }
+    &__image{
+        margin-top: 35px;
+        @include pc{
+            margin-top: 3.5rem;
+        }
+        @include tab{
+            margin-top: 3.3rem;
+        }
+    }
+    &__caption{
+        @include font-style(22px, $color-black, 300);
+        line-height: 1;
+        text-align: right;
+        margin-top: 51px;
+        @include pc{
+            font-size: 2.2rem;
+            margin-top: 5.1rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+            line-height: 3.6rem;
+            text-align: center;
+            margin-top: 4.9rem;
+        }
+    }
+}
+.management-link-sec{
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 25px;
+    @include pc{
+        margin-top: 6rem;
+        margin-bottom: 2.5rem;
+    }
+    @include tab{
+        margin-top: 5.5rem;
+        margin-bottom: 0;
+    }
+}
+.management__link{
+    font-size: 2.3rem;
+    letter-spacing: 0.15em;
+    @include pc{
+        font-size: 2.3rem;
+    }
+}

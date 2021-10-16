@@ -2010,6 +2010,10 @@ picture {
   height: 314px;
 }
 
+.page-main-visual-sec picture {
+  height: 100%;
+}
+
 .page__h1-title {
   font-size: 45px;
   color: #5fc1c7;
@@ -2038,6 +2042,177 @@ picture {
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+}
+
+/***会社案内ページスタイル***/
+.company-top-sec {
+  background-image: url("../images/svg/background05.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 120px;
+  padding-bottom: 52px;
+}
+
+.profile-item {
+  text-align: center;
+}
+
+.profile-item__title-flame {
+  width: 500px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: #6c8485;
+  border-radius: 0 0 10px 10px;
+  margin-top: 60px;
+}
+
+.profile-item__title {
+  color: #ffffff;
+  line-height: 60px;
+}
+
+.profile-item__text {
+  font-size: 46px;
+  color: #6c8485;
+  font-weight: 600;
+  font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", YuMincho, "Yu Mincho", serif;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  margin-top: 40px;
+}
+
+.company-middle-sec {
+  margin-top: 78px;
+}
+
+.company-middle-sec__h2-title {
+  text-align: center;
+}
+
+.company-middle-sec__h2-title--en {
+  width: 307px;
+  margin: 2px auto 0 auto;
+}
+
+.company-overview {
+  margin-top: 51px;
+}
+
+.company-overview table {
+  width: 100%;
+  display: table;
+}
+
+.company-overview tr {
+  display: table-row;
+  border-bottom: solid 1px #231815;
+  vertical-align: middle;
+}
+
+.company-overview th {
+  width: 200px;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 300;
+  padding: 25px 0 25px 40px;
+  background-color: #5fc1c7;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.company-overview td {
+  font-size: 22px;
+  color: #231815;
+  font-weight: 300;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 25px 0 25px 37px;
+}
+
+.company-bottom-sec {
+  margin-top: 80px;
+  margin-bottom: 25px;
+}
+
+.company-bottom-sec__h2-title {
+  background-image: url("../images/svg/background06.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #ffffff;
+  padding: 38px 0;
+  position: relative;
+}
+
+.company-bottom-sec__h2-title span {
+  position: absolute;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/svg/arrow-bottom.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 50%;
+  -webkit-transform: translate(15%, -50%);
+          transform: translate(15%, -50%);
+}
+
+.about-tokuteishou {
+  background-color: #fffde9;
+  padding: 25px 0 69px 0;
+}
+
+.about-tokuteishou tr {
+  display: block;
+  border-bottom: solid 1px #231815;
+  margin-top: 26px;
+}
+
+.about-tokuteishou th {
+  width: 200px;
+  font-size: 22px;
+  color: #231815;
+  font-weight: 300;
+  padding: 9px 0;
+  display: table-cell;
+}
+
+.about-tokuteishou td {
+  font-size: 22px;
+  color: #231815;
+  font-weight: 300;
+  display: table-cell;
+  vertical-align: top;
+  padding: 9px 0 9px 37px;
+}
+
+.about-tokuteishou td li {
+  padding-left: 18px;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.about-tokuteishou td li:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #6c8485;
+}
+
+.about-tokuteishou td li:last-child {
+  margin-bottom: 0;
+}
+
+.about-tokuteishou td p {
+  line-height: 1;
+  margin-bottom: 11px;
 }
 
 /***衛生管理ページスタイル***/
@@ -2543,7 +2718,7 @@ picture {
   font-weight: 300;
   text-align: center;
   letter-spacing: 0.18em;
-  font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", YuMincho, "Yu Mincho";
+  font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", YuMincho, "Yu Mincho", serif;
 }
 
 .footer-tel__copy {
@@ -3051,6 +3226,60 @@ picture {
     border-left: solid 2.8rem transparent;
     border-right: solid 2.8rem transparent;
     top: 100%;
+  }
+  .company-top-sec {
+    margin-top: 12rem;
+    padding-bottom: 5.2rem;
+  }
+  .profile-item__title-flame {
+    width: 50rem;
+    height: 6rem;
+    border-radius: 0 0 1rem 1rem;
+    margin-top: 6rem;
+  }
+  .profile-item__title {
+    line-height: 6rem;
+  }
+  .profile-item__text {
+    font-size: 4.6rem;
+    margin-top: 4rem;
+  }
+  .company-middle-sec {
+    margin-top: 7.8rem;
+  }
+  .company-middle-sec__h2-title--en {
+    width: 30.7rem;
+  }
+  .company-overview {
+    margin-top: 5.1rem;
+  }
+  .company-overview tr {
+    padding: 2.4rem 0;
+    border-bottom: none;
+  }
+  .company-overview th {
+    width: 20rem;
+    font-size: 2.2rem;
+    padding: 2.5rem 0 2.5rem 4rem;
+  }
+  .company-bottom-sec {
+    margin-top: 8rem;
+    margin-bottom: 2.5rem;
+  }
+  .company-bottom-sec__h2-title {
+    padding: 3.8rem 0;
+  }
+  .company-bottom-sec__h2-title span {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+  .about-tokuteishou {
+    padding: 2.5rem 0 6.9rem 0;
+  }
+  .about-tokuteishou th {
+    width: 20rem;
+    font-size: 2.2rem;
+    padding: 0.9rem 0;
   }
   .management-intro-sec {
     margin-top: 7.2rem;
@@ -3680,6 +3909,73 @@ picture {
     line-height: 6.5rem;
     font-size: 3.6rem;
     letter-spacing: 0.15em;
+  }
+  .company-top-sec {
+    margin-top: 10.3rem;
+    padding-bottom: 5.6rem;
+  }
+  .profile-item__text {
+    letter-spacing: 0.12em;
+  }
+  .company-middle-sec__h2-title--en {
+    width: 36rem;
+    margin: 1.6rem auto 0 auto;
+  }
+  .company-overview {
+    width: 100vw;
+    margin: 3.2rem calc(50% - 50vw) 0;
+  }
+  .company-overview th {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1.6rem 0;
+  }
+  .company-overview td {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1.6rem 0;
+  }
+  .company-bottom-sec {
+    margin-bottom: 0;
+  }
+  .company-bottom-sec__h2-title {
+    padding: 3.7rem 0;
+  }
+  .about-tokuteishou {
+    padding: 0 0 4.6rem 0;
+  }
+  .about-tokuteishou table {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+  }
+  .about-tokuteishou tr {
+    margin-top: 0;
+    border-bottom: none;
+  }
+  .about-tokuteishou th {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1.6rem 0;
+  }
+  .about-tokuteishou td {
+    background-color: #ffffff;
+  }
+  .about-tokuteishou td li {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .about-tokuteishou td {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1.6rem 0;
   }
   .management-intro-sec {
     margin-top: 13.3rem;
