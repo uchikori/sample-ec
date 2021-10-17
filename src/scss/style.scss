@@ -240,7 +240,7 @@ picture{
 }
 .page-paragraph{
     @include font-style(22px, $color-black, 300);
-    line-height: 3.6rem;
+    line-height: 36px;
     letter-spacing: 0.05em;
     @include pc{
         font-size: 2.2rem;
@@ -714,6 +714,7 @@ picture{
 /***共通ページスタイル***/
 .page-main-visual-sec{
     &__inner{
+        text-align: center;
         height: 314px;
         @include pc{
             height: 31.4rem;
@@ -772,277 +773,155 @@ picture{
         }
     }
 }
-/***会社案内ページスタイル***/
-.company-top-sec{
-    background-image: url("../images/svg/background05.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 120px;
-    padding-bottom: 52px;
-    @include pc{
-        margin-top: 12rem;
-        padding-bottom: 5.2rem;
-    }
-    @include tab{
-        margin-top: 10.3rem;
-        padding-bottom: 5.6rem;
-    }
-}
-.profile-item{
+.single__h1-title{
+    @include font-style(45px, $color-blue, 600);
+    line-height: 1.5;
+    letter-spacing: 0em;
+    display: inline-block;
     text-align: center;
-
-    &__title-flame{
-        width: 500px;
-        height: 60px;
-        margin: 0 auto;
-        background-color: $color-blue2;
-        border-radius: 0 0 10px 10px;
-        margin-top: 60px;
-        @include pc{
-            width: 50rem;
-            height: 6rem;
-            border-radius: 0 0 1rem 1rem;
-            margin-top: 6rem;
-        }
-    }
-    &__title{
-        color: $color-white;
-        line-height: 60px;
-        @include pc{
-            line-height: 6rem;
-        }
-    }
-    &__text{
-        @include font-style(46px, $color-blue2, 600);
-        font-family: $font-m;
-        letter-spacing: 0.18em;
-        line-height: 1;
-        margin-top: 40px;
-        @include pc{
-            font-size: 4.6rem;
-            margin-top: 4rem;
-        }
-        @include tab{
-            letter-spacing: 0.12em;
-        }
-    }
-
-}
-.company-middle-sec{
-    margin-top: 78px;
+    background-color: $color-white;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    position: relative;
+    padding: 20px;
+    max-width: 1200px;
     @include pc{
-        margin-top: 7.8rem;
-    }
-    &__h2-title{
-        text-align: center;
-    }
-    &__h2-title--en{
-        width: 307px;
-        margin: 2px auto 0 auto;
-        @include pc{
-            width: 30.7rem;
-        }
-        @include tab{
-            width: 36rem;
-            margin: 1.6rem auto 0 auto;
-        }
-    }
-}
-.company-overview{
-    margin-top: 51px;
-    @include pc{
-        margin-top: 5.1rem;
-    }@include tab{
-        width: 100vw;
-        margin: 3.2rem calc(50% - 50vw) 0;
-    }
-    table{
-        width: 100%;
-        display: table
-    }
-    tr{
-        display: table-row;
-        border-bottom: solid 1px $color-black;
-        vertical-align: middle;
-        @include pc{
-            padding: 2.4rem 0;
-            border-bottom: none;
-        }
-    }
-    th{
-        width: 200px;
-        @include font-style(22px, $color-white, 300);
-        padding: 25px 0 25px 40px;
-        background-color: $color-blue;
-        display: table-cell;
-        vertical-align: middle;
-        @include pc{
-            width: 20rem;
-            font-size: 2.2rem;
-            padding: 2.5rem 0 2.5rem 4rem;
-        }
-        @include tab{
-            display: block;
-            width: 100%;
-            text-align: center;
-            font-size: 2.5rem;
-            padding: 1.6rem 0;
-        }
-    }
-    td{
-        @include font-style(22px, $color-black, 300);
-        display: table-cell;
-        vertical-align: middle;
-        padding: 25px 0 25px 37px;
-        @include tab{
-            display: block;
-            width: 100%;
-            text-align: center;
-            font-size: 2.5rem;
-            padding: 1.6rem 0;
-        }
-    }
-}
-
-.company-bottom-sec{
-    margin-top: 80px;
-    margin-bottom: 25px;
-    @include pc{
-        margin-top: 8rem;
-        margin-bottom: 2.5rem;
+        max-width: 84.5vw;
+        font-size: 4.5rem;
+        transform: translateY(-20%);
     }
     @include tab{
-        margin-bottom: 0;
+        font-size: 3.6rem;
     }
-    &__h2-title{
-        background-image: url("../images/svg/background06.svg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        text-align: center;
-        color: $color-white;
-        padding: 38px 0; 
-        position: relative;
-        @include pc{
-            padding: 3.8rem 0;
-        }
-        @include tab{
-            padding: 3.7rem 0;
-        }
-        span{
-            position: absolute;
-            display: inline-block;
-            width: 48px;
-            height: 48px;
-            background-image: url("../images/svg/arrow-bottom.svg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            top: 50%;
-            transform: translate(15%, -50%);
-            @include pc{
-                width: 4.8rem;
-                height: 4.8rem;
-            }
-        }
-    }
-}
-
-.about-tokuteishou{
-    background-color: $color-bg;
-    padding: 25px 0 69px 0;
-    @include pc{
-        padding: 2.5rem 0 6.9rem 0;
-    }
-    @include tab{
-        padding: 0 0 4.6rem 0;
-    }
-    table{
-        @include tab{
-            width: 100vw;
-            margin: 0 calc(50% - 50vw);
-        }
-
-    }
-    tr{
+    &:after{
+        content: "";
         display: block;
-        border-bottom: solid 1px $color-black;
-        margin-top: 26px;
-        @include tab{
-            margin-top: 0;
-            border-bottom: none;
-        }
-    }
-    th{
-        width: 200px;
-        @include font-style(22px, $color-black, 300);
-        padding: 9px 0;
-        display: table-cell;
-        // vertical-align: middle;
+        width: 56px;
+        // height: 28px;
+        border-top: solid 28px $color-blue;
+        border-left: solid 28px transparent;
+        border-right: solid 28px transparent;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
         @include pc{
-            width: 20rem;
-            font-size: 2.2rem;
-            padding: 0.9rem 0;
-        }
-        @include tab{
-            display: block;
-            width: 100%;
-            text-align: center;
-            font-size: 2.5rem;
-            padding: 1.6rem 0;
-        }
-    }
-    td{
-        @include font-style(22px, $color-black, 300);
-        display: table-cell;
-        vertical-align: top;
-        padding: 9px 0 9px 37px;
-        @include tab{
-            background-color: $color-white;
-        }
-        ul{
-            // list-style: square;
-        }
-        li{
-            padding-left: 18px;
-            line-height: 1;
-            position: relative;
-            margin-bottom: 16px;
-            @include tab{
-                display: inline-block;
-                margin-bottom: 0;
-            }
-            &:before{
-                content: " ";
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                display: block;
-                width: 16px;
-                height: 16px;
-                background-color: $color-blue2;
-            }
-            &:last-child{
-                margin-bottom: 0;
-            }
-        }
-        p{
-            line-height: 1;
-            margin-bottom: 11px;
-        }
-        @include tab{
-            display: block;
-            width: 100%;
-            text-align: center;
-            font-size: 2.5rem;
-            padding: 1.6rem 0;
+            width: 5.6rem;
+            // height: 28px;
+            border-top: solid 2.8rem $color-blue;
+            border-left: solid 2.8rem transparent;
+            border-right: solid 2.8rem transparent;
+            top: 100%;
         }
     }
 }
+/***会社案内ページスタイル***/
+@import 'page/_company.scss';
 
+/***機能水ページスタイル***/
+@import 'page/_water.scss';
 
 /***衛生管理ページスタイル***/
 @import 'page/_management.scss';
 
+/***アーカイブページスタイル***/
+@import 'archive/_archive.scss';
+
+/***記事詳細ページスタイル***/
+.article{
+    &__inner{
+        margin-top: 160px;
+    }
+    .time-icon{
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        @include pc{
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+        @include tab{
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+    figure{
+        padding: 24px 0;
+        @include pc{
+            padding: 2.4rem 0;
+        }
+    }
+    h2{
+        @include font-style(30px, $color-white, 600);
+        font-family: $font;
+        line-height: 1.5;
+        letter-spacing: 0em;
+        background-color: $color-blue;
+        padding: 10px 16px;
+        border-radius: 10px;
+        margin: 24px 0;
+        @include pc{
+            font-size: 3rem;
+            padding: 1rem 1.6rem;
+            border-radius: 1rem;
+            margin: 2.4rem 0;
+        }
+        @include tab{
+            font-size: 4rem;
+            padding: 1rem 1.6rem;
+            border-radius: 1rem;
+            margin: 4rem 0;
+        }
+    }
+    h3{
+        @include font-style(24px, $color-black, 600);
+        font-family: $font;
+        line-height: 1.5;
+        letter-spacing: 0em;
+        padding: 10px 16px;
+        border-left: solid 6px $color-blue;
+        border-bottom: solid 3px $color-blue;
+        margin: 24px 0;
+        @include pc{
+            font-size: 2.4rem;
+            padding: 1rem 1.6rem;
+            margin: 4rem 0;
+        }
+        @include tab{
+            font-size: 3.6rem;
+            padding: 1rem 1.6rem;
+            margin: 2.4rem 0;
+        }
+    }
+    h4{
+        @include font-style(20px, $color-blue, 600);
+        font-family: $font;
+        line-height: 1.5;
+        letter-spacing: 0em;
+        padding: 10px 16px;
+        margin: 24px 0;
+        @include pc{
+            font-size: 20rem;
+            padding: 1rem 1.6rem;
+            margin: 4rem 0;
+        }
+        @include tab{
+            font-size: 3.2rem;
+            padding: 1rem 1.6rem;
+            margin: 4rem 0;
+        }
+    }
+    p{
+        @include font-style(18px, $color-blue2, 600);
+        line-height: 2;
+        letter-spacing: 0em;
+        @include pc{
+            font-size: 1.8rem;
+        }
+        @include tab{
+            font-size: 2.8rem;
+        }
+    }
+}
 /***お問い合わせページスタイル***/
 @import 'page/_contact.scss';
 
@@ -1066,7 +945,7 @@ picture{
         display: flex;
         justify-content: center;
         align-items: center;
-        @include tab{
+        @include pc{
             height: 25.1rem;
         }
     }
