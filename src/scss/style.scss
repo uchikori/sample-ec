@@ -101,6 +101,17 @@ picture{
         display: block;
     }
 }
+em{
+    @include font-style(15px, $color-em, 500);
+    font-style: normal;
+    margin-left: 13px;
+    @include pc{
+        font-size: 1.5rem;
+    }
+    @include tab{
+        font-size: 2.5rem;
+    }
+}
 //-------------------------------
 //  Components
 //-------------------------------
@@ -326,6 +337,15 @@ picture{
     top: 0;
     left: 0;
     .page &{
+        background-color: rgba(255, 255, 255, 0.8);
+        @include tab{
+            position: relative;
+        }
+    }
+    .page-template-uscescart &{
+        position: relative;
+    }
+    .page-template-uscesmember &{
         background-color: rgba(255, 255, 255, 0.8);
         @include tab{
             position: relative;
@@ -847,12 +867,623 @@ picture{
 /***商品カテゴリーページスタイル***/
 @import 'archive/_category.scss';
 
-/***商品記事ページスタイル***/
-@import 'single/_wc-single.scss';
-
 /***お問い合わせページスタイル***/
 @import 'page/_contact.scss';
 
+/***商品記事ページスタイル***/
+@import 'single/_wc-single.scss';
+
+/***カートページスタイル***/
+//カート
+.cart-page{
+    margin-top: 25px;
+    @include pc{
+        margin-top: 2.5rem;
+    }
+    @include tab{
+        margin-top: 2rem;
+    }
+    .cart_navi{
+        width: 862px;
+        margin: 0 auto;
+        @include pc{
+            width: 86.2rem;
+        }
+        @include tab{
+            width: 100vw;
+            margin: 0 calc(50% - 50vw);
+        }
+        ul{
+            display: flex;
+        }
+        li{
+            width: 20%;
+            height: 38px;
+            @include font-style(17px, $color-white, 500);
+            padding: 10px 0;
+            text-align: center;
+            background-color: $color-gray;
+            position: relative;
+            @include pc{
+                height: 3.8rem;
+                font-size: 1.7rem;
+                padding: 1rem 0;
+            }
+            @include tab{
+                height: 5.5rem;
+                font-size: 2rem;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &.current{
+                background-color: $color-blue;
+                &:before{
+                    background-color: $color-blue;
+                }
+                &:after{
+                    background-color: $color-blue;
+                }
+            }
+            &:before{
+                content: "";
+                display: block;
+                width: 19px;
+                height: 19px;
+                border-right: solid 2px $color-white;
+                transform: skew(40deg)translateX(-60%);
+                background-color: $color-gray;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                z-index: 1;
+                @include pc{
+                    width: 1.9rem;
+                    height: 1.9rem;
+                }
+                @include tab{
+                    width: 2.75rem;
+                    height: 2.75rem;
+                    transform: skew(20deg)translateX(-70%);
+                }
+            }
+            &:after{
+                content: "";
+                display: block;
+                width: 19px;
+                height: 19px;
+                border-right: solid 2px $color-white;
+                transform: skew(-40deg)translateX(-60%);
+                background-color: $color-gray;
+                position: absolute;
+                bottom: 0;
+                left: 100%;
+                z-index: 1;
+                @include pc{
+                    width: 1.9rem;
+                    height: 1.9rem;
+                }
+                @include tab{
+                    width: 2.75rem;
+                    height: 2.75rem;
+                    transform: skew(-20deg)translateX(-70%);
+                }
+            }
+            &:last-child{
+                &:before{
+                    display: none;
+                }
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.cart{
+    .upbutton{
+        text-align: right;
+        @include font-style(16px, $color-black, 300);
+        line-height: 40px;
+        padding: 26.5px 0;
+        @include pc{
+            font-size: 1.6rem;
+            line-height: 4rem;
+            padding: 2.65rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+            padding: 2.65rem 0;
+        }
+        input[type="submit"]{
+            width: 200px;
+            height: 40px;
+            @include font-style(16px, $color-blue, 500);
+            line-height: 40px;
+            text-align: center;
+            border: solid 1px $color-blue;
+            border-radius: 8px;
+            background-color: transparent;
+            @include pc{
+                width: 20rem;
+                height: 4rem;
+                font-size: 1.6rem;
+                line-height: 4rem;
+                border-radius: 0.8rem;
+            }
+            @include tab{
+                display: block;
+                margin-left: auto;
+                font-size: 2.5rem;
+                width: 26rem;
+                height: 5.8rem;
+            }
+        }
+    }
+}
+.cart-table__wrap{
+    width: 100%;
+    padding: 36px 0;
+    // border-top: solid 1px $color-black;
+    border-bottom: solid 1px $color-black;
+    @include pc{
+        padding: 3.6rem 0;
+    }
+    @include tab{
+        padding: 2.4rem 0;
+    }
+    @include tab{
+        display: block;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+}
+#cart_table{
+    width: 100%;
+    @include tab{
+        width: 144rem;
+    }
+    @include sp{
+        width: 760px;
+    }
+    th{
+        vertical-align: middle;
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        @include pc{
+            font-size: 1.6rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+        }
+    }
+    td{
+        vertical-align: middle;
+        @include font-style(20px, $color-black, 500);
+        line-height: 1;
+        padding: 16px 0;
+        &.productname{
+            font-weight: 700;
+            @include tab{
+                font-size: 3.6rem;
+            }
+        }
+        @include pc{
+            font-size: 2rem;
+            padding: 1.6rem 0;
+        }
+        @include tab{
+            font-size: 2.5rem;
+        }
+    }
+    .num{
+        width: 10.4%;
+        text-align: left;
+        @include tab{
+            width: 5%;
+        }
+    }
+    .productname{
+        width: 23.1%;
+        text-align: left;
+    }
+    .unitprice{
+        width: 13%;
+    }
+    .quantity{
+        width: 9%;
+    }
+    .subtotal{
+        width: 11.98%;
+    }
+    .stock{
+        width: 11.98%;
+    }
+    .action{
+        width: 3.6%;
+        input[type="submit"]{
+            width: auto;
+            height: auto;
+            color: $color-black;
+            background-color: transparent;
+            font-size: 20px;
+            padding: 4px 6px;
+            border: solid 1px $color-black;
+            font-weight: 300;
+            line-height: 1;
+            border-radius: 4px;
+            @include pc{
+                font-size: 2rem;
+                padding: 0.4rem 0.6rem;
+            }
+            @include tab{
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .thumbnail{
+        width: 16.3%;
+        text-align: left;
+        img{
+            width: 132px;
+            height: 132px;
+            @include pc{
+                width: 13.2rem;
+                height: 13.2rem;
+            }
+            @include tab{
+                width: 17rem;
+                height: 17rem;
+            }
+        }
+    }
+    input[type="text"]{
+        width: 45px;
+        height: 45px;
+        border-radius: 5px;
+        border: solid 1px $color-black;
+        text-align: center;
+        @include font-style(20px, $color-black, 600);
+        @include pc{
+            width: 5.5rem;
+            height: 5.5rem;
+            border-radius: 0.5rem;
+            font-size: 2rem;
+        }
+    }
+}
+.currency_code{
+    @include font-style(14px, $color-black, 300);
+    line-height: 1;
+    padding: 5px;
+    @include pc{
+        font-size: 1.4rem;
+    }
+    @include tab{
+        display: none;
+        font-size: 2rem;
+    }
+}
+.caption{
+    display: none;
+    @include tab{
+        display: block;
+        @include font-style(2rem, $color-blue, 600);
+        line-height: 1;
+        padding: 1.6rem 0;
+    }
+}
+.total-amount{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    &__w{
+        @include font-style(21px, $color-black, 600);
+        line-height: 1;
+        @include pc{
+            font-size: 2.1rem;
+        }
+        @include tab{
+            font-size: 2.4rem;
+        }
+    }
+    &__n{
+        @include font-style(30px, $color-black, 600);
+        line-height: 1;
+        font-family: $font-h;
+        @include pc{
+            font-size: 3rem;
+        }
+        @include tab{
+            font-size: 5.2rem;
+        }
+    }
+}
+.send{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+    @include pc{
+        margin-top: 2.7rem;
+    }
+    @include tab{
+        margin-top: 6rem;
+        flex-direction: column;
+        gap: 3.2rem;
+        align-items: center
+    }
+}
+.page-template-uscescart{
+    input[type="submit"]{
+        width: 280px;
+        height: 45px;
+        @include font-style(20px, $color-white, 600);
+        line-height: 45px;
+        text-align:center;
+        background-color: $color-gray;
+        border-radius: 12px;
+        @include pc{
+            font-size: 2.8rem;
+            width: 28rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: 1.2rem;
+        }
+        &.to_customerinfo_button{
+            background-color: $color-blue;
+        }
+        &.to_memberlogin_button{
+            background-color: $color-blue;
+        }
+    }
+    input[type="button"]{
+        width: 280px;
+        height: 45px;
+        @include font-style(20px, $color-white, 600);
+        line-height: 45px;
+        text-align:center;
+        background-color: $color-gray;
+        border-radius: 12px;
+        @include pc{
+            font-size: 2.8rem;
+            width: 28rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: 1.2rem;
+        }
+    }
+}
+.page-template-uscesmember{
+    input[type="submit"]{
+        width: 280px;
+        height: 45px;
+        @include font-style(20px, $color-white, 600);
+        line-height: 45px;
+        text-align:center;
+        background-color: $color-gray;
+        border-radius: 12px;
+        @include pc{
+            font-size: 2.8rem;
+            width: 28rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: 1.2rem;
+        }
+    }
+}
+//お客様情報
+.customer-info-title{
+    @include font-style(20px, $color-black, 600);
+    margin-top: 54px;
+    margin-bottom: 12px;
+    @include pc{
+        font-size: 2rem;
+        margin-top: 5,4rem;
+        margin-bottom: 1.2rem;
+    }
+    @include tab{
+        font-size: 3.6rem;
+        margin-top: 6rem;
+        margin-bottom: 2.6rem;
+    }
+}
+.non-customer-info-title{
+    @include font-style(20px, $color-black, 600);
+    margin-top: 54px;
+    margin-bottom: 12px;
+    @include pc{
+        font-size: 2rem;
+        margin-top: 5,4rem;
+        margin-bottom: 1.2rem;
+    }
+    @include tab{
+        font-size: 3.6rem;
+        margin-top: 6rem;
+        margin-bottom: 2.6rem;
+    }
+}
+.customer_loginform{
+    border-bottom: solid 1px $color-black;
+    .send{
+        margin-top: 15px;
+        margin-bottom: 26px;
+        display: flex;
+        justify-content: center;
+        @include pc{
+            margin-top: 1.5rem;
+            margin-bottom: 2.6rem;
+        }
+        @include tab{
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+}
+.customer_form{
+    width: 100%;
+    tr{
+        @include tab{
+            display: block;
+            margin-bottom: 3rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    th{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        vertical-align: middle;
+        width: 18.75%;
+        @include pc{
+            font-size: 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            font-size: 2.8rem;
+            display: block;
+        }
+    }
+    td{
+        padding: 11px 0;
+        vertical-align: middle;
+        @include tab{
+            display: block;
+        }
+    }
+    input{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        width: 600px;
+        height: 40px;
+        border: solid 1px $color-border2;
+        border-radius: 4px;
+        @include pc{
+            font-size: 1.6rem;
+            width: 60rem;
+            height: 4rem;
+            border-radius: 0.4rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 5rem;
+            font-size: 2.8rem;
+        }
+    }
+
+}
+.non-customer_inputform{
+    width: 100%;
+    em{
+        margin-left: 0;
+    }
+    tr{
+        @include tab{
+            display: block;
+            margin-bottom: 3rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    #name1,#name2,#zipcode,#address1,#address2,
+    #tel,#mailaddress1,#mailaddress2{
+        background-color: $color-must;
+    }
+    th{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        vertical-align: middle;
+        width: 18.75%;
+        @include pc{
+            font-size: 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            font-size: 2.8rem;
+            display: block;
+        }
+    }
+    td{
+        padding: 11px 0;
+        vertical-align: middle;
+        @include tab{
+            display: block;
+        }
+
+    }
+    .name_td{
+        input{
+            width: 280px;
+            @include pc{
+                width: 28rem;
+            }
+        }
+    }
+
+    input{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        width: 600px;
+        height: 40px;
+        border: solid 1px #bbb3b1;
+        border-radius: 4px;
+        @include pc{
+            font-size: 1.6rem;
+            width: 60rem;
+            height: 4rem;
+            border-radius: 0.4rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 5rem;
+            font-size: 2.8rem;
+        }
+    }
+    #zipcode{
+        width: 160px;
+        @include pc{
+            width: 16rem;
+        }
+    }
+    #customer_pref{
+        width: 130px;
+        height: 40px;
+        @include font-style(20px, $color-black, 600);
+        line-height: 40px;
+        text-align:center;
+        background-color: transparent;
+        border-radius: 4px;
+        border: solid 1px $color-border2;
+        @include pc{
+            font-size: 2.5rem;
+            width: 13rem;
+            height: 4rem;
+            line-height: 4rem;
+            border-radius: 10.4rem;
+        }
+    }
+    input[type="button"]{
+        width: 130px;
+        height: 40px;
+        @include font-style(20px, $color-black, 600);
+        line-height: 40px;
+        text-align:center;
+        background-color: transparent;
+        border-radius: 4px;
+        border: solid 1px $color-border2;
+        @include pc{
+            font-size: 2.5rem;
+            width: 13rem;
+            height: 4rem;
+            line-height: 4rem;
+            border-radius: 10.4rem;
+        }
+    }
+}
 //-------------------------------
 // cta
 //-------------------------------

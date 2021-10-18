@@ -173,6 +173,7 @@
     @include font-style(13px, $color-price, 400);
     line-height: 1;
     font-style: normal;
+    margin-left: 0;
     @include pc{
         font-size: 1.3rem;
     }

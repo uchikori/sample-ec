@@ -140,11 +140,11 @@
     <!-- cart -->
     <section class="cart-page">
         <div class="cart-page__inner container--size-s">
-            <article id="wc_customer" class="post">
+            <article id="wc-cart" class="post">
                 <div class="cart_navi">
                     <ul>
-                        <li>カート</li>
-                        <li class="current"><h1>お客様<br class="br-tab">情報</h1></li>
+                        <li class="current"><h1>カート</h1></li>
+                        <li>お客様<br class="br-tab">情報</li>
                         <li>配送<br class="br-tab">支払方法</li>
                         <li>内容<br class="br-tab">確認</li>
                         <li>完了</li>
@@ -155,119 +155,66 @@
 
                 <div class="error_message"></div>
 
-                <h2 class="customer-info-title">会員の方はこちら</h2>
                 <!-- end カートページ共通 -->
-                <form class="customer_loginform" name="customer_loginform" action="/" method="post" onkeydown="if(event.keyCode == 13){return false;}">
-                    <table class="customer_form">
-                        <tbody>
-                            <tr>
-                                <th scope="row">メールアドレス</th>
-                                <td><input name="loginmail" id="mailaddress1" type="text"  style="ime-mode: inactive"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">パスワード</th>
-                                <td><input name="loginpass" id="password" type="password" value=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="send">
-                      <input name="customerlogin" type="submit" class="to_memberlogin_button" value="次へ">
+                <form action="/wc_customer_page.html" method="post" onkeydown="if(event.keyCode == 13){return false;}">
+                    <div class="cart">
+                        <!-- 数量更新 -->
+                        <div class="upbutton">
+                            数量を変更した場合は必ず<br class="br-tab">更新ボタンを押してください
+                            <input name="upbutton" type="submit" value="数量更新" onclick="return uscesCart.upCart()">
+                        </div>
+                        <!-- //数量更新 -->
+                        <div class="cart-table__wrap">
+                            <table cellspacing="0" id="cart_table">
+                                <thead>
+                                    <tr>
+                                        <th class="num">No.</th>
+                                        <th class="thumbnail"></th>
+                                        <th class="productname">商品名</th>
+                                        <th class="unitprice">単価</th>
+                                        <th class="quantity">数量</th>
+                                        <th class="subtotal">金額<em class="tax">（税込み）</em></th>
+                                        <th class="stock">在庫状態</th>
+                                        <th class="action"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="num">01</td>
+                                        <td class="thumbnail"><a href="/"><img src="../../dist/images/item-image.jpg" alt=""></a></td>
+                                        <td class="productname">除菌ちゃん</td>
+                                        <td class="unitprice">￥00,000</td>
+                                        <td class="quantity"><input name="quant" type="text" class="quantity" value="1"></td>
+                                        <td class="subtotal">￥00,000</td>
+                                        <td class="stock">在庫有り</td>
+                                        <td class="action"><input  name="delbutton" class="delButton" type="submit" value="削除"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">01</td>
+                                        <td class="thumbnail"><a href="/"><img src="../../dist/images/item-image.jpg" alt=""></a></td>
+                                        <td class="productname">除菌ちゃん</td>
+                                        <td class="unitprice">￥00,000</td>
+                                        <td class="quantity"><input name="quant" type="text" class="quantity" value="1"></td>
+                                        <td class="subtotal">￥00,000</td>
+                                        <td class="stock">在庫有り</td>
+                                        <td class="action"><input  name="delbutton" class="delButton" type="submit" value="削除"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="currency_code">通貨：円</div>
+                        <div class="caption">※横スクロールで確認できます。</div>
+                        <div class="total-amount">
+                            <div class="total-amount__w">商品合計<em class="tax">（税込み）</em></div>
+                            <div class="total-amount__n">￥00,000</div>
+                        </div>
                     </div>
-                </form>
-                <h2 class="non-customer-info-title">非会員の方はこちら</h2>
-                <form class="non-customer_form" name="customer_form" action="/" method="post" onkeydown="if(event.keyCode == 13){return false;}">
-                    <table class="non-customer_inputform">
-                      <tbody>
-                        <tr class="customkey_company-name">
-                          <th scope="row">会社名</th>
-                          <td colspan="2"><input type="text" value=""></td>
-                        </tr>
-
-                        <tr id="name_row" class="inp1">
-                          <th width="127" scope="rpw"><em>※</em>お名前</th>
-                          <td class="name_td">姓<input id="name1" type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
-                          <td class="name_td">名<input id="name2" type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
-                        </tr>
-
-                        <tr id="furikana_row" class="inp1">
-                          <th width="127" scope="rpw">フリガナ</th>
-                          <td class="name_td">姓<input type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
-                          <td class="name_td">名<input type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
-                        </tr>
-
-                        <tr id="zipcode_row">
-                          <th scope="row"><em>※</em>郵便番号</th>
-                          <td colspan="2">
-                            <input type="text" id="zipcode" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active">
-                            <input type="button" id="search_zipcode" class="search-zipcode button" value="住所検索" onclick="AjaxZip3.zip2addr('customer[zipcode]', '', 'customer[pref]', 'customer[address1]');">
-                          </td>
-                        </tr>
-
-                        <tr id="status_row">
-                          <th scope="row"><em>※</em>都道府県</th>
-                          <td colspan="2">
-                            <select name="customer[pref]" id="customer_pref" class="pref">
-                              <option value="--選択--">--選択--</option>
-                            </select>
-                          </td>
-                        </tr>
-
-                        <tr id="address1_row" class="inp2">
-                          <th scope="row"><em>※</em>市区郡町村</th>
-                          <td colspan="2"><input name="customer[address1]" id="address1" type="text" value="" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" />横浜市上北町</td>
-                        </tr>
-
-                        <tr id="address2_row">
-                          <th scope="row"><em>＊</em>番地</th>
-                          <td colspan="2"><input name="customer[address2]" id="address2" type="text" value="" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" />3-24-555</td>
-                        </tr>
-
-                        <tr id="address3_row">
-                          <th scope="row">ビル名</th>
-                          <td colspan="2"><input name="customer[address3]" id="address3" type="text" value="" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" />通販ビル4F</td>
-                        </tr>
-
-                        <tr id="tel_row">
-                          <th scope="row"><em>＊</em>電話番号</th>
-                          <td colspan="2"><input name="customer[tel]" id="tel" type="text" value="" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" />1000-10-1000</td>
-                        </tr>
-
-                        <tr id="fax_row">
-                          <th scope="row">FAX番号</th>
-                          <td colspan="2"><input name="customer[fax]" id="fax" type="text" value="" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" />1000-10-1000</td>
-                        </tr>	
-
-                        <tr>
-                          <th scope="row"><em>＊</em>メールアドレス</th>
-                          <td colspan="2"><input name="customer[mailaddress1]" id="mailaddress1" type="text" value="" style="ime-mode: inactive" /></td>
-                        </tr>
-
-                      </tbody>
-                    </table>
-                    <table class="non-customer_inputform">
-                      <tbody>
-                        <h2 class="non-customer-info-title">新規会員登録する場合にご記入ください</h2>
-                        <tr>
-                          <th scope="row">パスワード</th>
-                          <td colspan="2"><input name="customer[password1]" type="password" value="" /></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">パスワード（確認用）</th>
-                          <td colspan="2"><input name="customer[password2]" type="password" value="" /></td>
-                        </tr>
-
-                      </tbody>
-                    </table>
-
-
-
-                    <input type="hidden">
-                    <div class="agree_member_area"></div>
                     <div class="send">
                         <input name="previous" type="button" id="previouscart" class="continue_shopping_button" value="買い物を続ける" onclick="uscesCart.previousCart();">
                         <input name="customerinfo" type="submit" class="to_customerinfo_button" value="次へ" onclick="return uscesCart.cartNext();">
                     </div>
                 </form>
+                <div class="footer_explanation"></div>
             </article>
         </div>
     </section>
