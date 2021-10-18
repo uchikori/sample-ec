@@ -1,6 +1,12 @@
 .article{
     &__inner{
         margin-top: 160px;
+        @include pc{
+            margin-top: 16rem;
+        }
+        @include tab{
+            margin-top: 24rem;
+        }
     }
     .time-icon{
         display: inline-block;

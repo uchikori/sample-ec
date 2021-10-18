@@ -704,6 +704,10 @@ picture {
   background-color: rgba(255, 255, 255, .8);
 }
 
+.single .header {
+  position: relative;
+}
+
 .archive .header {
   background-color: rgba(255, 255, 255, .8);
 }
@@ -4508,6 +4512,9 @@ picture {
     padding: 0 1.1rem;
     border-radius: 0.7rem;
   }
+  .article__inner {
+    margin-top: 16rem;
+  }
   .article .time-icon {
     width: 1.3rem;
     height: 1.3rem;
@@ -5635,6 +5642,9 @@ picture {
     padding: 0 2.9rem;
     border-radius: 0.7rem;
   }
+  .article__inner {
+    margin-top: 24rem;
+  }
   .article .time-icon {
     width: 2.4rem;
     height: 2.4rem;
@@ -5768,6 +5778,9 @@ picture {
     width: 32rem;
     height: 4.5rem;
     font-size: 2.8rem;
+  }
+  .detail-box {
+    margin-top: 8rem;
   }
   .tab {
     height: 4.6rem;
