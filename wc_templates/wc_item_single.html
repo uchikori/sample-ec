@@ -153,10 +153,10 @@
                                     <div class="item-code skuform__item-code">
                                         No.000
                                     </div>
-                                    <div class="item-name skuform__item-name">
+                                    <h1 class="item-name skuform__item-name">
                                         除菌ちゃん
                                         <span class="skuname"></span>
-                                    </div>
+                                    </h1>
                                     <dl class="item-option skuform__item-option"></dl>
                                     <div class="field skuform__field">
                                         <div class="zaikostatus">在庫あり</div>
@@ -164,7 +164,7 @@
                                     </div>
                                     <div class="c-box skuform__c-box">
                                         <div class="quantity">数量<input name="quant[]" type="text" class="skuquantity" value="1" onkeydown="if (event.keyCode == 13) {return false;}"></div>
-                                        <div class="cart-button"><input name="inCart" type="submit" class="skubutton" value="カートへ入れる"></div>
+                                        <div class="cart-button"><input name="inCart" type="submit" class="skubutton" value="&#xf07a; カートへ入れる"></div>
                                     </div>
                                 </div>
                                 <!-- end SKUループの処理 -->
@@ -172,7 +172,107 @@
                         </div>
                     </div>
                     <div class="detail-box">
-
+                        <ul class="tab-area">
+                            <h2 class="tab active">商品詳細説明</h2>
+                            <h2 class="tab">レビュー（2）</h2>
+                        </ul>
+                        <div class="content-area">
+                            <div class="item-description show content-item">
+                                <p>
+                                    この文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字です
+                                    <br>
+                                    この文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字です
+                                    <br>
+                                    <br>
+                                    特徴
+                                    <br>
+                                    この文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字です。
+                                    <br>
+                                    ・この文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字です
+                                    <br>
+                                    ・この文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字です
+                                    <br>
+                                    ・この文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字です
+                                </p>
+                            </div>
+                            <div class="content-item">
+                                <div id="comments" class="comments">
+                                    <div class="comment-respond">
+                                        <h3 class="reply-title">
+                                            この商品のレビューを投稿する
+                                            <small></small>
+                                        </h3>
+                                        <form action="/" method="post" id="comment-form" class="comment-form">
+                                            <p class="comment-form-comment">
+                                                <label for="comment">レビュー</label>
+                                                <textarea name="comment" id="comment" cols="45" rows="4" aria-required="true"></textarea>
+                                            </p>
+                                            <p class="comment-form-author">
+                                                <label for="author">名前</label>
+                                                <input id="author" name="author" type="text">
+                                            </p>
+                                            <div id="input-type-star">
+                                                <i class="star-on-png"></i>
+                                                <i class="star-on-png"></i>
+                                                <i class="star-on-png"></i>
+                                                <i class="star-on-png"></i>
+                                                <i class="star-on-png"></i>
+                                            </div>
+                                            <p class="form-submit">
+                                                <input id="submit" name="submit" type="submit" value="レビューを送信する">
+                                            </p>
+                                        </form>
+                                    </div>
+                                    <h3 class="comments__count">
+                                        1件のレビューがあります
+                                    </h3>
+                                    <ul class="comments__list">
+                                        <li class="comment even thread-even">
+                                            <div class="comment__meta">
+                                                <img src="../dist/images/dummy.png" alt="">
+                                                <ul class="comment__meta-list">
+                                                    <li class="comment__date">2021年2月12日11:12AM</li>
+                                                    <li class="comment__author-name">ショップオーナーのレビュー</li>
+                                                </ul>
+                                            </div>
+                                            <div class="comment__content">
+                                                <p>
+                                                    この文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字です・この文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字です・この文字はあたり文字ですこの文字はあたり文字です
+                                                </p>
+                                                <div class="star-rating">
+                                                    <i class="star-on-png star"></i>
+                                                    <i class="star-on-png star"></i>
+                                                    <i class="star-on-png star"></i>
+                                                    <i class="star-on-png star"></i>
+                                                    <i class="star-on-png star"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="comment even thread-even">
+                                            <div class="comment__meta">
+                                                <img src="../dist/images/dummy.png" alt="">
+                                                <ul class="comment__meta-list">
+                                                    <li class="comment__date">2021年2月12日11:12AM</li>
+                                                    <li class="comment__author-name">ショップオーナーのレビュー</li>
+                                                </ul>
+                                            </div>
+                                            <div class="comment__content">
+                                                <p>
+                                                    この文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字です・この文字はあたり文字ですこの文字はあたり文字ですこの文字はあたり文字です・この文字はあたり文字ですこの文字はあたり文字です
+                                                </p>
+                                                <div class="star-rating">
+                                                    <i class="star-on-png star"></i>
+                                                    <i class="star-on-png star"></i>
+                                                    <i class="star-on-png star"></i>
+                                                    <i class="star-on-png star"></i>
+                                                    <i class="star-on-png star"></i>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>

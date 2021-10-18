@@ -33,3 +33,19 @@
           siteMap.slideDown();
       }
   });
+
+  /**
+   * 
+   * タブ切り替え
+   * 
+   */
+   jQuery(function(){
+    let tabs = jQuery('.tab');
+    jQuery('.tab').on('click', function(){
+      jQuery('.active').removeClass('active');
+      jQuery(this).addClass('active');
+  
+      const index = tabs.index(this);
+      jQuery('.content-item').removeClass('show').eq(index).addClass('show');
+    });
+  });
