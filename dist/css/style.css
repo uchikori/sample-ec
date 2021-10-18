@@ -712,6 +712,18 @@ picture {
   position: relative;
 }
 
+.category-eiseikanri .header {
+  position: relative;
+}
+
+.category-kukan .header {
+  position: relative;
+}
+
+.category-jokin .header {
+  position: relative;
+}
+
 .header__inner {
   height: 100%;
   display: -webkit-box;
@@ -2866,11 +2878,13 @@ picture {
   color: #231815;
   font-weight: 300;
   line-height: 1;
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", ヒラギノ角ゴ Pro, "Hiragino Sans", ヒラギノ角ゴシック, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
 }
 
 .category-header__left span {
   font-size: 22px;
   font-weight: 700;
+  margin-right: 4px;
 }
 
 .category-header__center {
@@ -2885,6 +2899,7 @@ picture {
   color: #231815;
   font-weight: 300;
   line-height: 1;
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", ヒラギノ角ゴ Pro, "Hiragino Sans", ヒラギノ角ゴシック, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
 }
 
 .category-il {
@@ -2924,14 +2939,157 @@ picture {
   font-weight: 400;
   line-height: 1;
   margin-top: 8px;
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", ヒラギノ角ゴ Pro, "Hiragino Sans", ヒラギノ角ゴシック, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
 }
 
-.category-il article .tax {
+.tax {
   font-size: 13px;
   color: #3e3430;
   font-weight: 400;
   line-height: 1;
   font-style: normal;
+}
+
+/***商品記事ページスタイル***/
+.product-article {
+  margin-top: 24px;
+}
+
+.itempage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 80px;
+}
+
+.img-box {
+  width: 400px;
+  height: 280px;
+}
+
+.item-info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.item-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 80px;
+}
+
+.skuform {
+  width: 100%;
+}
+
+.skuform__item-name {
+  margin-top: 18px;
+}
+
+.skuform__field {
+  margin-top: 10px;
+  padding-bottom: 108px;
+}
+
+.skuform__c-box {
+  margin-top: 22px;
+}
+
+.item-code {
+  font-size: 14px;
+  color: #231815;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", ヒラギノ角ゴ Pro, "Hiragino Sans", ヒラギノ角ゴシック, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
+}
+
+.item-name {
+  font-size: 31px;
+  color: #231815;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.11em;
+}
+
+.field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 1px #231815;
+}
+
+.zaikostatus {
+  font-size: 16px;
+  color: #231815;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.11em;
+}
+
+.field_price {
+  font-size: 30px;
+  color: #231815;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.09em;
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", ヒラギノ角ゴ Pro, "Hiragino Sans", ヒラギノ角ゴシック, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
+}
+
+.c-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.c-box .quantity {
+  font-size: 18px;
+  color: #231815;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.22em;
+}
+
+.c-box .skuquantity {
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  border: solid 1px #231815;
+  text-align: center;
+  font-size: 20px;
+  color: #231815;
+  font-weight: 600;
+  margin: 0 30px 0 15px;
+}
+
+.c-box .skubutton {
+  width: 280px;
+  height: 45px;
+  font-size: 20px;
+  color: #231815;
+  font-weight: 600;
+  background-color: #78716e;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 12px;
 }
 
 /***お問い合わせページスタイル***/
@@ -4189,8 +4347,59 @@ picture {
     font-size: 1.9rem;
     margin-top: 0.8rem;
   }
-  .category-il article .tax {
+  .tax {
     font-size: 1.3rem;
+  }
+  .product-article {
+    margin-top: 2.4rem;
+  }
+  .itempage {
+    gap: 8rem;
+  }
+  .img-box {
+    width: 40rem;
+    height: 28rem;
+  }
+  .item-form {
+    gap: 8rem;
+  }
+  .skuform__item-name {
+    margin-top: 1.8rem;
+  }
+  .skuform__field {
+    margin-top: 1rem;
+    padding-bottom: 10.8rem;
+  }
+  .skuform__c-box {
+    margin-top: 2.2rem;
+  }
+  .item-code {
+    font-size: 1.4rem;
+  }
+  .item-name {
+    font-size: 3.1rem;
+  }
+  .zaikostatus {
+    font-size: 1.6rem;
+  }
+  .field_price {
+    font-size: 3rem;
+  }
+  .c-box .quantity {
+    font-size: 1.8rem;
+  }
+  .c-box .skuquantity {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    margin: 0 3rem 0 1.5em;
+  }
+  .c-box .skubutton {
+    width: 28rem;
+    height: 4.5rem;
+    font-size: 2rem;
+    border-radius: 1.2rem;
   }
   .contact-intro-sec {
     margin-top: 7.2rem;
@@ -5193,7 +5402,7 @@ picture {
     font-size: 3.2rem;
     margin-top: 1.6rem;
   }
-  .category-il article .tax {
+  .tax {
     font-size: 2rem;
   }
   .contact-intro-sec {

@@ -340,6 +340,15 @@ picture{
     .category-eisei &{
         position: relative;
     }
+    .category-eiseikanri &{
+        position: relative;
+    }
+    .category-kukan &{
+        position: relative;
+    }
+    .category-jokin &{
+        position: relative;
+    }
     @include pc{
         height: 8rem;
     }
@@ -829,280 +838,151 @@ picture{
 @import 'archive/_archive.scss';
 
 /***記事詳細ページスタイル***/
-.article{
-    &__inner{
-        margin-top: 160px;
-    }
-    .time-icon{
-        display: inline-block;
-        width: 13px;
-        height: 13px;
-        @include pc{
-            width: 1.3rem;
-            height: 1.3rem;
-        }
-        @include tab{
-            width: 2.4rem;
-            height: 2.4rem;
-        }
-    }
-    figure{
-        padding: 24px 0;
-        @include pc{
-            padding: 2.4rem 0;
-        }
-    }
-    h2{
-        @include font-style(30px, $color-white, 600);
-        font-family: $font;
-        line-height: 1.5;
-        letter-spacing: 0em;
-        background-color: $color-blue;
-        padding: 10px 16px;
-        border-radius: 10px;
-        margin: 24px 0;
-        @include pc{
-            font-size: 3rem;
-            padding: 1rem 1.6rem;
-            border-radius: 1rem;
-            margin: 2.4rem 0;
-        }
-        @include tab{
-            font-size: 4rem;
-            padding: 1rem 1.6rem;
-            border-radius: 1rem;
-            margin: 4rem 0;
-        }
-    }
-    h3{
-        @include font-style(24px, $color-black, 600);
-        font-family: $font;
-        line-height: 1.5;
-        letter-spacing: 0em;
-        padding: 10px 16px;
-        border-left: solid 6px $color-blue;
-        border-bottom: solid 3px $color-blue;
-        margin: 24px 0;
-        @include pc{
-            font-size: 2.4rem;
-            padding: 1rem 1.6rem;
-            margin: 4rem 0;
-        }
-        @include tab{
-            font-size: 3.6rem;
-            padding: 1rem 1.6rem;
-            margin: 2.4rem 0;
-        }
-    }
-    h4{
-        @include font-style(20px, $color-blue, 600);
-        font-family: $font;
-        line-height: 1.5;
-        letter-spacing: 0em;
-        padding: 10px 16px;
-        margin: 24px 0;
-        @include pc{
-            font-size: 20rem;
-            padding: 1rem 1.6rem;
-            margin: 4rem 0;
-        }
-        @include tab{
-            font-size: 3.2rem;
-            padding: 1rem 1.6rem;
-            margin: 4rem 0;
-        }
-    }
-    p{
-        @include font-style(18px, $color-blue2, 600);
-        line-height: 2;
-        letter-spacing: 0em;
-        @include pc{
-            font-size: 1.8rem;
-        }
-        @include tab{
-            font-size: 2.8rem;
-        }
-    }
-}
+@import 'single/_single.scss';
+
 /***商品カテゴリーページスタイル***/
-.category-main-visual-sec{
-    margin-top: 40px;
+@import 'archive/_category.scss';
+
+/***商品記事ページスタイル***/
+.product-article{
+    margin-top: 24px;
     @include pc{
-        margin-top: 4rem;
+        margin-top: 2.4rem;
     }
-    @include tab{
-        margin-top: 3rem;
+}
+.itempage{
+    display: flex;
+    gap: 80px;
+    @include pc{
+        gap: 8rem;
     }
-    &__image{
-        width: 960px;
-        height: 350px;
-        margin: 0 auto;
+}
+.img-box{
+    width: 400px;
+    height: 280px;
+    @include pc{
+        width: 40rem;
+        height: 28rem;
+    }
+}
+.item-info{
+    flex-grow: 1;
+}
+.item-form{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    @include pc{
+        gap: 8rem;
+    }
+}
+.skuform{
+    width: 100%;
+    &__item-name{
+        margin-top: 18px;
         @include pc{
-            width: 96rem;
-            height: 35rem;
-        }
-        @include tab{
-            width: 100%;
+            margin-top: 1.8rem;
         }
     }
-    &__h1-title{
-        margin-top: 20px;
+    &__field{
+        margin-top: 10px;
+        padding-bottom: 108px;
         @include pc{
-            margin-top: 2rem;
+            margin-top: 1rem;
+            padding-bottom: 10.8rem;
         }
-        @include tab{
-            text-align: center;
-            margin-top: 4rem;
+    }
+    &__c-box{
+        margin-top: 22px;
+        @include pc{
+            margin-top: 2.2rem;
         }
     }
 }
-.item-list{
-    margin-top: 53px;
-    margin-bottom: 50px;
+.item-code{
+    @include font-style(14px, $color-black, 400);
+    line-height: 1;
+    letter-spacing: 0.09em;
+    font-family: $font-h;
     @include pc{
-        margin-top: 5.3rem;
-        margin-bottom: 5rem;
-    }
-    @include tab{
-        margin-top: 9.5rem;
-        margin-bottom: 8.7rem;
-    }
-    .pagination{
-        margin-top: 78px;
-        @include tab{
-            margin-top: 2.8rem;
-        }
+        font-size: 1.4rem;
     }
 }
-.category-header{
+.item-name{
+    @include font-style(31px, $color-black, 600);
+    line-height: 1;
+    letter-spacing: 0.11em;
+    @include pc{
+        font-size: 3.1rem;
+    }
+}
+.field{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include tab{
-        justify-content: center;
-        position: relative;
-    }
-    &__left{
-        @include font-style(14px, $color-black, 300);
-        line-height: 1;
-        @include pc{
-            font-size: 1.4rem;
-        }
-        @include tab{
-            font-size: 2rem;
-            position: absolute;
-            left: 0;
-            top: 220%;
-        }
-        span{
-            font-size: 22px;
-            font-weight: 700;
-            @include pc{
-                font-size: 2.2rem;
-            }
-            @include tab{
-                font-size: 2.5rem;
-            }
-        }
-    }
-    &__center{
-        @include font-style(27px, $color-black, 600);
-        line-height: 1;
-        @include pc{
-            font-size: 2.7rem;
-        }
-        @include tab{
-            font-size: 3.6rem;
-        }
-    }
-    &__right{
-        @include font-style(14px, $color-black, 300);
-        line-height: 1;
-        @include pc{
-            font-size: 1.4rem;
-        }
-        @include tab{
-            font-size: 2rem;
-            position: absolute;
-            right: 0;
-            top: 220%;
-        }
-    }
+    border-bottom: solid 1px $color-black;
 }
-.category-il{
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    justify-content: flex-start;
-    padding-top: 38px;
-    flex-wrap: wrap;
+.zaikostatus{
+    @include font-style(16px, $color-black, 300);
+    line-height: 1;
+    letter-spacing: 0.11em;
     @include pc{
-        gap: 2rem;
-        padding-top: 3.8rem;
+        font-size: 1.6rem;
     }
-    @include tab{
-        padding-top: 10.2rem;
-        gap: 3rem;
+}
+.field_price{
+    @include font-style(30px, $color-black, 300);
+    line-height: 1;
+    letter-spacing: 0.09em;
+    font-family: $font-h;
+    @include pc{
+        font-size: 3rem;
     }
-    article{
-        width: 225px;
+}
+.c-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .quantity{
+        @include font-style(18px, $color-black, 300);
+        line-height: 1;
+        letter-spacing: 0.22em;
         @include pc{
-            width: 22.5rem;
+            font-size: 1.8rem;
         }
-        @include tab{
-            width: 25.5rem;
-            margin-bottom: 3.4rem;
+    }
+    .skuquantity{
+        width: 45px;
+        height: 45px;
+        border-radius: 5px;
+        border: solid 1px $color-black;
+        text-align: center;
+        @include font-style(20px, $color-black, 600);
+        margin: 0 30px 0 15px;
+        @include pc{
+            width: 4.5rem;
+            height: 4.5rem;
+            border-radius: 0.5rem;
+            font-size: 2rem;
+            margin: 0 3rem 0 1.5em;
         }
-        .itemimg{
-            width: 100%;
-            height: 203px;
-            @include pc{
-                height: 20.3rem;
-            }
-            @include tab{
-                height: 23rem;
-            }
-        }
-        .itemname{
-            @include font-style(20px, $color-black, 400);
-            line-height: 1;
-            margin-top: 13px;
-            @include pc{
-                font-size: 2rem;
-                margin-top: 1.3rem;
-            }
-            @include tab{
-                font-size: 3rem;
-                margin-top: 1.7rem;
-            }
-        }
-        .itemprice{
-            @include font-style(19px, $color-price, 400);
-            line-height: 1;
-            margin-top: 8px;
-            @include pc{
-                font-size: 1.9rem;
-                margin-top: 0.8rem;
-            }
-            @include tab{
-                font-size: 3.2rem;
-                margin-top: 1.6rem;
-            }
-        }
-        .tax{
-            @include font-style(13px, $color-price, 400);
-            line-height: 1;
-            font-style: normal;
-            @include pc{
-                font-size: 1.3rem;
-            }
-            @include tab{
-                font-size: 2rem;
-            }
+    }
+    .skubutton{
+        width: 280px;
+        height: 45px;
+        @include font-style(20px, $color-black, 600);
+        background-color: #78716e;
+        color: $color-white;
+        text-align: center;
+        border-radius: 12px;
+        @include pc{
+            width: 28rem;
+            height: 4.5rem;
+            font-size: 2rem;
+            border-radius: 1.2rem;
         }
     }
 }
-
 /***お問い合わせページスタイル***/
 @import 'page/_contact.scss';
 

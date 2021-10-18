@@ -1,0 +1,95 @@
+.article{
+    &__inner{
+        margin-top: 160px;
+    }
+    .time-icon{
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        @include pc{
+            width: 1.3rem;
+            height: 1.3rem;
+        }
+        @include tab{
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+    figure{
+        padding: 24px 0;
+        @include pc{
+            padding: 2.4rem 0;
+        }
+    }
+    h2{
+        @include font-style(30px, $color-white, 600);
+        font-family: $font;
+        line-height: 1.5;
+        letter-spacing: 0em;
+        background-color: $color-blue;
+        padding: 10px 16px;
+        border-radius: 10px;
+        margin: 24px 0;
+        @include pc{
+            font-size: 3rem;
+            padding: 1rem 1.6rem;
+            border-radius: 1rem;
+            margin: 2.4rem 0;
+        }
+        @include tab{
+            font-size: 4rem;
+            padding: 1rem 1.6rem;
+            border-radius: 1rem;
+            margin: 4rem 0;
+        }
+    }
+    h3{
+        @include font-style(24px, $color-black, 600);
+        font-family: $font;
+        line-height: 1.5;
+        letter-spacing: 0em;
+        padding: 10px 16px;
+        border-left: solid 6px $color-blue;
+        border-bottom: solid 3px $color-blue;
+        margin: 24px 0;
+        @include pc{
+            font-size: 2.4rem;
+            padding: 1rem 1.6rem;
+            margin: 4rem 0;
+        }
+        @include tab{
+            font-size: 3.6rem;
+            padding: 1rem 1.6rem;
+            margin: 2.4rem 0;
+        }
+    }
+    h4{
+        @include font-style(20px, $color-blue, 600);
+        font-family: $font;
+        line-height: 1.5;
+        letter-spacing: 0em;
+        padding: 10px 16px;
+        margin: 24px 0;
+        @include pc{
+            font-size: 20rem;
+            padding: 1rem 1.6rem;
+            margin: 4rem 0;
+        }
+        @include tab{
+            font-size: 3.2rem;
+            padding: 1rem 1.6rem;
+            margin: 4rem 0;
+        }
+    }
+    p{
+        @include font-style(18px, $color-blue2, 600);
+        line-height: 2;
+        letter-spacing: 0em;
+        @include pc{
+            font-size: 1.8rem;
+        }
+        @include tab{
+            font-size: 2.8rem;
+        }
+    }
+}
