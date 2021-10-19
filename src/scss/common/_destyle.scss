@@ -254,12 +254,14 @@ textarea {
   /* 1 */
   -webkit-appearance: checkbox;
   appearance: checkbox;
+  // display: none;
 }
 
 [type="radio"] {
   /* 1 */
   -webkit-appearance: radio;
   appearance: radio;
+  // display: none;
 }
 
 /**

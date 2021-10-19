@@ -183,16 +183,13 @@
         line-height: 25px;
         display: inline-block;
         letter-spacing: 0.17em;
-        margin-left: 5px;
         @include pc{
             font-size: 1.7rem;
             line-height: 2.5rem;
-            margin-left: 0.5rem;
         }
         @include tab{
             font-size: 2.8rem;
             line-height: 3.5rem;
-            margin-left: 1.5rem;
         }
     }
     .input-message{
@@ -281,27 +278,13 @@
             padding: 0.8rem 1.6rem;
         }
     }
-    input[type="radio"]{
-        width: 25px;
-        height: 25px;
-        border: solid 1px $color-black;
-        border-radius: 100%;
-        background-color: $color-white;
-        @include pc{
-            width: 2.5rem;
-            height: 2.5rem;
-        }
-        @include tab{
-            width: 3.5rem;
-            height: 3.5rem;
-        }
-    }
+
     input[type="checkbox"]{
         width: 25px;
         height: 25px;
         border: solid 1px $color-black;
-        border-radius: 100%;
         background-color: $color-white;
+        display: inline-block;
         @include pc{
             width: 2.5rem;
             height: 2.5rem;

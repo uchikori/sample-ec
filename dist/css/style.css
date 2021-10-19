@@ -555,6 +555,15 @@ em {
   margin-left: 13px;
 }
 
+input[type="radio"] {
+  width: 25px;
+  height: 25px;
+  border: solid 1px #231815;
+  border-radius: 100%;
+  background-color: #ffffff;
+  margin-right: 5px;
+}
+
 .logo {
   display: block;
 }
@@ -3088,7 +3097,6 @@ em {
   line-height: 25px;
   display: inline-block;
   letter-spacing: 0.17em;
-  margin-left: 5px;
 }
 
 .mw_wp_form_input .input-message .input-area {
@@ -3151,20 +3159,12 @@ em {
   padding: 7px 16px;
 }
 
-.mw_wp_form_input input[type="radio"] {
-  width: 25px;
-  height: 25px;
-  border: solid 1px #231815;
-  border-radius: 100%;
-  background-color: #ffffff;
-}
-
 .mw_wp_form_input input[type="checkbox"] {
   width: 25px;
   height: 25px;
   border: solid 1px #231815;
-  border-radius: 100%;
   background-color: #ffffff;
+  display: inline-block;
 }
 
 .mw_wp_form_input textarea {
@@ -3789,22 +3789,52 @@ em {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  gap: 12px;
+  margin-bottom: 24px;
 }
 
-.total-amount__w {
+.total-amount th {
+  padding: 11px 6px;
+}
+
+.total-amount td {
+  padding: 11px 6px;
+}
+
+.total-amount__h {
   font-size: 21px;
   color: #231815;
   font-weight: 600;
   line-height: 1;
+  vertical-align: middle;
 }
 
-.total-amount__n {
+.total-amount__d {
   font-size: 30px;
   color: #231815;
   font-weight: 600;
   line-height: 1;
   font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", ヒラギノ角ゴ Pro, "Hiragino Sans", ヒラギノ角ゴシック, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.total-amount .other-amount__h {
+  text-align: left;
+  font-size: 16px;
+  color: #231815;
+  font-weight: 300;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.total-amount .other-amount__d {
+  text-align: right;
+  font-size: 20px;
+  color: #231815;
+  font-weight: 300;
+  line-height: 1;
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", ヒラギノ角ゴ Pro, "Hiragino Sans", ヒラギノ角ゴシック, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
+  vertical-align: middle;
 }
 
 .send {
@@ -3814,7 +3844,34 @@ em {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.send__cart-page {
   margin-top: 27px;
+}
+
+.send__loginform {
+  margin-top: 15px;
+  margin-bottom: 26px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.send__non-customerform {
+  gap: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.send__derivery-page {
+  gap: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
 }
 
 .page-template-uscescart input[type="submit"] {
@@ -3869,31 +3926,24 @@ em {
   margin-bottom: 12px;
 }
 
-.non-customer-info-title {
+.non-customer-info-title, .at_exp_text {
   font-size: 20px;
   color: #231815;
   font-weight: 600;
-  margin-top: 54px;
-  margin-bottom: 12px;
+  margin-top: 24px;
+  margin-bottom: 14px;
 }
 
 .customer_loginform {
   border-bottom: solid 1px #231815;
 }
 
-.customer_loginform .send {
-  margin-top: 15px;
-  margin-bottom: 26px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .customer_form {
   width: 100%;
+}
+
+.customer_form em {
+  margin-left: 0;
 }
 
 .customer_form th {
@@ -3907,10 +3957,42 @@ em {
 
 .customer_form td {
   padding: 11px 0;
+  font-size: 16px;
+  color: #231815;
+  font-weight: 500;
+  line-height: 1;
   vertical-align: middle;
 }
 
-.customer_form input {
+.customer_form dt {
+  padding: 11px 0;
+}
+
+.customer_form dd {
+  margin-left: 30px;
+  font-size: 14px;
+  color: #6c8485;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.customer_form select {
+  padding: 0 40px;
+  height: 40px;
+  font-size: 16px;
+  color: #231815;
+  font-weight: 600;
+  line-height: 40px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: solid 1px #bbb3b1;
+  background-image: url("../images/svg/arrow-bottom-black.png");
+  background-position: center right 10px;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.customer_form input[type="text"] {
   font-size: 16px;
   color: #231815;
   font-weight: 500;
@@ -3919,6 +4001,31 @@ em {
   height: 40px;
   border: solid 1px #bbb3b1;
   border-radius: 4px;
+  padding: 0 16px;
+}
+
+.customer_form input[type="password"] {
+  font-size: 16px;
+  color: #231815;
+  font-weight: 500;
+  line-height: 1;
+  width: 600px;
+  height: 40px;
+  border: solid 1px #bbb3b1;
+  border-radius: 4px;
+  padding: 0 16px;
+}
+
+.customer_form textarea {
+  font-size: 16px;
+  color: #231815;
+  font-weight: 500;
+  line-height: 1;
+  width: 600px;
+  height: 130px;
+  border: solid 1px #bbb3b1;
+  border-radius: 4px;
+  padding: 16px;
 }
 
 .non-customer_inputform {
@@ -3944,8 +4051,12 @@ em {
 }
 
 .non-customer_inputform td {
-  padding: 11px 0;
+  padding: 12.5px 0;
   vertical-align: middle;
+  font-size: 16px;
+  color: #d8d6d6;
+  font-weight: 300;
+  line-height: 1;
 }
 
 .non-customer_inputform .name_td input {
@@ -3961,16 +4072,33 @@ em {
   height: 40px;
   border: solid 1px #bbb3b1;
   border-radius: 4px;
+  padding: 0 16px;
 }
 
 .non-customer_inputform #zipcode {
   width: 160px;
 }
 
-.non-customer_inputform #customer_pref {
+.non-customer_inputform select {
+  width: 140px;
+  height: 40px;
+  font-size: 16px;
+  color: #231815;
+  font-weight: 600;
+  line-height: 40px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: solid 1px #bbb3b1;
+  background-image: url("../images/svg/arrow-bottom-black.png");
+  background-position: center right 10px;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.non-customer_inputform input[type="button"] {
   width: 130px;
   height: 40px;
-  font-size: 20px;
+  font-size: 16px;
   color: #231815;
   font-weight: 600;
   line-height: 40px;
@@ -3980,17 +4108,176 @@ em {
   border: solid 1px #bbb3b1;
 }
 
-.non-customer_inputform input[type="button"] {
-  width: 130px;
+.agree_member_area .at_cont_text {
+  width: 100%;
+  height: 200px;
+  border: solid 1px #d8d6d6;
+  padding: 16px;
+  margin: 12px 0;
+  font-size: 16px;
+  color: #231815;
+  font-weight: 300;
+  line-height: 2.4;
+  border-radius: 4px;
+}
+
+.agree_member_area .at_check_area {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.agree_member_area .at_check_area input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #231815;
+  background-color: #ffffff;
+  display: inline-block;
+}
+
+.agree_member_area .at_check_area label {
+  font-size: 16px;
+  color: #231815;
+  font-weight: 300;
+}
+
+.derivery-form {
+  margin-top: 80px;
+}
+
+.derivery-form__table-wrap {
+  padding: 23px 0;
+  border-top: solid 1px #231815;
+}
+
+.derivery-form__table-wrap:nth-child(1) {
+  border-top: none;
+}
+
+#delivery_flag th {
+  vertical-align: top;
+  padding: 16px 0;
+}
+
+#delivery_table {
+  display: none;
+}
+
+#notes_table th {
+  vertical-align: top;
+  padding: 16px 0;
+}
+
+.point-form {
+  padding-bottom: 20px;
+  border-bottom: solid 1px #231815;
+  margin-bottom: 24px;
+}
+
+#point_table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#point_table tr {
+  display: inline-block;
+  margin-right: 55px;
+}
+
+#point_table tr:last-child {
+  margin-right: 0;
+}
+
+#point_table th {
+  vertical-align: middle;
+  padding-right: 34px;
+  font-size: 16px;
+  color: #231815;
+  font-weight: 500;
+}
+
+#point_table td {
+  vertical-align: middle;
+  font-size: 20px;
+  color: #231815;
+  font-weight: normal;
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", ヒラギノ角ゴ Pro, "Hiragino Sans", ヒラギノ角ゴシック, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", Meiryo, sans-serif;
+}
+
+#point_table input[type="submit"] {
+  background-color: #5fc1c7;
+}
+
+#point_table input[type="text"] {
+  font-size: 20px;
+  color: #231815;
+  font-weight: normal00;
+  line-height: 1;
+  width: 100px;
   height: 40px;
+  border: solid 1px #bbb3b1;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#confirm_table {
+  width: 100%;
+  font-size: 16px;
+  color: #231815;
+  font-weight: 500;
+  line-height: 1;
+  margin: 40px 0;
+}
+
+#confirm_table h3 {
   font-size: 20px;
   color: #231815;
   font-weight: 600;
-  line-height: 40px;
-  text-align: center;
-  background-color: transparent;
-  border-radius: 4px;
-  border: solid 1px #bbb3b1;
+  line-height: 1;
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 37px;
+}
+
+#confirm_table h3:after {
+  content: "";
+  display: inline-block;
+  width: 800px;
+  height: 1px;
+  background-color: #d8d6d6;
+}
+
+#confirm_table th {
+  width: 18.3%;
+  vertical-align: middle;
+  padding: 25px 0;
+}
+
+#confirm_table td {
+  vertical-align: middle;
+}
+
+#purchace_form {
+  padding-top: 26px;
 }
 
 .cta-sec {
@@ -4240,6 +4527,11 @@ em {
   }
   em {
     font-size: 1.5rem;
+  }
+  input[type="radio"] {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
   }
   .title {
     font-size: 3rem;
@@ -5074,7 +5366,6 @@ em {
   .mw_wp_form_input .mwform-radio-field-text {
     font-size: 1.7rem;
     line-height: 2.5rem;
-    margin-left: 0.5rem;
   }
   .mw_wp_form_input .input-message .form-label {
     margin-top: 1.1rem;
@@ -5099,10 +5390,6 @@ em {
     width: 67rem;
     font-size: 1.7rem;
     padding: 0.7rem 1.6rem;
-  }
-  .mw_wp_form_input input[type="radio"] {
-    width: 2.5rem;
-    height: 2.5rem;
   }
   .mw_wp_form_input input[type="checkbox"] {
     width: 2.5rem;
@@ -5308,14 +5595,41 @@ em {
   .currency_code {
     font-size: 1.4rem;
   }
-  .total-amount__w {
+  .total-amount {
+    margin-bottom: 2.4rem;
+  }
+  .total-amount th {
+    padding: 1.1rem 0.6rem;
+  }
+  .total-amount td {
+    padding: 1.1rem 0.6rem;
+  }
+  .total-amount__h {
     font-size: 2.1rem;
   }
-  .total-amount__n {
+  .total-amount__d {
     font-size: 3rem;
   }
-  .send {
+  .total-amount .other-amount__h {
+    font-size: 1.6rem;
+  }
+  .total-amount .other-amount__d {
+    font-size: 2rem;
+  }
+  .send__cart-page {
     margin-top: 2.7rem;
+  }
+  .send__loginform {
+    margin-top: 1.5rem;
+    margin-bottom: 2.6rem;
+  }
+  .send__non-customerform {
+    gap: 6rem;
+    margin-top: 5rem;
+  }
+  .send__derivery-page {
+    gap: 6rem;
+    margin-bottom: 2rem;
   }
   .page-template-uscescart input[type="submit"] {
     font-size: 2.8rem;
@@ -5343,26 +5657,56 @@ em {
     margin-top: 5,4rem;
     margin-bottom: 1.2rem;
   }
-  .non-customer-info-title {
+  .non-customer-info-title, .at_exp_text {
     font-size: 2rem;
-    margin-top: 5,4rem;
+    margin-top: 2.6rem;
     margin-bottom: 1.2rem;
-  }
-  .customer_loginform .send {
-    margin-top: 1.5rem;
-    margin-bottom: 2.6rem;
   }
   .customer_form th {
     font-size: 1.6rem;
   }
-  .customer_form input {
+  .customer_form td {
+    font-size: 1.6rem;
+    padding: 1.1rem 0;
+  }
+  .customer_form dt {
+    padding: 1.1rem 0;
+  }
+  .customer_form select {
+    font-size: 1.4rem;
+    padding: 0 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    border-radius: 0.4rem;
+    background-position: center right 2.4rem;
+  }
+  .customer_form input[type="text"] {
     font-size: 1.6rem;
     width: 60rem;
     height: 4rem;
     border-radius: 0.4rem;
+    padding: 0 1.6rem;
+  }
+  .customer_form input[type="password"] {
+    font-size: 1.6rem;
+    width: 60rem;
+    height: 4rem;
+    border-radius: 0.4rem;
+    padding: 0 1.6rem;
+  }
+  .customer_form textarea {
+    font-size: 1.6rem;
+    width: 60rem;
+    height: 13rem;
+    border-radius: 0.4rem;
+    padding: 1.6rem;
   }
   .non-customer_inputform th {
     font-size: 1.6rem;
+  }
+  .non-customer_inputform td {
+    font-size: 1.6rem;
+    padding: 1.25rem 0;
   }
   .non-customer_inputform .name_td input {
     width: 28rem;
@@ -5372,23 +5716,86 @@ em {
     width: 60rem;
     height: 4rem;
     border-radius: 0.4rem;
+    padding: 0 1.6rem;
   }
   .non-customer_inputform #zipcode {
     width: 16rem;
   }
-  .non-customer_inputform #customer_pref {
-    font-size: 2.5rem;
-    width: 13rem;
+  .non-customer_inputform select {
+    font-size: 1.4rem;
+    width: 10rem;
     height: 4rem;
     line-height: 4rem;
-    border-radius: 10.4rem;
+    border-radius: 0.4rem;
+    background-position: center right 2.4rem;
   }
   .non-customer_inputform input[type="button"] {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     width: 13rem;
     height: 4rem;
     line-height: 4rem;
-    border-radius: 10.4rem;
+    border-radius: 0.4rem;
+  }
+  .agree_member_area .at_cont_text {
+    height: 20rem;
+    padding: 1.6rem;
+    margin: 1.2rem 0;
+    font-size: 1.6rem;
+    border-radius: 0.4rem;
+  }
+  .agree_member_area .at_check_area input[type="checkbox"] {
+    width: 20rem;
+    height: 20rem;
+  }
+  .agree_member_area .at_check_area label {
+    padding: 1.6rem;
+  }
+  .derivery-form {
+    margin-top: 8rem;
+  }
+  .derivery-form__table-wrap {
+    padding-bottom: 2.3rem;
+  }
+  #delivery_flag th {
+    padding: 1.6rem 0;
+  }
+  .point-form {
+    padding-bottom: 2rem;
+    margin-bottom: 2.4rem;
+  }
+  #point_table tr {
+    margin-right: 5.5rem;
+  }
+  #point_table th {
+    padding-right: 3.4rem;
+    font-size: 1.6rem;
+  }
+  #point_table td {
+    font-size: 2rem;
+  }
+  #point_table input[type="text"] {
+    font-size: 2rem;
+    width: 10rem;
+    height: 4rem;
+    background-repeat: 0.4rem;
+  }
+  #confirm_table {
+    font-size: 1.6rem;
+    margin: 4rem 0;
+  }
+  #confirm_table h3 {
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    margin-top: 3.7rem;
+  }
+  #confirm_table h3:after {
+    width: 80rem;
+  }
+  #confirm_table th {
+    padding: 2.5rem 0;
+  }
+  #purchace_form {
+    padding-top: 2.6rem;
   }
   .cta-sec {
     padding-top: 5.5rem;
@@ -5479,6 +5886,11 @@ em {
   }
   em {
     font-size: 2.5rem;
+  }
+  input[type="radio"] {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 1.2rem;
   }
   .title {
     width: 54rem;
@@ -6390,7 +6802,6 @@ em {
   .mw_wp_form_input .mwform-radio-field-text {
     font-size: 2.8rem;
     line-height: 3.5rem;
-    margin-left: 1.5rem;
   }
   .mw_wp_form_input .input-message {
     margin-bottom: 0.5rem;
@@ -6409,10 +6820,6 @@ em {
     width: 100%;
     font-size: 2.8rem;
     padding: 0.8rem 1.6rem;
-  }
-  .mw_wp_form_input input[type="radio"] {
-    width: 3.5rem;
-    height: 3.5rem;
   }
   .mw_wp_form_input input[type="checkbox"] {
     width: 3.5rem;
@@ -6616,14 +7023,19 @@ em {
     line-height: 1;
     padding: 1.6rem 0;
   }
-  .total-amount__w {
-    font-size: 2.4rem;
+  .total-amount__h {
+    font-size: 2.8rem;
   }
-  .total-amount__n {
+  .total-amount__d {
     font-size: 5.2rem;
   }
+  .total-amount .other-amount__h {
+    font-size: 2.5rem;
+  }
+  .total-amount .other-amount__d {
+    font-size: 3.6rem;
+  }
   .send {
-    margin-top: 6rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -6633,19 +7045,31 @@ em {
         -ms-flex-align: center;
             align-items: center;
   }
+  .send__cart-page {
+    margin-top: 6rem;
+  }
+  .send__loginform {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+  .send__non-customerform {
+    margin-top: 6rem;
+    gap: 3.2rem;
+  }
+  .send__derivery-page {
+    gap: 3.2rem;
+    margin-top: 2.6rem;
+    margin: 0;
+  }
   .customer-info-title {
     font-size: 3.6rem;
     margin-top: 6rem;
     margin-bottom: 2.6rem;
   }
-  .non-customer-info-title {
+  .non-customer-info-title, .at_exp_text {
     font-size: 3.6rem;
-    margin-top: 6rem;
-    margin-bottom: 2.6rem;
-  }
-  .customer_loginform .send {
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-top: 3.8rem;
+    margin-bottom: 2.5rem;
   }
   .customer_form tr {
     display: block;
@@ -6661,10 +7085,30 @@ em {
   }
   .customer_form td {
     display: block;
+    font-size: 2.8rem;
   }
-  .customer_form input {
+  .customer_form dt {
+    display: block;
+  }
+  .customer_form select {
+    font-size: 2.5rem;
+    width: 28rem;
+    height: 5rem;
+    line-height: 5rem;
+  }
+  .customer_form input[type="text"] {
     width: 100%;
     height: 5rem;
+    font-size: 2.8rem;
+  }
+  .customer_form input[type="password"] {
+    width: 100%;
+    height: 5rem;
+    font-size: 2.8rem;
+  }
+  .customer_form textarea {
+    width: 100%;
+    height: 54rem;
     font-size: 2.8rem;
   }
   .non-customer_inputform tr {
@@ -6681,11 +7125,85 @@ em {
   }
   .non-customer_inputform td {
     display: block;
+    font-size: 2.8rem;
+    padding: 1.2rem 0;
+    margin-bottom: 2rem;
+  }
+  .non-customer_inputform td:last-child {
+    margin-bottom: 0;
+  }
+  .non-customer_inputform .name_td input {
+    width: 51rem;
   }
   .non-customer_inputform input {
     width: 100%;
     height: 5rem;
     font-size: 2.8rem;
+  }
+  .non-customer_inputform #zipcode {
+    width: 28rem;
+  }
+  .non-customer_inputform select {
+    font-size: 2.5rem;
+    width: 28rem;
+    height: 5rem;
+    line-height: 5rem;
+    padding-left: 1.6rem;
+  }
+  .non-customer_inputform input[type="button"] {
+    font-size: 2.5rem;
+    width: 24rem;
+    height: 5rem;
+    line-height: 5rem;
+  }
+  .agree_member_area .at_cont_text {
+    width: 100%;
+    height: 40rem;
+    font-size: 2.8rem;
+  }
+  .agree_member_area .at_check_area input[type="checkbox"] {
+    width: 4rem;
+    height: 4rem;
+  }
+  .agree_member_area .at_check_area label {
+    font-size: 2.8rem;
+  }
+  .point-form {
+    padding-bottom: 4rem;
+  }
+  #point_table tr {
+    margin-right: 0;
+    display: table-row;
+  }
+  #point_table th {
+    font-size: 2.5rem;
+  }
+  #point_table td {
+    font-size: 3.6rem;
+    text-align: right;
+    padding: 1.1rem 0;
+  }
+  #point_table input[type="text"] {
+    font-size: 3.6rem;
+    height: 5rem;
+  }
+  #confirm_table {
+    font-size: 2.8rem;
+  }
+  #confirm_table h3 {
+    font-size: 3.6rem;
+  }
+  #confirm_table h3:after {
+    width: 30rem;
+  }
+  #confirm_table th {
+    width: 100%;
+    display: block;
+    padding: 2rem 0 1rem 0;
+  }
+  #confirm_table td {
+    display: block;
+    padding: 1rem 0 2rem 0;
   }
   .cta-sec {
     padding-top: 8rem;

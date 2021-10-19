@@ -112,6 +112,24 @@ em{
         font-size: 2.5rem;
     }
 }
+input[type="radio"]{
+    width: 25px;
+    height: 25px;
+    border: solid 1px $color-black;
+    border-radius: 100%;
+    background-color: $color-white;
+    margin-right: 5px;
+    @include pc{
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 0.5rem;
+    }
+    @include tab{
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-right: 1.2rem;
+    }
+}
 //-------------------------------
 //  Components
 //-------------------------------
@@ -1179,21 +1197,39 @@ em{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 12px;
-    &__w{
+    margin-bottom: 24px;
+    @include pc{
+        margin-bottom: 2.4rem;
+    }
+    th{
+        padding: 11px 6px;
+        @include pc{
+            padding: 1.1rem 0.6rem;
+        }
+    }
+    td{
+        padding: 11px 6px;
+        @include pc{
+            padding: 1.1rem 0.6rem;
+        }
+    }
+    &__h{
         @include font-style(21px, $color-black, 600);
         line-height: 1;
+        vertical-align: middle;
         @include pc{
             font-size: 2.1rem;
         }
         @include tab{
-            font-size: 2.4rem;
+            font-size: 2.8rem;
         }
     }
-    &__n{
+    &__d{
         @include font-style(30px, $color-black, 600);
         line-height: 1;
         font-family: $font-h;
+        vertical-align: middle;
+        text-align: right;
         @include pc{
             font-size: 3rem;
         }
@@ -1201,19 +1237,90 @@ em{
             font-size: 5.2rem;
         }
     }
+    .other-amount{
+        &__h{
+            text-align: left;
+            @include font-style(16px, $color-black, 300);
+            line-height: 1;
+            vertical-align: middle;
+            @include pc{
+                font-size: 1.6rem;
+            }
+            @include tab{
+                font-size: 2.5rem;
+            }
+        }
+        &__d{
+            text-align: right;
+            @include font-style(20px, $color-black, 300);
+            line-height: 1;
+            font-family: $font-h;
+            vertical-align: middle;
+            @include pc{
+                font-size: 2rem;
+            }
+            @include tab{
+                font-size: 3.6rem;
+            }
+        }
+    }
 }
 .send{
     display: flex;
     justify-content: space-between;
-    margin-top: 27px;
-    @include pc{
-        margin-top: 2.7rem;
-    }
     @include tab{
-        margin-top: 6rem;
         flex-direction: column;
         gap: 3.2rem;
         align-items: center
+    }
+    &__cart-page{
+        margin-top: 27px;
+        @include pc{
+            margin-top: 2.7rem;
+        }
+        @include tab{
+            margin-top: 6rem;
+        }
+    }
+    &__loginform{
+        margin-top: 15px;
+        margin-bottom: 26px;
+        justify-content: center;
+        @include pc{
+            margin-top: 1.5rem;
+            margin-bottom: 2.6rem;
+        }
+        @include tab{
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+    &__non-customerform{
+        gap: 60px;
+        justify-content: center;
+        margin-top: 50px;
+        @include pc{
+            gap: 6rem;
+            margin-top: 5rem;
+        }
+        @include tab{
+            margin-top: 6rem;
+            gap: 3.2rem;
+        }
+    }
+    &__derivery-page{
+        gap: 60px;
+        justify-content: center;
+        margin-bottom: 20px;
+        @include pc{
+            gap: 6rem;
+            margin-bottom: 2rem;
+        }
+        @include tab{
+            gap: 3.2rem;
+            margin-top: 2.6rem;
+            margin: 0;
+        }
     }
 }
 .page-template-uscescart{
@@ -1290,40 +1397,29 @@ em{
         margin-bottom: 2.6rem;
     }
 }
-.non-customer-info-title{
+.non-customer-info-title,.at_exp_text{
     @include font-style(20px, $color-black, 600);
-    margin-top: 54px;
-    margin-bottom: 12px;
+    margin-top: 24px;
+    margin-bottom: 14px;
     @include pc{
         font-size: 2rem;
-        margin-top: 5,4rem;
+        margin-top: 2.6rem;
         margin-bottom: 1.2rem;
     }
     @include tab{
         font-size: 3.6rem;
-        margin-top: 6rem;
-        margin-bottom: 2.6rem;
+        margin-top: 3.8rem;
+        margin-bottom: 2.5rem;
     }
 }
 .customer_loginform{
     border-bottom: solid 1px $color-black;
-    .send{
-        margin-top: 15px;
-        margin-bottom: 26px;
-        display: flex;
-        justify-content: center;
-        @include pc{
-            margin-top: 1.5rem;
-            margin-bottom: 2.6rem;
-        }
-        @include tab{
-            margin-top: 3rem;
-            margin-bottom: 4rem;
-        }
-    }
 }
 .customer_form{
     width: 100%;
+    em{
+        margin-left: 0;
+    }
     tr{
         @include tab{
             display: block;
@@ -1349,23 +1445,73 @@ em{
     }
     td{
         padding: 11px 0;
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
         vertical-align: middle;
+        @include pc{
+            font-size: 1.6rem;
+            padding: 1.1rem 0;
+        }
+        @include tab{
+            display: block;
+            font-size: 2.8rem;
+        }
+    }
+    dt{
+        padding: 11px 0;
+        @include pc{
+            padding: 1.1rem 0;
+        }
         @include tab{
             display: block;
         }
     }
-    input{
+    dd{
+        margin-left: 30px;
+        @include font-style(14px, $color-blue2, 300);
+        line-height: 1;
+    }
+    select{
+        padding: 0 40px;
+        height: 40px;
+        @include font-style(16px, $color-black, 600);
+        line-height: 40px;
+        background-color: transparent;
+        border-radius: 4px;
+        border: solid 1px $color-border2;
+        background-image: url("../images/svg/arrow-bottom-black.png");
+        background-position: center right 10px;
+        background-repeat: no-repeat;
+        text-align: center;
+        @include pc{
+            font-size: 1.4rem;
+            padding: 0 4rem;
+            height: 4rem;
+            line-height: 4rem;
+            border-radius: 0.4rem;
+            background-position: center right 2.4rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+            width: 28rem;
+            height: 5rem;
+            line-height: 5rem;
+        }
+    }
+    input[type="text"]{
         @include font-style(16px, $color-black, 500);
         line-height: 1;
         width: 600px;
         height: 40px;
         border: solid 1px $color-border2;
         border-radius: 4px;
+        padding: 0 16px;
         @include pc{
             font-size: 1.6rem;
             width: 60rem;
             height: 4rem;
             border-radius: 0.4rem;
+            padding: 0 1.6rem;
         }
         @include tab{
             width: 100%;
@@ -1373,7 +1519,48 @@ em{
             font-size: 2.8rem;
         }
     }
-
+    input[type="password"]{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        width: 600px;
+        height: 40px;
+        border: solid 1px $color-border2;
+        border-radius: 4px;
+        padding: 0 16px;
+        @include pc{
+            font-size: 1.6rem;
+            width: 60rem;
+            height: 4rem;
+            border-radius: 0.4rem;
+            padding: 0 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 5rem;
+            font-size: 2.8rem;
+        }
+    }
+    textarea{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        width: 600px;
+        height: 130px;
+        border: solid 1px #bbb3b1;
+        border-radius: 4px;
+        padding: 16px;
+        @include pc{
+            font-size: 1.6rem;
+            width: 60rem;
+            height: 13rem;
+            border-radius: 0.4rem;
+            padding: 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 54rem;
+            font-size: 2.8rem;
+        }
+    }
 }
 .non-customer_inputform{
     width: 100%;
@@ -1408,10 +1595,22 @@ em{
         }
     }
     td{
-        padding: 11px 0;
+        padding: 12.5px 0;
         vertical-align: middle;
+        @include font-style(16px, $color-gray, 300);
+        line-height: 1;
+        @include pc{
+            font-size: 1.6rem;
+            padding: 1.25rem 0;
+        }
         @include tab{
             display: block;
+            font-size: 2.8rem;
+            padding: 1.2rem 0;
+            margin-bottom: 2rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
         }
 
     }
@@ -1421,9 +1620,11 @@ em{
             @include pc{
                 width: 28rem;
             }
+            @include tab{
+                width: 51rem;
+            }
         }
     }
-
     input{
         @include font-style(16px, $color-black, 500);
         line-height: 1;
@@ -1431,11 +1632,13 @@ em{
         height: 40px;
         border: solid 1px #bbb3b1;
         border-radius: 4px;
+        padding: 0 16px;
         @include pc{
             font-size: 1.6rem;
             width: 60rem;
             height: 4rem;
             border-radius: 0.4rem;
+            padding: 0 1.6rem;
         }
         @include tab{
             width: 100%;
@@ -1448,40 +1651,297 @@ em{
         @include pc{
             width: 16rem;
         }
+        @include tab{
+            width: 28rem;
+        }
     }
-    #customer_pref{
-        width: 130px;
+    select{
+        width: 140px;
         height: 40px;
-        @include font-style(20px, $color-black, 600);
+        @include font-style(16px, $color-black, 600);
         line-height: 40px;
-        text-align:center;
         background-color: transparent;
         border-radius: 4px;
         border: solid 1px $color-border2;
+        background-image: url("../images/svg/arrow-bottom-black.png");
+        background-position: center right 10px;
+        background-repeat: no-repeat;
+        text-align: center;
         @include pc{
-            font-size: 2.5rem;
-            width: 13rem;
+            font-size: 1.4rem;
+            width: 10rem;
             height: 4rem;
             line-height: 4rem;
-            border-radius: 10.4rem;
+            border-radius: 0.4rem;
+            background-position: center right 2.4rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+            width: 28rem;
+            height: 5rem;
+            line-height: 5rem;
+            padding-left: 1.6rem;
         }
     }
     input[type="button"]{
         width: 130px;
         height: 40px;
-        @include font-style(20px, $color-black, 600);
+        @include font-style(16px, $color-black, 600);
         line-height: 40px;
         text-align:center;
         background-color: transparent;
         border-radius: 4px;
         border: solid 1px $color-border2;
         @include pc{
-            font-size: 2.5rem;
+            font-size: 1.6rem;
             width: 13rem;
             height: 4rem;
             line-height: 4rem;
-            border-radius: 10.4rem;
+            border-radius: 0.4rem;
         }
+        @include tab{
+            font-size: 2.5rem;
+            width: 24rem;
+            height: 5rem;
+            line-height: 5rem;
+        }
+    }
+}
+.agree_member_area{
+    .at_cont_text{
+        width: 100%;
+        height: 200px;
+        border: solid 1px $color-gray;
+        padding: 16px;
+        margin: 12px 0;
+        @include font-style(16px, $color-black, 300);
+        line-height: 2.4;
+        border-radius: 4px;
+        @include pc{
+            height: 20rem;
+            padding: 1.6rem;
+            margin: 1.2rem 0;
+            font-size: 1.6rem;
+            border-radius: 0.4rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 40rem;
+            font-size: 2.8rem;
+        }
+    }
+    .at_check_area{
+        text-align:center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input[type="checkbox"]{
+            width: 20px;
+            height: 20px;
+            border: solid 1px $color-black;
+            background-color: $color-white;
+            display: inline-block;
+            @include pc{
+                width: 20rem;
+                height: 20rem;
+            }
+            @include tab{
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        label{
+            @include font-style(16px, $color-black, 300);
+            @include pc{
+                padding: 1.6rem;
+            }
+            @include tab{
+                font-size: 2.8rem;
+            }
+        }
+    }
+}
+//配送ページ
+.derivery-form{
+    margin-top: 80px;
+    @include pc{
+        margin-top: 8rem;
+    }
+    &__table-wrap{
+        padding: 23px 0;
+        border-top: solid 1px $color-black;
+        @include pc{
+            padding-bottom: 2.3rem;
+        }
+        &:nth-child(1){
+            border-top: none;
+        }
+    }
+}
+#delivery_flag{
+    th{
+        vertical-align: top;
+        padding: 16px 0;
+        @include pc{
+            padding: 1.6rem 0;
+        }
+    }
+}
+#delivery_table{
+    display: none;
+}
+#notes_table{
+    th{
+        vertical-align: top;
+        padding: 16px 0;
+    }
+}
+//確認ページ
+.point-form{
+    padding-bottom: 20px;
+    border-bottom: solid 1px $color-black;
+    margin-bottom: 24px;
+    @include pc{
+        padding-bottom: 2rem;
+        margin-bottom: 2.4rem;
+    }
+    @include tab{
+        padding-bottom: 4rem;
+    }
+}
+#point_table{
+    display: flex;
+    justify-content: flex-end;
+    tr{
+        display: inline-block;
+        margin-right: 55px;
+        &:last-child{
+            margin-right: 0;
+        }
+        @include pc{
+            margin-right: 5.5rem;
+        }
+        @include tab{
+            margin-right: 0;
+            display: table-row;
+        }
+    }
+    th{
+        vertical-align: middle;
+        padding-right: 34px;
+        @include font-style(16px, $color-black, 500);
+        @include pc{
+            padding-right: 3.4rem;
+            font-size: 1.6rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+        }
+    }
+    td{
+        vertical-align: middle;
+        @include font-style(20px, $color-black, normal);
+        font-family: $font-h;
+        @include pc{
+            font-size: 2rem;
+        }
+        @include tab{
+            font-size: 3.6rem;
+            text-align: right;
+            padding: 1.1rem 0;
+        }
+    }
+    input[type="submit"]{
+        background-color: $color-blue;
+    }
+    input[type="text"]{
+        @include font-style(20px, $color-black, normal00);
+        line-height: 1;
+        width: 100px;
+        height: 40px;
+        border: solid 1px #bbb3b1;
+        border-radius: 4px;
+        text-align: center;
+        @include pc{
+            font-size: 2rem;
+            width: 10rem;
+            height: 4rem;
+            background-repeat: 0.4rem;
+        }
+        @include tab{
+            font-size: 3.6rem;
+            height: 5rem;
+        }
+    }
+}
+#confirm_table{
+    width: 100%;
+    @include font-style(16px, $color-black, 500);
+    line-height: 1;
+    margin: 40px 0;
+    @include pc{
+        font-size: 1.6rem;
+        margin: 4rem 0;
+    }
+    @include tab{
+        font-size: 2.8rem;
+    }
+    h3{
+        @include font-style(20px, $color-black, 600);
+        line-height: 1;
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 37px;
+        @include pc{
+            font-size: 2rem;
+            padding: 1.5rem 0;
+            margin-top: 3.7rem;
+        }
+        @include tab{
+            font-size: 3.6rem;
+        }
+        &:after{
+            content: "";
+            display: inline-block;
+            width: 800px;
+            height: 1px;
+            background-color: $color-gray;
+            @include pc{
+                width: 80rem;
+            }
+            @include tab{
+                width: 30rem;
+            }
+        }
+    }
+    th{
+        width: 18.3%;
+        vertical-align: middle;
+        padding: 25px 0;
+        @include pc{
+            padding: 2.5rem 0;
+        }
+        @include tab{
+            width: 100%;
+            display: block;
+            padding: 2rem 0 1rem 0;
+        }
+    }
+    td{
+        vertical-align: middle;
+        @include tab{
+            display: block;
+            padding: 1rem 0 2rem 0;
+        }
+        
+    }
+}
+#purchace_form{
+    padding-top: 26px;
+    @include pc{
+        padding-top: 2.6rem;
     }
 }
 //-------------------------------

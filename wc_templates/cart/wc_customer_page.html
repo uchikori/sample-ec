@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="robots" content="noindex">
+  <title>新規Webサイトタイトル</title>
+  <!-- font-awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <!-- メインCSS読み込み -->
+  <link rel="stylesheet" href="../../dist/css/style.css">
+  <script src="https://kit.fontawesome.com/2bcc27253a.js" crossorigin="anonymous"></script>
+  <!-- jQuery読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="page page-template-uscescart">
+
+<!-- header -->
+<header class="header">
+    <div class="header__inner">
+      <div class="header__left">
+        <h1 class="logo header__logo">
+  
+            <img src="../../dist/images/svg/logo.svg" alt="とちぎ衛生環境防衛隊">
+  
+        </h1>
+      </div>
+      <nav class="navi header__navi">
+        <div class="navi__inner">
+          <div class="logo navi__logo">
+            <img src="../../dist/images/svg/logo.svg" alt="とちぎ衛生環境防衛隊">
+          </div>
+          <ul class="global-navi">
+              <li class="menu-item">
+                <a href="/" class="nav-link">
+                  TOP
+                  <div class="global-navi__navi-icon"><img src="../../dist/images/svg/arrow.svg" alt=""></div>
+                </a>
+                
+              </li>
+              <li class="menu-item js-accordion">
+                <div class="nav-link">
+                  商品一覧
+                </div>
+                <ul class="sub-menu js-sitemap">
+                  <li class="menu-item">
+                    <a href="/category.html" class="nav-link">
+                      除菌ちゃん
+                      <span class="global-navi__navi-icon"><img src="../../dist/images/svg/arrow.svg" alt=""></span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/category.html" class="nav-link">
+                      衛生管理機器
+                      <span class="global-navi__navi-icon"><img src="../../dist/images/svg/arrow.svg" alt=""></span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/category.html" class="nav-link">
+                      空間除菌機器
+                      <span class="global-navi__navi-icon"><img src="../../dist/images/svg/arrow.svg" alt=""></span>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/category.html" class="nav-link">
+                      衛生グッズ
+                      <span class="global-navi__navi-icon"><img src="../../dist/images/svg/arrow.svg" alt=""></span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="/page-water.html" class="nav-link">
+                  機能水とは？
+                  <span class="global-navi__navi-icon"><img src="../../dist/images/svg/arrow.svg" alt=""></span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="/page-management.html" class="nav-link">
+                  衛星管理トータルサポート
+                  <span class="global-navi__navi-icon"><img src="../../dist/images/svg/arrow.svg" alt=""></span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="/archive-works.html" class="nav-link">
+                  施設導入事例
+                  <span class="global-navi__navi-icon"><img src="../../dist/images/svg/arrow.svg" alt=""></span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="/page-company.html" class="nav-link">
+                  会社案内
+                  <span class="global-navi__navi-icon"><img src="../../dist/images/svg/arrow.svg" alt=""></span>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="/page-contact.html" class="nav-link">
+                  お問い合わせ
+                  <span class="global-navi__navi-icon"><img src="../../dist/images/svg/arrow.svg" alt=""></span>
+                </a>
+              </li>
+          </ul>
+          <ul class="cf">
+            <li class="user_name">
+              <div class="user_login_icon">
+                <img src="../../dist/images/svg/user_login.svg" alt="">
+              </div>
+              ゲスト
+            </li>
+            <li><a href="../member/wc_login_page.html" class="user_login_a user-btn">ログイン</a></li>
+            <li><a href="../member/wc_new_member_page.html" class="user_new_regist user-btn">新規会員登録</a></li>
+          </ul>
+        </div>
+  
+  
+      </nav>
+      <div class="header__right">
+        <div class="cart-btn header__cart-btn">
+          <a href="/wc_templates/cart/wc_cart_page.html">
+            <img src="../../dist/images/svg/cart.svg" alt="">
+            <span class="total-quant">0</span>
+          </a>
+        </div>
+        <div class="humberger header__humberger">
+          <span class="humberger__line"></span>
+          <span class="humberger__line"></span>
+          <span class="humberger__line"></span>
+        </div>
+      </div>
+    </div>
+</header><!-- end header -->
+
+<div id="primary" class="site-content">
+  <div id="content" role="main">
+
+    <!-- contents -->
+
+    <!-- cart -->
+    <section class="cart-page">
+        <div class="cart-page__inner container--size-s">
+            <article id="wc_customer" class="post">
+                <div class="cart_navi">
+                    <ul>
+                        <li>カート</li>
+                        <li class="current"><h1>お客様<br class="br-tab">情報</h1></li>
+                        <li>配送<br class="br-tab">支払方法</li>
+                        <li>内容<br class="br-tab">確認</li>
+                        <li>完了</li>
+                    </ul>
+                </div>
+
+                <div class="header_explanation"></div>
+
+                <div class="error_message"></div>
+
+                <h2 class="customer-info-title">会員の方はこちら</h2>
+                <!-- end カートページ共通 -->
+
+                <!-- 会員の方 -->
+                <form class="customer_loginform" name="customer_loginform" action="/" method="post" onkeydown="if(event.keyCode == 13){return false;}">
+                    <table class="customer_form">
+                        <tbody>
+                            <tr>
+                                <th scope="row">メールアドレス</th>
+                                <td><input name="loginmail" id="mailaddress1" type="text"  style="ime-mode: inactive"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">パスワード</th>
+                                <td><input name="loginpass" id="password" type="password" value=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="send send__loginform">
+                      <input name="customerlogin" type="submit" class="to_memberlogin_button" value="次へ">
+                    </div>
+                </form>
+                <!-- end 会員の方 -->
+
+                <!-- 非会員の方 -->
+                <h2 class="non-customer-info-title">非会員の方はこちら</h2>
+                <form class="non-customer_form" name="customer_form" action="/" method="post" onkeydown="if(event.keyCode == 13){return false;}">
+                    <table class="non-customer_inputform">
+                      <tbody>
+                        <tr class="customkey_company-name">
+                          <th scope="row">会社名</th>
+                          <td colspan="2"><input type="text" value=""></td>
+                        </tr>
+
+                        <tr id="name_row" class="inp1">
+                          <th width="127" scope="rpw"><em>※</em>お名前</th>
+                          <td class="name_td">姓<input id="name1" type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
+                          <td class="name_td">名<input id="name2" type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
+                        </tr>
+
+                        <tr id="furikana_row" class="inp1">
+                          <th width="127" scope="rpw">フリガナ</th>
+                          <td class="name_td">姓<input type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
+                          <td class="name_td">名<input type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
+                        </tr>
+
+                        <tr id="zipcode_row">
+                          <th scope="row"><em>※</em>郵便番号</th>
+                          <td colspan="2">
+                            <input type="text" id="zipcode" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active">
+                            <input type="button" id="search_zipcode" class="search-zipcode button" value="住所検索" onclick="AjaxZip3.zip2addr('customer[zipcode]', '', 'customer[pref]', 'customer[address1]');">
+                          </td>
+                        </tr>
+
+                        <tr id="status_row">
+                          <th scope="row"><em>※</em>都道府県</th>
+                          <td colspan="2">
+                            <select name="customer[pref]" id="customer_pref" class="pref">
+                              <option value="選択">選択</option>
+                              <option value="北海道" selected="selected">北海道</option>
+                              <option value="青森県">青森県</option>
+                              <option value="岩手県">岩手県</option>
+                              <option value="宮城県">宮城県</option>
+                              <option value="秋田県">秋田県</option>
+                              <option value="山形県">山形県</option>
+                              <option value="福島県">福島県</option>
+                              <option value="茨城県">茨城県</option>
+                              <option value="栃木県">栃木県</option>
+                              <option value="群馬県">群馬県</option>
+                              <option value="埼玉県">埼玉県</option>
+                              <option value="千葉県">千葉県</option>
+                              <option value="東京都">東京都</option>
+                              <option value="神奈川県">神奈川県</option>
+                              <option value="新潟県">新潟県</option>
+                              <option value="富山県">富山県</option>
+                              <option value="石川県">石川県</option>
+                              <option value="福井県">福井県</option>
+                              <option value="山梨県">山梨県</option>
+                              <option value="長野県">長野県</option>
+                              <option value="岐阜県">岐阜県</option>
+                              <option value="静岡県">静岡県</option>
+                              <option value="愛知県">愛知県</option>
+                              <option value="三重県">三重県</option>
+                              <option value="滋賀県">滋賀県</option>
+                              <option value="京都府">京都府</option>
+                              <option value="大阪府">大阪府</option>
+                              <option value="兵庫県">兵庫県</option>
+                              <option value="奈良県">奈良県</option>
+                              <option value="和歌山県">和歌山県</option>
+                              <option value="鳥取県">鳥取県</option>
+                              <option value="島根県">島根県</option>
+                              <option value="岡山県">岡山県</option>
+                              <option value="広島県">広島県</option>
+                              <option value="山口県">山口県</option>
+                              <option value="徳島県">徳島県</option>
+                              <option value="香川県">香川県</option>
+                              <option value="愛媛県">愛媛県</option>
+                              <option value="高知県">高知県</option>
+                              <option value="福岡県">福岡県</option>
+                              <option value="佐賀県">佐賀県</option>
+                              <option value="長崎県">長崎県</option>
+                              <option value="熊本県">熊本県</option>
+                              <option value="大分県">大分県</option>
+                              <option value="宮崎県">宮崎県</option>
+                              <option value="鹿児島県">鹿児島県</option>
+                              <option value="沖縄県">沖縄県</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <tr id="address1_row" class="inp2">
+                          <th scope="row"><em>※</em>市区郡町村</th>
+                          <td colspan="2"><input name="customer[address1]" id="address1" type="text" value="" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" />横浜市上北町</td>
+                        </tr>
+
+                        <tr id="address2_row">
+                          <th scope="row"><em>＊</em>番地</th>
+                          <td colspan="2"><input name="customer[address2]" id="address2" type="text" value="" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" />3-24-555</td>
+                        </tr>
+
+                        <tr id="address3_row">
+                          <th scope="row">ビル名</th>
+                          <td colspan="2"><input name="customer[address3]" id="address3" type="text" value="" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" />通販ビル4F</td>
+                        </tr>
+
+                        <tr id="tel_row">
+                          <th scope="row"><em>＊</em>電話番号</th>
+                          <td colspan="2"><input name="customer[tel]" id="tel" type="text" value="" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" />1000-10-1000</td>
+                        </tr>
+
+                        <tr id="fax_row">
+                          <th scope="row">FAX番号</th>
+                          <td colspan="2"><input name="customer[fax]" id="fax" type="text" value="" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: inactive" />1000-10-1000</td>
+                        </tr>	
+
+                        <tr>
+                          <th scope="row"><em>＊</em>メールアドレス</th>
+                          <td colspan="2"><input name="customer[mailaddress1]" id="mailaddress1" type="text" value="" style="ime-mode: inactive" /></td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                    <table class="non-customer_inputform">
+                      <tbody>
+                        <h2 class="non-customer-info-title">新規会員登録する場合にご記入ください</h2>
+                        <tr>
+                          <th scope="row">パスワード</th>
+                          <td colspan="2"><input name="customer[password1]" type="password" value="" /></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">パスワード（確認用）</th>
+                          <td colspan="2"><input name="customer[password2]" type="password" value="" /></td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                    <input type="hidden">
+                    <div class="agree_member_area">
+                      <div class="at_exp_text">会員規約</div>
+                      <textarea name="at_cont_text" class="at_cont_text" readonly="readonly">
+                        本規約は、コルネ株式会社（以下「当社」といいます）がWebサイト上で提供するサービス「Welcart.com」（以下「本サイト」といいます）を、会員が利用するにあたり適用するものです。本規約及び個人情報の取扱いに同意し、ご登録された方（以下「会員」といいます）に限り、「Welcart.com会員」に提供されるサービス（以下「本サービス」といいます）の提供を受けることができるものとします。
+
+                        第1条：会員および入会
+                        本規約に同意し、以下の項目を満たす場合のみとします。
+
+                        1．会員とは本規約を承認の上、Welcart.com会員への入会申込みを行い、当社が承諾した方とします。
+                        2．会員はWelcart.com会員への入会申込みを行った時点で、本会員規約の「第5条：個人情報の取扱いについて」の内容に同意しているものとみなします。
+
+                        第2条：IDおよびパスワードの管理
+                        IDおよびパスワードは、他人に知られることがないよう定期的に変更する等、会員本人が責任をもって管理してください。当社は、入力または利用されたIDおよびパスワードの組合せが会員の登録したものと一致することを所定の方法により確認した場合、会員による利用があったものとみなします。当社は、盗用、不正利用その他の事情により会員のIDおよびパスワードを当該会員以外の第三者が利用している場合であっても、それにより生じた損害について一切の責任を負わないものとします。
+
+                        第3条：登録情報の変更
+                        会員として登録した情報（以下「登録情報」といいます。）に変更が生じた場合は、速やかに登録情報の変更をお願いいたします。登録情報の変更がなされなかったことにより会員に生じた損害について、当社は、一切の責任を負わないものとします。
+
+                        第4条：入会金及び会費
+                        入会金、会費は無料とします。
+
+                        第5条：個人情報の取扱いについて
+                        当社は、お客様の個人情報保護の重要性について認識しております。Welcart.com会員へご登録いただいたお客様の個人情報の取扱いについての詳細は以下の通りとなります。
+
+                        1.個人情報の取得
+                        お客様からお預かりした個人情報は、予め通知又は公表させていただいた目的の達成のために必要な範囲内で利用いたします。目的の範囲を超えて利用する必要が生じた場合は、その旨お客様にご連絡（通知）し、かつ同意をいただきます。
+
+                        2.利用目的
+                        Welcart.com会員への入会時に取得しました個人情報の利用目的は以下の通りとなります。
+                        (1)「welcart.com」の利用者管理
+                        (2)「welcart.com」に関するご連絡
+
+                        ただし、次に示すいずれかに該当する場合は、本人の同意を得ることなく利用することがあります。
+                        a) 法令に基づく場合
+                        b) 人の生命、身体又は財産の保護のために必要がある場合であって、本人の同意を得ることが困難である時
+                        c) 公衆衛生の向上又は児童の健全な育成の推進のために必要がある場合であって、本人の同意を得ることが困難である時
+                        d) 国の機関若しくは地方公共団体又はその委託を受けたものが法令の定める事務を遂行することに対して協力する必要がある場合であって、本人の同意を得ることによって当該事務の遂行に支障を及ぼすおそれがある時
+
+                        3.個人情報の第三者への提供について
+                        当社でお預かりした個人情報を、ご本人の同意なく第三者へ提供することはありません。個人情報を第三者へ提供する場合には、法令に基づく命令などを除き、必ず事前にお客様の同意をいただいた上で行います。
+
+                        4.個人情報の委託について
+                        当社では上記の利用目的を遂行するために、お預かりした個人情報を第三者に委託することがあります。個人情報を委託する場合には、十分な個人情報保護の水準を備える者を選び、指導・管理を実施し、適切に取扱います。
+
+                        5.開示等請求について
+                        ご自身の個人情報について利用目的の通知、開示、内容の訂正、追加又は削除、利用の停止、第三者への提供の停止に関する権利を保有しています（法令に定めがある場合を除く）。これらの権利行使については、当条項「8.個人情報の取得事業者及び個人情報保護管理者」に記載の問い合わせ先に請求ください。また、個人情報に関する苦情及び相談等についても同様の窓口となります。
+
+                        6.個人情報を与えることの任意性
+                        ご自身の個人情報について、弊社に提供することについては任意です。ただし、個人情報を与えなかった場合、弊社は前述の利用目的を遂行することが出来なくなり、弊社サービスを利用することが出来なくなります。
+
+                        7.本人が認識できない方法により行う個人情報の取得について
+                        当社では、本人が認識できない方法によって個人情報を取得することはありません。万一、上記のような個人情報の取得を行うときは、その旨を本人に通知し、同意を取った上で取得いたします。
+
+                        8.個人情報の取得事業者及び個人情報保護管理者
+                        コルネ株式会社
+                        福井県坂井市丸岡町熊堂3-7-1-16 福井県産業情報センタービル
+                        TEL：0776-67-2677　MAIL：info@collne.com
+                        担当者：個人情報保護管理責任者
+
+                        第6条：禁止事項
+                        会員サービスの利用に際して、会員は、以下の各号に定める行為またはそのおそれのある行為を行ってはならないものとします。
+                        1.法令、裁判所の判決、決定もしくは命令、または法令上拘束力のある行政措置に違反する行為
+                        2.公の秩序または善良の良俗を害する行為
+                        3.反社会的勢力に対する利益供与その他の協力行為
+                        4.当社、または第三者の権利、利益、名誉等を侵害する行為
+                        5.第三者になりすます行為または意図的に虚偽の情報を送信する行為
+                        6.第三者の個人情報その他のプライバシーに関する情報を不正に収集、開示、または提供する行為
+                        7.不正アクセス行為、第三者のアカウントを利用する行為、その他これらに類する行為
+                        8.会員サービスの誤作動を誘引する行為
+                        9.会員サービスが通常意図しないバグを利用する動作を生じさせ、または、通常意図しない効果を及ぼす外部ツールの利用、作成、または頒布を行う行為
+                        10.会員サービスまたは当社のサーバーに過度の負担をかける行為
+                        11.コンピュータウイルス等の有害なプログラムを当社または第三者に送信し、または流布する行為
+                        12.本規約に違反し、または、会員サービスの趣旨目的に反する行為
+                        13.その他、当社が不適切と判断する行為
+
+                        第7条：利用停止、会員資格の取り消し等
+                        当社は、会員が次の各号のいずれかに該当すると判断した場合には、事前に通知することなく当該会員による会員サービスの利用停止、アカウントの停止、IDおよびパスワードの変更、または当該会員の会員資格の取り消し等の措置を講じることができるものとします。これにより会員に何らかの不利益または損害が生じたとしても、当社は一切の責任を負わないものとします。
+                        1.会員に法令や本規約に違反する行為があった場合
+                        2.会員に会員サービス利用に関して不正行為があった場合
+                        3.一定回数以上のパスワードの入力ミスがあるなど会員のセキュリティを確保するために必要な場合
+                        4.その他が相当と判断した場合
+
+                        第8条：会員の退会
+                        1.会員は、当社所定の退会手続きにより、いつでも本契約を終了させることができます。
+                        2.前項退会手続きにより、または、事由のいかんを問わず本契約が終了した場合、会員は、会員サービスについて、即時に一切利用できなくなります。当該時点において当社が会員サービスに関連して有していた権利は、全て消滅し、会員は、当社に対して何らの請求を行えません。ただし、本契約終了以前において会員が当社に対して債務を負っていた場合、当該債務は消滅せず、会員は、当社に対して本契約終了後ただちに全ての当該債務について弁済しなければならないものとします。
+
+                        第9条：会員サービスの変更、中断、終了等
+                        1.当社は、会員に事前に通知することなく、会員サービスの内容の全部または一部をその裁量によって変更または追加することができるものとします。
+                        2.当社は、事前に所定の方法にて会員に通知することにより、当社の裁量で会員サービスの提供を終了することができるものとします。
+                        3.当社は、以下の各号に定める場合、会員に事前に通知することなく、会員サービスの全部または一部を一時的に中断することができるものとします。
+                        (1)システムのメンテナンスまたは修理を定期的にまたは緊急に行う場合
+                        (2)アクセス過多等によって、システムに負荷が集中した場合
+                        (3)会員、当社、または第三者のセキュリティを確保する必要が生じた場合
+                        (4)通信回線の停止、天災、火災、停電、その他の不慮の事故または戦争、紛争、動乱、暴動、労働争議等の不可抗力により会員サービスの提供が困難な場合
+                        (5)その他当社が必要と判断した場合
+                        4.当社は、当社が本条に従ってとった措置に起因して会員に生じた損害について、一切の責任を負わないものとします。
+
+                        第10条：本規約の改定等
+                        1.当社は、本規約を任意にいつでも改定することができるものとし、本規約に追加の規定、条件等を定めることができます。本規約の改定および規定、条件の追加等は、当社所定のサイトに掲示したときにその効力を生じるものとします。
+                        2.当社は、会員サービスにかかる事業を第三者に譲渡し、または合併もしくは会社分割等により承継させ、本契約上の地位ならびに権利および義務を当該譲渡等の譲受人等に承継させることができるものとします。会員は、かかる譲渡等について、あらかじめ同意するものとします。
+
+                        第11条：準拠法、合意管轄
+                        本規約は日本法に基づき解釈されるものとし、本規約に関し訴訟の必要が生じた場合には、当社所在地を管轄する裁判所を第一審の専属的合意管轄裁判所といたします。
+                      </textarea>
+                      <div class="at_check_area">
+                        <input name="agree_member_check" value="1" id="agree_member_check" class="at_check" type="checkbox">
+                        <label for="agree_member_check" style="cursor:pointer;"> 会員規約に同意する</label>
+                      </div>
+                    </div>
+                    <div class="send send__non-customerform">
+                        <input name="previous" type="submit" id="previouscart" class="continue_shopping_button" value="戻る" onclick="uscesCart.previousCart();">
+                        <input name="customerinfo" type="submit" class="to_customerinfo_button" value="次へ" onclick="return uscesCart.cartNext();">
+                    </div>
+                </form>
+                <!-- end 非会員の方 -->
+            </article>
+        </div>
+    </section>
+
+    <!-- end product -->
+
+    <!-- cta -->
+    <section class="cta-sec">
+      <div class="cta-sec__inner">
+        <div class="cta-sec__circle">
+          <div class="cta-sec__circle-inner">
+            <h2 class="h2-title cta-sec__h2-title">
+              お問い合わせ
+            </h2>
+            <p class="cta-sec__lead-text">
+              サービスのご相談、資料請求、ご質問など
+              <br>
+              弊社へのお問い合わせはこちらからどうぞ。
+            </p>
+            <div class="cta-sec__contact">
+              <a href="/" class="mail-btn cta-sec__mail js-mail">
+                <span class="mail-btn__link-icon js-mailIcon"></span>
+                お問い合わせ
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- //cta -->
+
+    <!-- end contents -->
+  </div>
+</div>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="footer__top">
+    <p class="footer__appeal">「衛生環境」をテーマに取り組んでいる会社です</p>
+    <div class="footer__inner container--size-ss">
+      <div class="footer__info">
+        <div class="footer-tel">
+          <picture class="footer-tel__num">
+            <source media="(max-width: 640px)" srcset="../../dist/images/svg/footer-cta_sp.svg">
+            <img srcset="../../dist/images/svg/footer-cta.svg" src="../../dist/images/svg/footer-cta.svg" alt="お問い合わせ電話番号0285-44-0614">
+          </picture>
+        </div>
+      </div>
+      <div class="footer__address">【お電話での受付時間】9:00〜17:00（土日祝日除く）</div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="copyright">
+      <small>&copy;2021 TOCHIGI EISEIKANKYOBOEITAI LTD.</small>
+    </p>
+  </div>
+</footer>
+<!-- end footer -->
+
+<script src="../../dist/js/common.min.js"></script>
+<script src="../../dist/js/front-page.min.js"></script>
+</body>
+</html>
