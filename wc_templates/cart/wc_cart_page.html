@@ -140,13 +140,13 @@
     <!-- cart -->
     <section class="cart-page">
         <div class="cart-page__inner container--size-s">
-            <article id="wc-confirm" class="post">
+            <article id="wc-cart" class="post">
                 <div class="cart_navi">
                     <ul>
-                        <li><h1>カート</h1></li>
+                        <li class="current"><h1>カート</h1></li>
                         <li>お客様<br class="br-tab">情報</li>
                         <li>配送<br class="br-tab">支払方法</li>
-                        <li class="current"><h1>内容<br class="br-tab">確認</h1></li>
+                        <li>内容<br class="br-tab">確認</li>
                         <li>完了</li>
                     </ul>
                 </div>
@@ -156,237 +156,64 @@
                 <div class="error_message"></div>
 
                 <!-- end カートページ共通 -->
-
-                <!-- カート内容確認テーブル -->
-                <div class="cart">
-                    <div class="cart-table__wrap">
-                        <table cellspacing="0" id="cart_table">
-                            <thead>
-                                <tr>
-                                    <th class="num">No.</th>
-                                    <th class="thumbnail"></th>
-                                    <th class="productname">商品名</th>
-                                    <th class="unitprice">単価</th>
-                                    <th class="quantity">数量</th>
-                                    <th class="subtotal">金額<em class="tax">（税込み）</em></th>
-                                    <th class="stock">在庫状態</th>
-                                    <th class="action"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="num">01</td>
-                                    <td class="thumbnail"><a href="/"><img src="../../dist/images/item-image.jpg" alt=""></a></td>
-                                    <td class="productname">除菌ちゃん</td>
-                                    <td class="unitprice">￥00,000</td>
-                                    <td class="quantity"><input name="quant" type="text" class="quantity" value="1"></td>
-                                    <td class="subtotal">￥00,000</td>
-                                    <td class="stock">在庫有り</td>
-                                    <td class="action"><input  name="delbutton" class="delButton" type="submit" value="削除"></td>
-                                </tr>
-                                <tr>
-                                    <td class="num">01</td>
-                                    <td class="thumbnail"><a href="/"><img src="../../dist/images/item-image.jpg" alt=""></a></td>
-                                    <td class="productname">除菌ちゃん</td>
-                                    <td class="unitprice">￥00,000</td>
-                                    <td class="quantity"><input name="quant" type="text" class="quantity" value="1"></td>
-                                    <td class="subtotal">￥00,000</td>
-                                    <td class="stock">在庫有り</td>
-                                    <td class="action"><input  name="delbutton" class="delButton" type="submit" value="削除"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="currency_code">通貨：円</div>
-                    <div class="caption">※横スクロールで確認できます。</div>
-
-                    <!-- 合計金額 -->
-                    <table class="total-amount">
-                        <!-- 合計金額 -->
-                        <tr>
+                <form action="/wc_customer_page.html" method="post" onkeydown="if(event.keyCode == 13){return false;}">
+                    <div class="cart">
+                        <!-- 数量更新 -->
+                        <div class="upbutton">
+                            数量を変更した場合は必ず<br class="br-tab">更新ボタンを押してください
+                            <input name="upbutton" type="submit" value="数量更新" onclick="return uscesCart.upCart()">
+                        </div>
+                        <!-- //数量更新 -->
+                        <div class="cart-table__wrap">
+                            <table cellspacing="0" id="cart_table">
+                                <thead>
+                                    <tr>
+                                        <th class="num">No.</th>
+                                        <th class="thumbnail"></th>
+                                        <th class="productname">商品名</th>
+                                        <th class="unitprice">単価</th>
+                                        <th class="quantity">数量</th>
+                                        <th class="subtotal">金額<em class="tax">（税込み）</em></th>
+                                        <th class="stock">在庫状態</th>
+                                        <th class="action"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="num">01</td>
+                                        <td class="thumbnail"><a href="/"><img src="../../dist/images/item-image.jpg" alt=""></a></td>
+                                        <td class="productname">除菌ちゃん</td>
+                                        <td class="unitprice">￥00,000</td>
+                                        <td class="quantity"><input name="quant" type="text" class="quantity" value="1"></td>
+                                        <td class="subtotal">￥00,000</td>
+                                        <td class="stock">在庫有り</td>
+                                        <td class="action"><input  name="delbutton" class="delButton" type="submit" value="削除"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="num">01</td>
+                                        <td class="thumbnail"><a href="/"><img src="../../dist/images/item-image.jpg" alt=""></a></td>
+                                        <td class="productname">除菌ちゃん</td>
+                                        <td class="unitprice">￥00,000</td>
+                                        <td class="quantity"><input name="quant" type="text" class="quantity" value="1"></td>
+                                        <td class="subtotal">￥00,000</td>
+                                        <td class="stock">在庫有り</td>
+                                        <td class="action"><input  name="delbutton" class="delButton" type="submit" value="削除"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="currency_code">通貨：円</div>
+                        <div class="caption">※横スクロールで確認できます。</div>
+                        <table class="total-amount">
+                          <tr>
                             <th class="total-amount__h">商品合計<em class="tax">（税込み）</em></th>
                             <td class="total-amount__d">￥00,000</td>
-                        </tr>
-
-                        <!-- 割引が適用される場合 -->
-
-                        <!-- //消費税対象が「商品代金のみ」の場合 -->
-
-                        <!-- 会員システム利用＆ポイントシステム利用＆ポイント利用が1円以上の場合 -->
-
-                        <!-- 送料金額 -->
-                        <tr>
-                            <th class="other-amount__h">送料</th>
-                            <td class="other-amount__d">￥000</td>
-                        </tr>
-
-                        <!-- 代引き手数料を設定している場合 -->
-                        <tr>
-                            <th class="other-amount__h">代引手数料</th>
-                            <td class="other-amount__d">￥000</td>
-                        </tr>
-
-                        <!-- 消費税対象が「総合計金額」の場合 -->
-                        <tr>
-                            <th class="other-amount__h">内消費税</th>
-                            <td class="other-amount__d">(￥000)</td>
-                        </tr>
-
-                        <!-- //会員システム利用＆ポイントシステム利用＆ポイント利用が1円以上の場合&ポイントの適用範囲が総合計まで含む場合 -->
-                        <tr>
-                            <th class="other-amount__h">使用ポイント</th>
-                            <td class="other-amount__d">000</td>
-                        </tr>
-                    </table>
-
-                    <!-- ポイント利用 -->
-                    <form action="https://sample-ec.uchiwa-design.net/usces-cart/" method="post" onKeyDown="if(event.keyCode == 13){return false;}" class="point-form">
-						<div class="error_message"></div>
-						<table cellspacing="0" id="point_table">
-							<tr>
-								<th class="c-point">現在のポイント</th>
-								<td><span class="point">1363</span>pt</td>
-                            </tr>
-                            <tr>
-                                <th class="u-point">利用するポイント</th>
-								<td><input name="offer[usedpoint]" class="used_point" type="text" value="100" />pt</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="point-btn"><input name="use_point" type="submit" class="use_point_button" value="ポイントを使用する" /></td>
-                            </tr>
-						</table>
-						<input type="hidden" id="wc_nonce" name="wc_nonce" value="3867b06a6b" /><input type="hidden" name="_wp_http_referer" value="/usces-cart/" />
-					</form>
-
-                    <!-- 総合計金額 -->
-                    <table class="total-amount">
-                        <tr>
-                            <th class="total-amount__h">総合計金額<em class="tax">（税込み）</em></th>
-                            <td class="total-amount__d">￥000,000</td>
-                        </tr>
-                    </table>
-
-
-                </div>
-
-                <!-- 内容確認テーブル -->
-                <table id="confirm_table">
-                    <tr class="ttl">
-                        <td colspan="2"><h3>お客様情報</h3></td>
-                    </tr>
-                    <tr>
-                        <th>メールアドレス</th>
-                        <td>ucchii.wa@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <th>会社名</th>
-                        <td></td>
-                    </tr>
-                    <tr class="name-row member-name-row">
-                        <th>お名前</th>
-                        <td>山内 友暉 様</td>
-                    </tr>
-                    <tr class="furikana-row member-furikana-row">
-                        <th>フリガナ</th>
-                        <td>ヤマウチ ユウキ 様</td>
-                    </tr>
-                    <tr class="zipcode-row member-zipcode-row">
-                        <th>郵便番号</th>
-                        <td>0040072</td>
-                    </tr>
-                    <tr class="states-row member-states-row">
-                        <th>都道府県</th>
-                        <td>北海道</td>
-                    </tr>
-                    <tr class="address1-row member-address1-row">
-                        <th>市区郡町村</th>
-                        <td>札幌市厚別区厚別北二条１丁目</td>
-                    </tr>
-                    <tr class="address2-row member-address2-row">
-                        <th>番地</th>
-                        <td>3-5</td>
-                    </tr>
-                    <tr class="address3-row member-address3-row">
-                        <th>ビル名</th>
-                        <td></td>
-                    </tr>
-                    <tr class="tel-row member-tel-row">
-                        <th>電話番号</th>
-                        <td>08060925223</td>
-                    </tr>
-                    <tr class="fax-row member-fax-row">
-                        <th>FAX番号</th>
-                        <td></td>
-                    </tr>
-                    <tr class="ttl">
-                        <td colspan="2"><h3>配送先情報</h3></td>
-                    </tr>
-                    <tr class="name-row delivery-name-row">
-                        <th>お名前</th>
-                        <td>山内 友暉 様</td>
-                    </tr>
-                    <tr class="furikana-row delivery-furikana-row">
-                        <th>フリガナ</th>
-                        <td>ヤマウチ ユウキ 様</td>
-                    </tr>
-                    <tr class="zipcode-row delivery-zipcode-row">
-                        <th>郵便番号</th>
-                        <td>0040072</td>
-                    </tr>
-                    <tr class="states-row delivery-states-row">
-                        <th>都道府県</th>
-                        <td>北海道</td>
-                    </tr>
-                    <tr class="address1-row delivery-address1-row">
-                        <th>市区郡町村</th>
-                        <td>札幌市厚別区厚別北二条１丁目</td>
-                    </tr>
-                    <tr class="address2-row delivery-address2-row">
-                        <th>番地</th>
-                        <td>3-5</td>
-                    </tr>
-                    <tr class="address3-row delivery-address3-row">
-                        <th>ビル名</th>
-                        <td></td>
-                    </tr>
-                    <tr class="tel-row delivery-tel-row">
-                        <th>電話番号</th>
-                        <td>08060925223</td>
-                    </tr>
-                    <tr class="fax-row delivery-fax-row">
-                        <th>FAX番号</th>
-                        <td></td>
-                    </tr>					
-                    <tr class="ttl">
-                        <td colspan="2"><h3>その他</h3></td>
-                    </tr>
-                    <tr>
-                        <th>配送方法</th>
-                        <td>通常配送</td>
-                    </tr>
-                    <tr>
-                        <th>配送希望日</th>
-                        <td>指定しない</td>
-                    </tr>
-                    <tr>
-                        <th>配送希望時間</th>
-                        <td>指定しない</td>
-                    </tr>
-                                    <tr>
-                        <th>支払方法</th>
-                        <td>代金引換</td>
-                    </tr>
-                    <tr>
-                        <th>備考</th>
-                        <td></td>
-                    </tr>
-                </table>
-
-                <!-- 送信ボタン -->
-                <form id="purchace_form" action="/">
-                    <div class="send">
-                        <input name="previous" type="button" id="previouscart" class="continue_shopping_button" value="戻る" onclick="uscesCart.previousCart();">
-                        <input name="customerinfo" type="submit" class="to_customerinfo_button" value="上記内容で注文する" onclick="return uscesCart.cartNext();">
+                          </tr>
+                        </table>
+                    </div>
+                    <div class="send send__cart-page">
+                        <input name="previous" type="button" id="previouscart" class="continue_shopping_button" value="買い物を続ける" onclick="uscesCart.previousCart();">
+                        <input name="customerinfo" type="submit" class="to_customerinfo_button" value="次へ" onclick="return uscesCart.cartNext();">
                     </div>
                 </form>
                 <div class="footer_explanation"></div>

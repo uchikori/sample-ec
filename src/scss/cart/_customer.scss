@@ -1,0 +1,379 @@
+.customer-info-title{
+    @include font-style(20px, $color-black, 600);
+    margin-top: 54px;
+    margin-bottom: 12px;
+    @include pc{
+        font-size: 2rem;
+        margin-top: 5,4rem;
+        margin-bottom: 1.2rem;
+    }
+    @include tab{
+        font-size: 3.6rem;
+        margin-top: 6rem;
+        margin-bottom: 2.6rem;
+    }
+}
+.non-customer-info-title,.at_exp_text{
+    @include font-style(20px, $color-black, 600);
+    margin-top: 24px;
+    margin-bottom: 14px;
+    @include pc{
+        font-size: 2rem;
+        margin-top: 2.6rem;
+        margin-bottom: 1.2rem;
+    }
+    @include tab{
+        font-size: 3.6rem;
+        margin-top: 3.8rem;
+        margin-bottom: 2.5rem;
+    }
+}
+.customer_loginform{
+    border-bottom: solid 1px $color-black;
+}
+.customer_form{
+    width: 100%;
+    em{
+        margin-left: 0;
+    }
+    tr{
+        @include tab{
+            display: block;
+            margin-bottom: 3rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    th{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        vertical-align: middle;
+        width: 18.75%;
+        @include pc{
+            font-size: 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            font-size: 2.8rem;
+            display: block;
+        }
+    }
+    td{
+        padding: 11px 0;
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        vertical-align: middle;
+        @include pc{
+            font-size: 1.6rem;
+            padding: 1.1rem 0;
+        }
+        @include tab{
+            display: block;
+            font-size: 2.8rem;
+        }
+    }
+    dt{
+        padding: 11px 0;
+        @include pc{
+            padding: 1.1rem 0;
+        }
+        @include tab{
+            display: block;
+        }
+    }
+    dd{
+        margin-left: 30px;
+        @include font-style(14px, $color-blue2, 300);
+        line-height: 1;
+    }
+    select{
+        padding: 0 40px;
+        height: 40px;
+        @include font-style(16px, $color-black, 600);
+        line-height: 40px;
+        background-color: transparent;
+        border-radius: 4px;
+        border: solid 1px $color-border2;
+        background-image: url("../images/svg/arrow-bottom-black.png");
+        background-position: center right 10px;
+        background-repeat: no-repeat;
+        text-align: center;
+        @include pc{
+            font-size: 1.4rem;
+            padding: 0 4rem;
+            height: 4rem;
+            line-height: 4rem;
+            border-radius: 0.4rem;
+            background-position: center right 2.4rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+            width: 28rem;
+            height: 5rem;
+            line-height: 5rem;
+        }
+    }
+    input[type="text"]{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        width: 600px;
+        height: 40px;
+        border: solid 1px $color-border2;
+        border-radius: 4px;
+        padding: 0 16px;
+        @include pc{
+            font-size: 1.6rem;
+            width: 60rem;
+            height: 4rem;
+            border-radius: 0.4rem;
+            padding: 0 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 5rem;
+            font-size: 2.8rem;
+        }
+    }
+    input[type="password"]{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        width: 600px;
+        height: 40px;
+        border: solid 1px $color-border2;
+        border-radius: 4px;
+        padding: 0 16px;
+        @include pc{
+            font-size: 1.6rem;
+            width: 60rem;
+            height: 4rem;
+            border-radius: 0.4rem;
+            padding: 0 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 5rem;
+            font-size: 2.8rem;
+        }
+    }
+    textarea{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        width: 600px;
+        height: 130px;
+        border: solid 1px #bbb3b1;
+        border-radius: 4px;
+        padding: 16px;
+        @include pc{
+            font-size: 1.6rem;
+            width: 60rem;
+            height: 13rem;
+            border-radius: 0.4rem;
+            padding: 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 54rem;
+            font-size: 2.8rem;
+        }
+    }
+}
+.non-customer_inputform{
+    width: 100%;
+    em{
+        margin-left: 0;
+    }
+    tr{
+        @include tab{
+            display: block;
+            margin-bottom: 3rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    #name1,#name2,#zipcode,#address1,#address2,
+    #tel,#mailaddress1,#mailaddress2{
+        background-color: $color-must;
+    }
+    th{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        vertical-align: middle;
+        width: 18.75%;
+        @include pc{
+            font-size: 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            font-size: 2.8rem;
+            display: block;
+        }
+    }
+    td{
+        padding: 12.5px 0;
+        vertical-align: middle;
+        @include font-style(16px, $color-gray, 300);
+        line-height: 1;
+        @include pc{
+            font-size: 1.6rem;
+            padding: 1.25rem 0;
+        }
+        @include tab{
+            display: block;
+            font-size: 2.8rem;
+            padding: 1.2rem 0;
+            margin-bottom: 2rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+    }
+    .name_td{
+        input{
+            width: 280px;
+            @include pc{
+                width: 28rem;
+            }
+            @include tab{
+                width: 51rem;
+            }
+        }
+    }
+    input{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        width: 600px;
+        height: 40px;
+        border: solid 1px #bbb3b1;
+        border-radius: 4px;
+        padding: 0 16px;
+        @include pc{
+            font-size: 1.6rem;
+            width: 60rem;
+            height: 4rem;
+            border-radius: 0.4rem;
+            padding: 0 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 5rem;
+            font-size: 2.8rem;
+        }
+    }
+    #zipcode{
+        width: 160px;
+        @include pc{
+            width: 16rem;
+        }
+        @include tab{
+            width: 28rem;
+        }
+    }
+    select{
+        width: 140px;
+        height: 40px;
+        @include font-style(16px, $color-black, 600);
+        line-height: 40px;
+        background-color: transparent;
+        border-radius: 4px;
+        border: solid 1px $color-border2;
+        background-image: url("../images/svg/arrow-bottom-black.png");
+        background-position: center right 10px;
+        background-repeat: no-repeat;
+        text-align: center;
+        @include pc{
+            font-size: 1.4rem;
+            width: 10rem;
+            height: 4rem;
+            line-height: 4rem;
+            border-radius: 0.4rem;
+            background-position: center right 2.4rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+            width: 28rem;
+            height: 5rem;
+            line-height: 5rem;
+            padding-left: 1.6rem;
+        }
+    }
+    input[type="button"]{
+        width: 130px;
+        height: 40px;
+        @include font-style(16px, $color-black, 600);
+        line-height: 40px;
+        text-align:center;
+        background-color: transparent;
+        border-radius: 4px;
+        border: solid 1px $color-border2;
+        @include pc{
+            font-size: 1.6rem;
+            width: 13rem;
+            height: 4rem;
+            line-height: 4rem;
+            border-radius: 0.4rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+            width: 24rem;
+            height: 5rem;
+            line-height: 5rem;
+        }
+    }
+}
+.agree_member_area{
+    .at_cont_text{
+        width: 100%;
+        height: 200px;
+        border: solid 1px $color-gray;
+        padding: 16px;
+        margin: 12px 0;
+        @include font-style(16px, $color-black, 300);
+        line-height: 2.4;
+        border-radius: 4px;
+        @include pc{
+            height: 20rem;
+            padding: 1.6rem;
+            margin: 1.2rem 0;
+            font-size: 1.6rem;
+            border-radius: 0.4rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 40rem;
+            font-size: 2.8rem;
+        }
+    }
+    .at_check_area{
+        text-align:center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input[type="checkbox"]{
+            width: 20px;
+            height: 20px;
+            border: solid 1px $color-black;
+            background-color: $color-white;
+            display: inline-block;
+            @include pc{
+                width: 20rem;
+                height: 20rem;
+            }
+            @include tab{
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+        label{
+            @include font-style(16px, $color-black, 300);
+            @include pc{
+                padding: 1.6rem;
+            }
+            @include tab{
+                font-size: 2.8rem;
+            }
+        }
+    }
+}

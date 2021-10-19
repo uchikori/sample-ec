@@ -1,0 +1,488 @@
+.cart-page{
+    margin-top: 25px;
+    @include pc{
+        margin-top: 2.5rem;
+    }
+    @include tab{
+        margin-top: 2rem;
+    }
+    .cart_navi{
+        width: 862px;
+        margin: 0 auto;
+        @include pc{
+            width: 86.2rem;
+        }
+        @include tab{
+            width: 100vw;
+            margin: 0 calc(50% - 50vw);
+        }
+        ul{
+            display: flex;
+        }
+        li{
+            width: 20%;
+            height: 38px;
+            @include font-style(17px, $color-white, 500);
+            padding: 10px 0;
+            text-align: center;
+            background-color: $color-gray;
+            position: relative;
+            @include pc{
+                height: 3.8rem;
+                font-size: 1.7rem;
+                padding: 1rem 0;
+            }
+            @include tab{
+                height: 5.5rem;
+                font-size: 2rem;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &.current{
+                background-color: $color-blue;
+                &:before{
+                    background-color: $color-blue;
+                }
+                &:after{
+                    background-color: $color-blue;
+                }
+            }
+            &:before{
+                content: "";
+                display: block;
+                width: 19px;
+                height: 19px;
+                border-right: solid 2px $color-white;
+                transform: skew(40deg)translateX(-60%);
+                background-color: $color-gray;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                z-index: 1;
+                @include pc{
+                    width: 1.9rem;
+                    height: 1.9rem;
+                }
+                @include tab{
+                    width: 2.75rem;
+                    height: 2.75rem;
+                    transform: skew(20deg)translateX(-70%);
+                }
+            }
+            &:after{
+                content: "";
+                display: block;
+                width: 19px;
+                height: 19px;
+                border-right: solid 2px $color-white;
+                transform: skew(-40deg)translateX(-60%);
+                background-color: $color-gray;
+                position: absolute;
+                bottom: 0;
+                left: 100%;
+                z-index: 1;
+                @include pc{
+                    width: 1.9rem;
+                    height: 1.9rem;
+                }
+                @include tab{
+                    width: 2.75rem;
+                    height: 2.75rem;
+                    transform: skew(-20deg)translateX(-70%);
+                }
+            }
+            &:last-child{
+                &:before{
+                    display: none;
+                }
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.cart{
+    .upbutton{
+        text-align: right;
+        @include font-style(16px, $color-black, 300);
+        line-height: 40px;
+        padding: 26.5px 0;
+        @include pc{
+            font-size: 1.6rem;
+            line-height: 4rem;
+            padding: 2.65rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+            padding: 2.65rem 0;
+        }
+        input[type="submit"]{
+            width: 200px;
+            height: 40px;
+            @include font-style(16px, $color-blue, 500);
+            line-height: 40px;
+            text-align: center;
+            border: solid 1px $color-blue;
+            border-radius: 8px;
+            background-color: transparent;
+            @include pc{
+                width: 20rem;
+                height: 4rem;
+                font-size: 1.6rem;
+                line-height: 4rem;
+                border-radius: 0.8rem;
+            }
+            @include tab{
+                display: block;
+                margin-left: auto;
+                font-size: 2.5rem;
+                width: 26rem;
+                height: 5.8rem;
+            }
+        }
+    }
+}
+.cart-table__wrap{
+    width: 100%;
+    padding: 36px 0;
+    // border-top: solid 1px $color-black;
+    border-bottom: solid 1px $color-black;
+    @include pc{
+        padding: 3.6rem 0;
+    }
+    @include tab{
+        padding: 2.4rem 0;
+    }
+    @include tab{
+        display: block;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+}
+#cart_table{
+    width: 100%;
+    @include tab{
+        width: 144rem;
+    }
+    @include sp{
+        width: 760px;
+    }
+    th{
+        vertical-align: middle;
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        @include pc{
+            font-size: 1.6rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+        }
+    }
+    td{
+        vertical-align: middle;
+        @include font-style(20px, $color-black, 500);
+        line-height: 1;
+        padding: 16px 0;
+        &.productname{
+            font-weight: 700;
+            @include tab{
+                font-size: 3.6rem;
+            }
+        }
+        @include pc{
+            font-size: 2rem;
+            padding: 1.6rem 0;
+        }
+        @include tab{
+            font-size: 2.5rem;
+        }
+    }
+    .num{
+        width: 10.4%;
+        text-align: left;
+        @include tab{
+            width: 5%;
+        }
+    }
+    .productname{
+        width: 23.1%;
+        text-align: left;
+    }
+    .unitprice{
+        width: 13%;
+    }
+    .quantity{
+        width: 9%;
+    }
+    .subtotal{
+        width: 11.98%;
+    }
+    .stock{
+        width: 11.98%;
+    }
+    .action{
+        width: 3.6%;
+        input[type="submit"]{
+            width: auto;
+            height: auto;
+            color: $color-black;
+            background-color: transparent;
+            font-size: 20px;
+            padding: 4px 6px;
+            border: solid 1px $color-black;
+            font-weight: 300;
+            line-height: 1;
+            border-radius: 4px;
+            @include pc{
+                font-size: 2rem;
+                padding: 0.4rem 0.6rem;
+            }
+            @include tab{
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .thumbnail{
+        width: 16.3%;
+        text-align: left;
+        img{
+            width: 132px;
+            height: 132px;
+            @include pc{
+                width: 13.2rem;
+                height: 13.2rem;
+            }
+            @include tab{
+                width: 17rem;
+                height: 17rem;
+            }
+        }
+    }
+    input[type="text"]{
+        width: 45px;
+        height: 45px;
+        border-radius: 5px;
+        border: solid 1px $color-black;
+        text-align: center;
+        @include font-style(20px, $color-black, 600);
+        @include pc{
+            width: 5.5rem;
+            height: 5.5rem;
+            border-radius: 0.5rem;
+            font-size: 2rem;
+        }
+    }
+}
+.currency_code{
+    @include font-style(14px, $color-black, 300);
+    line-height: 1;
+    padding: 5px;
+    @include pc{
+        font-size: 1.4rem;
+    }
+    @include tab{
+        display: none;
+        font-size: 2rem;
+    }
+}
+.caption{
+    display: none;
+    @include tab{
+        display: block;
+        @include font-style(2rem, $color-blue, 600);
+        line-height: 1;
+        padding: 1.6rem 0;
+    }
+}
+.total-amount{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+    @include pc{
+        margin-bottom: 2.4rem;
+    }
+    th{
+        padding: 11px 6px;
+        @include pc{
+            padding: 1.1rem 0.6rem;
+        }
+    }
+    td{
+        padding: 11px 6px;
+        @include pc{
+            padding: 1.1rem 0.6rem;
+        }
+    }
+    &__h{
+        @include font-style(21px, $color-black, 600);
+        line-height: 1;
+        vertical-align: middle;
+        @include pc{
+            font-size: 2.1rem;
+        }
+        @include tab{
+            font-size: 2.8rem;
+        }
+    }
+    &__d{
+        @include font-style(30px, $color-black, 600);
+        line-height: 1;
+        font-family: $font-h;
+        vertical-align: middle;
+        text-align: right;
+        @include pc{
+            font-size: 3rem;
+        }
+        @include tab{
+            font-size: 5.2rem;
+        }
+    }
+    .other-amount{
+        &__h{
+            text-align: left;
+            @include font-style(16px, $color-black, 300);
+            line-height: 1;
+            vertical-align: middle;
+            @include pc{
+                font-size: 1.6rem;
+            }
+            @include tab{
+                font-size: 2.5rem;
+            }
+        }
+        &__d{
+            text-align: right;
+            @include font-style(20px, $color-black, 300);
+            line-height: 1;
+            font-family: $font-h;
+            vertical-align: middle;
+            @include pc{
+                font-size: 2rem;
+            }
+            @include tab{
+                font-size: 3.6rem;
+            }
+        }
+    }
+}
+.send{
+    display: flex;
+    justify-content: space-between;
+    @include tab{
+        flex-direction: column;
+        gap: 3.2rem;
+        align-items: center
+    }
+    &__cart-page{
+        margin-top: 27px;
+        @include pc{
+            margin-top: 2.7rem;
+        }
+        @include tab{
+            margin-top: 6rem;
+        }
+    }
+    &__loginform{
+        margin-top: 15px;
+        margin-bottom: 26px;
+        justify-content: center;
+        @include pc{
+            margin-top: 1.5rem;
+            margin-bottom: 2.6rem;
+        }
+        @include tab{
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+    }
+    &__non-customerform{
+        gap: 60px;
+        justify-content: center;
+        margin-top: 50px;
+        @include pc{
+            gap: 6rem;
+            margin-top: 5rem;
+        }
+        @include tab{
+            margin-top: 6rem;
+            gap: 3.2rem;
+        }
+    }
+    &__derivery-page{
+        gap: 60px;
+        justify-content: center;
+        margin-bottom: 20px;
+        @include pc{
+            gap: 6rem;
+            margin-bottom: 2rem;
+        }
+        @include tab{
+            gap: 3.2rem;
+            margin-top: 2.6rem;
+            margin: 0;
+        }
+    }
+}
+.page-template-uscescart{
+    input[type="submit"]{
+        width: 280px;
+        height: 45px;
+        @include font-style(20px, $color-white, 600);
+        line-height: 45px;
+        text-align:center;
+        background-color: $color-gray;
+        border-radius: 12px;
+        @include pc{
+            font-size: 2.8rem;
+            width: 28rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: 1.2rem;
+        }
+        &.to_customerinfo_button{
+            background-color: $color-blue;
+        }
+        &.to_memberlogin_button{
+            background-color: $color-blue;
+        }
+    }
+    input[type="button"]{
+        width: 280px;
+        height: 45px;
+        @include font-style(20px, $color-white, 600);
+        line-height: 45px;
+        text-align:center;
+        background-color: $color-gray;
+        border-radius: 12px;
+        @include pc{
+            font-size: 2.8rem;
+            width: 28rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: 1.2rem;
+        }
+    }
+}
+.page-template-uscesmember{
+    input[type="submit"]{
+        width: 280px;
+        height: 45px;
+        @include font-style(20px, $color-white, 600);
+        line-height: 45px;
+        text-align:center;
+        background-color: $color-gray;
+        border-radius: 12px;
+        @include pc{
+            font-size: 2.8rem;
+            width: 28rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: 1.2rem;
+        }
+    }
+}

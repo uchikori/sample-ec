@@ -1,0 +1,150 @@
+.point-form{
+    padding-bottom: 20px;
+    border-bottom: solid 1px $color-black;
+    margin-bottom: 24px;
+    @include pc{
+        padding-bottom: 2rem;
+        margin-bottom: 2.4rem;
+    }
+    @include tab{
+        padding-bottom: 4rem;
+    }
+}
+#point_table{
+    display: flex;
+    justify-content: flex-end;
+    tr{
+        display: inline-block;
+        margin-right: 55px;
+        &:last-child{
+            margin-right: 0;
+        }
+        @include pc{
+            margin-right: 5.5rem;
+        }
+        @include tab{
+            margin-right: 0;
+            display: table-row;
+        }
+    }
+    th{
+        vertical-align: middle;
+        padding-right: 34px;
+        @include font-style(16px, $color-black, 500);
+        @include pc{
+            padding-right: 3.4rem;
+            font-size: 1.6rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+        }
+    }
+    td{
+        vertical-align: middle;
+        @include font-style(20px, $color-black, normal);
+        font-family: $font-h;
+        @include pc{
+            font-size: 2rem;
+        }
+        @include tab{
+            font-size: 3.6rem;
+            text-align: right;
+            padding: 1.1rem 0;
+        }
+    }
+    input[type="submit"]{
+        background-color: $color-blue;
+    }
+    input[type="text"]{
+        @include font-style(20px, $color-black, normal00);
+        line-height: 1;
+        width: 100px;
+        height: 40px;
+        border: solid 1px #bbb3b1;
+        border-radius: 4px;
+        text-align: center;
+        @include pc{
+            font-size: 2rem;
+            width: 10rem;
+            height: 4rem;
+            background-repeat: 0.4rem;
+        }
+        @include tab{
+            font-size: 3.6rem;
+            height: 5rem;
+        }
+    }
+}
+#confirm_table{
+    width: 100%;
+    @include font-style(16px, $color-black, 500);
+    line-height: 1;
+    margin: 40px 0;
+    @include pc{
+        font-size: 1.6rem;
+        margin: 4rem 0;
+    }
+    @include tab{
+        font-size: 2.8rem;
+    }
+    h3{
+        @include font-style(20px, $color-black, 600);
+        line-height: 1;
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 37px;
+        @include pc{
+            font-size: 2rem;
+            padding: 1.5rem 0;
+            margin-top: 3.7rem;
+        }
+        @include tab{
+            font-size: 3.6rem;
+        }
+        &:after{
+            content: "";
+            display: inline-block;
+            width: 800px;
+            height: 1px;
+            background-color: $color-gray;
+            @include pc{
+                width: 80rem;
+            }
+            @include tab{
+                width: 30rem;
+            }
+        }
+    }
+    th{
+        width: 18.3%;
+        vertical-align: middle;
+        padding: 25px 0;
+        @include pc{
+            padding: 2.5rem 0;
+        }
+        @include tab{
+            width: 100%;
+            display: block;
+            padding: 2rem 0 1rem 0;
+        }
+    }
+    td{
+        vertical-align: middle;
+        @include tab{
+            display: block;
+            padding: 1rem 0 2rem 0;
+        }
+        
+    }
+}
+#purchace_form{
+    padding-top: 26px;
+    @include pc{
+        padding-top: 2.6rem;
+    }
+    input[type="submit"]{
+        background-color: $color-submit;
+    }
+}
