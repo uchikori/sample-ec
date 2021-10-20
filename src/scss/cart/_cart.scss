@@ -370,64 +370,6 @@
         }
     }
 }
-.send{
-    display: flex;
-    justify-content: space-between;
-    @include tab{
-        flex-direction: column;
-        gap: 3.2rem;
-        align-items: center
-    }
-    &__cart-page{
-        margin-top: 27px;
-        @include pc{
-            margin-top: 2.7rem;
-        }
-        @include tab{
-            margin-top: 6rem;
-        }
-    }
-    &__loginform{
-        margin-top: 15px;
-        margin-bottom: 26px;
-        justify-content: center;
-        @include pc{
-            margin-top: 1.5rem;
-            margin-bottom: 2.6rem;
-        }
-        @include tab{
-            margin-top: 3rem;
-            margin-bottom: 4rem;
-        }
-    }
-    &__non-customerform{
-        gap: 60px;
-        justify-content: center;
-        margin-top: 50px;
-        @include pc{
-            gap: 6rem;
-            margin-top: 5rem;
-        }
-        @include tab{
-            margin-top: 6rem;
-            gap: 3.2rem;
-        }
-    }
-    &__derivery-page{
-        gap: 60px;
-        justify-content: center;
-        margin-bottom: 20px;
-        @include pc{
-            gap: 6rem;
-            margin-bottom: 2rem;
-        }
-        @include tab{
-            gap: 3.2rem;
-            margin-top: 2.6rem;
-            margin: 0;
-        }
-    }
-}
 .page-template-uscescart{
     input[type="submit"]{
         width: 280px;
@@ -467,24 +409,6 @@
         line-height: 45px;
         text-align:center;
         background-color: $color-gray;
-        border-radius: 12px;
-        @include pc{
-            font-size: 2.8rem;
-            width: 28rem;
-            height: 4.5rem;
-            line-height: 4.5rem;
-            border-radius: 1.2rem;
-        }
-    }
-}
-.page-template-uscesmember{
-    input[type="submit"]{
-        width: 280px;
-        height: 45px;
-        @include font-style(20px, $color-white, 600);
-        line-height: 45px;
-        text-align:center;
-        background-color: $color-blue;
         border-radius: 12px;
         @include pc{
             font-size: 2.8rem;
