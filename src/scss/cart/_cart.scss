@@ -450,6 +450,15 @@
         &.to_memberlogin_button{
             background-color: $color-blue;
         }
+        &.to_deliveryinfo_button{
+            background-color: $color-blue;
+        }
+        &.to_confirm_button{
+            background-color: $color-blue;
+        }
+        &.checkout_button{
+            background-color: $color-blue;
+        }
     }
     input[type="button"]{
         width: 280px;
@@ -475,7 +484,7 @@
         @include font-style(20px, $color-white, 600);
         line-height: 45px;
         text-align:center;
-        background-color: $color-gray;
+        background-color: $color-blue;
         border-radius: 12px;
         @include pc{
             font-size: 2.8rem;

@@ -177,7 +177,7 @@
                     </div>
 
                      <!-- [別の配送先を指定する]にチェックを入れた場合のみ表示される -->
-                    <table class="non-customer_inputform" id="delivery_table">
+                    <table class="customer_form--ptn--2 customer_form" id="delivery_table">
                         <tbody>
                             <tr class="customkey_company-name">
                             <th scope="row">会社名</th>
@@ -192,8 +192,8 @@
     
                             <tr id="furikana_row" class="inp1">
                             <th width="127" scope="rpw">フリガナ</th>
-                            <td class="name_td">姓<input type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
-                            <td class="name_td">名<input type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
+                            <td>姓<input type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
+                            <td>名<input type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
                             </tr>
     
                             <tr id="zipcode_row">
@@ -358,7 +358,7 @@
                     </div>
                     <div class="send send__derivery-page">
                         <input name="previous" type="submit" id="previouscart" class="continue_shopping_button" value="戻る" onclick="uscesCart.previousCart();">
-                        <input name="customerinfo" type="submit" class="to_customerinfo_button" value="次へ" onclick="return uscesCart.cartNext();">
+                        <input name="customerinfo" type="submit" class="to_confirm_button" value="次へ" onclick="return uscesCart.cartNext();">
                     </div>
 
                 </form>

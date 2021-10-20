@@ -3894,6 +3894,18 @@ input[type="radio"] {
   background-color: #5fc1c7;
 }
 
+.page-template-uscescart input[type="submit"].to_deliveryinfo_button {
+  background-color: #5fc1c7;
+}
+
+.page-template-uscescart input[type="submit"].to_confirm_button {
+  background-color: #5fc1c7;
+}
+
+.page-template-uscescart input[type="submit"].checkout_button {
+  background-color: #5fc1c7;
+}
+
 .page-template-uscescart input[type="button"] {
   width: 280px;
   height: 45px;
@@ -3914,7 +3926,7 @@ input[type="radio"] {
   font-weight: 600;
   line-height: 45px;
   text-align: center;
-  background-color: #d8d6d6;
+  background-color: #5fc1c7;
   border-radius: 12px;
 }
 
@@ -4016,6 +4028,19 @@ input[type="radio"] {
   padding: 0 16px;
 }
 
+.customer_form input[type="button"] {
+  width: 130px;
+  height: 40px;
+  font-size: 16px;
+  color: #231815;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 4px;
+  border: solid 1px #bbb3b1;
+}
+
 .customer_form textarea {
   font-size: 16px;
   color: #231815;
@@ -4028,84 +4053,30 @@ input[type="radio"] {
   padding: 16px;
 }
 
-.non-customer_inputform {
-  width: 100%;
-}
-
-.non-customer_inputform em {
-  margin-left: 0;
-}
-
-.non-customer_inputform #name1, .non-customer_inputform #name2, .non-customer_inputform #zipcode, .non-customer_inputform #address1, .non-customer_inputform #address2,
-.non-customer_inputform #tel, .non-customer_inputform #mailaddress1, .non-customer_inputform #mailaddress2 {
-  background-color: #fdeeed;
-}
-
-.non-customer_inputform th {
-  font-size: 16px;
-  color: #231815;
-  font-weight: 500;
-  line-height: 1;
-  vertical-align: middle;
-  width: 18.75%;
-}
-
-.non-customer_inputform td {
-  padding: 12.5px 0;
-  vertical-align: middle;
-  font-size: 16px;
-  color: #d8d6d6;
-  font-weight: 300;
-  line-height: 1;
-}
-
-.non-customer_inputform .name_td input {
+.customer_form .name_td input {
   width: 280px;
 }
 
-.non-customer_inputform input {
-  font-size: 16px;
-  color: #231815;
-  font-weight: 500;
-  line-height: 1;
-  width: 600px;
-  height: 40px;
-  border: solid 1px #bbb3b1;
-  border-radius: 4px;
-  padding: 0 16px;
+.customer_form #furikana_row input {
+  width: 280px;
 }
 
-.non-customer_inputform #zipcode {
+.customer_form #zipcode {
   width: 160px;
 }
 
-.non-customer_inputform select {
-  width: 140px;
-  height: 40px;
-  font-size: 16px;
-  color: #231815;
-  font-weight: 600;
-  line-height: 40px;
-  background-color: transparent;
-  border-radius: 4px;
-  border: solid 1px #bbb3b1;
-  background-image: url("../images/svg/arrow-bottom-black.png");
-  background-position: center right 10px;
-  background-repeat: no-repeat;
-  text-align: center;
+.customer_form--ptn--2 #name1, .customer_form--ptn--2 #name2, .customer_form--ptn--2 #zipcode, .customer_form--ptn--2 #address1, .customer_form--ptn--2 #address2,
+.customer_form--ptn--2 #tel, .customer_form--ptn--2 #mailaddress1, .customer_form--ptn--2 #mailaddress2 {
+  background-color: #fdeeed;
 }
 
-.non-customer_inputform input[type="button"] {
-  width: 130px;
-  height: 40px;
+.customer_form--ptn--2 td {
+  padding: 12.5px 0;
+  vertical-align: middle;
   font-size: 16px;
-  color: #231815;
-  font-weight: 600;
-  line-height: 40px;
-  text-align: center;
-  background-color: transparent;
-  border-radius: 4px;
-  border: solid 1px #bbb3b1;
+  color: #6c8485;
+  font-weight: 300;
+  line-height: 1;
 }
 
 .agree_member_area .at_cont_text {
@@ -4322,6 +4293,22 @@ input[type="radio"] {
   font-weight: 600;
   background-color: #5fc1c7;
   border-radius: 12px;
+}
+
+/***メンバーページスタイル***/
+.member-page {
+  margin-top: 80px;
+}
+
+#memberpages {
+  margin-top: 13px;
+}
+
+.member_page_title {
+  font-size: 20px;
+  color: #231815;
+  font-weight: 600;
+  line-height: 1;
 }
 
 .cta-sec {
@@ -5738,6 +5725,13 @@ input[type="radio"] {
     border-radius: 0.4rem;
     padding: 0 1.6rem;
   }
+  .customer_form input[type="button"] {
+    font-size: 1.6rem;
+    width: 13rem;
+    height: 4rem;
+    line-height: 4rem;
+    border-radius: 0.4rem;
+  }
   .customer_form textarea {
     font-size: 1.6rem;
     width: 60rem;
@@ -5745,40 +5739,18 @@ input[type="radio"] {
     border-radius: 0.4rem;
     padding: 1.6rem;
   }
-  .non-customer_inputform th {
-    font-size: 1.6rem;
-  }
-  .non-customer_inputform td {
-    font-size: 1.6rem;
-    padding: 1.25rem 0;
-  }
-  .non-customer_inputform .name_td input {
+  .customer_form .name_td input {
     width: 28rem;
   }
-  .non-customer_inputform input {
-    font-size: 1.6rem;
-    width: 60rem;
-    height: 4rem;
-    border-radius: 0.4rem;
-    padding: 0 1.6rem;
+  .customer_form #furikana_row input {
+    width: 28rem;
   }
-  .non-customer_inputform #zipcode {
+  .customer_form #zipcode {
     width: 16rem;
   }
-  .non-customer_inputform select {
-    font-size: 1.4rem;
-    width: 10rem;
-    height: 4rem;
-    line-height: 4rem;
-    border-radius: 0.4rem;
-    background-position: center right 2.4rem;
-  }
-  .non-customer_inputform input[type="button"] {
+  .customer_form--ptn--2 td {
     font-size: 1.6rem;
-    width: 13rem;
-    height: 4rem;
-    line-height: 4rem;
-    border-radius: 0.4rem;
+    padding: 1.25rem 0;
   }
   .agree_member_area .at_cont_text {
     height: 20rem;
@@ -5788,8 +5760,8 @@ input[type="radio"] {
     border-radius: 0.4rem;
   }
   .agree_member_area .at_check_area input[type="checkbox"] {
-    width: 20rem;
-    height: 20rem;
+    width: 2rem;
+    height: 2rem;
   }
   .agree_member_area .at_check_area label {
     padding: 1.6rem;
@@ -7165,55 +7137,34 @@ input[type="radio"] {
     height: 5rem;
     font-size: 2.8rem;
   }
+  .customer_form input[type="button"] {
+    font-size: 2.5rem;
+    width: 24rem;
+    height: 5rem;
+    line-height: 5rem;
+  }
   .customer_form textarea {
     width: 100%;
     height: 54rem;
     font-size: 2.8rem;
   }
-  .non-customer_inputform tr {
-    display: block;
-    margin-bottom: 3rem;
+  .customer_form .name_td input {
+    width: 51rem;
   }
-  .non-customer_inputform tr:last-child {
-    margin-bottom: 0;
+  .customer_form #furikana_row input {
+    width: 51rem;
   }
-  .non-customer_inputform th {
-    width: 100%;
-    font-size: 2.8rem;
-    display: block;
+  .customer_form #zipcode {
+    width: 28rem;
   }
-  .non-customer_inputform td {
+  .customer_form--ptn--2 td {
     display: block;
     font-size: 2.8rem;
     padding: 1.2rem 0;
     margin-bottom: 2rem;
   }
-  .non-customer_inputform td:last-child {
+  .customer_form--ptn--2 td:last-child {
     margin-bottom: 0;
-  }
-  .non-customer_inputform .name_td input {
-    width: 51rem;
-  }
-  .non-customer_inputform input {
-    width: 100%;
-    height: 5rem;
-    font-size: 2.8rem;
-  }
-  .non-customer_inputform #zipcode {
-    width: 28rem;
-  }
-  .non-customer_inputform select {
-    font-size: 2.5rem;
-    width: 28rem;
-    height: 5rem;
-    line-height: 5rem;
-    padding-left: 1.6rem;
-  }
-  .non-customer_inputform input[type="button"] {
-    font-size: 2.5rem;
-    width: 24rem;
-    height: 5rem;
-    line-height: 5rem;
   }
   .agree_member_area .at_cont_text {
     width: 100%;

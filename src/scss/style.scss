@@ -907,6 +907,19 @@ input[type="radio"]{
 //完了ページ
 @import 'cart/_completion.scss';
 
+/***メンバーページスタイル***/
+//新規会員登録
+.member-page{
+    margin-top: 80px;
+}
+#memberpages{
+    margin-top: 13px;
+}
+.member_page_title{
+    @include font-style(20px, $color-black, 600);
+    line-height: 1;
+}
+
 //-------------------------------
 // cta
 //-------------------------------
