@@ -1,0 +1,111 @@
+.footer{
+    width: 100%;
+    padding-top: 42px;
+    @include pc{
+        padding-top: 4.2rem;
+    }
+    @include tab{
+        padding-top: 3rem;
+    }
+    &__appeal{
+        @include font-style(17px, $color-blue2, 600);
+        line-height: 1;
+        letter-spacing: 0.15em;
+        text-align: center;
+        @include pc{
+            font-size: 1.7rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+            letter-spacing: 0.03em;
+        }
+    }
+    &__inner{
+        width: 800px;
+        margin: 14px auto 0 auto;
+        @include pc{
+            width: 80rem;
+        }
+        @include tab{
+            width: 84vw;
+        }
+    }
+    &__info{
+        width: 100%;
+    }
+    &__logo{
+        font-size: 32px;
+        letter-spacing: 0;
+    }
+    &__address{
+        @include font-style(14px, $color-black, 300);
+        line-height: 1;
+        letter-spacing: 0em;
+        margin-top: 12px;
+        text-align: center;
+        margin-left: 244px;
+        @include pc{
+            font-size: 1.4rem;
+            margin-top: 0.4rem;
+        }
+        @include tab{
+            font-size: 2rem;
+            margin-top: 1.6rem;
+            margin-left: 0;
+        }
+    }
+    &__bottom{
+        width: 100%;
+        height: 25px;
+        background-color: $color-blue2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        @include pc{
+            height: 2.5rem;
+            margin-top: 1.6rem;
+        }
+        @include tab{
+            margin-top: 2rem;
+        }
+    }
+}
+.copyright{
+    @include font-style(10px, $color-white, 300);
+    text-align: center;
+    letter-spacing: 0.18em;
+    font-family: $font-m; 
+}
+.footer-tel{
+    &__copy{
+        @include font-style(15px, $color-blue2, 600);
+        line-height: 1;
+        letter-spacing: 0.21em;
+        @include pc{
+            font-size: 1.5rem;
+        }
+    }
+    &__icon{
+        display: inline-block;
+        width: 37px;
+        height: 41px;
+        position: relative;
+        background-image: url("../images/svg/tel-icon.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include pc{
+            width: 3.7rem;
+            height: 4.1rem;
+        }
+    }
+    &__num{
+        @include font-style(52px, $color-blue, 600);
+        line-height: 1;
+        margin-top: 6px;
+        @include pc{
+            font-size: 5.2rem;
+            margin-top: 0.6rem;
+        }
+    }
+}
