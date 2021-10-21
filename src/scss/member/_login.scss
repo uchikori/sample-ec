@@ -1,0 +1,179 @@
+.loginbox{
+    margin-top: 15px;
+    @include pc{
+        margin-top: 1.5rem;
+    }
+    @include tab{
+        margin-top: 1.5rem;
+    }
+}
+.member-box{
+    p{
+        padding: 11px 0;
+        color: $color-blue2;
+        @include pc{
+            padding: 1.1rem 0;
+        }
+        @include tab{
+            padding: 2.1rem 0;
+        }
+        &.forgetmenot{
+            padding: 5px 0;
+            @include pc{
+                padding: 0.5rem 0;
+            }
+            @include tab{
+                padding: 0;
+                margin-top: -0.5rem;
+            }
+        }
+        &.submit{
+            padding: 20px 0;
+            @include pc{
+                padding: 2rem 0;
+            }
+            @include tab{
+                text-align: center;
+                padding: 4.3rem 0;
+            }
+        }
+        &.submit__center{
+            text-align: center;
+            @include tab{
+                padding: 4rem 0 0 0;
+            }
+        }
+        &.lostpass{
+            @include tab{
+                text-align: center;
+                padding: 0.5rem 0;
+            }
+            a{
+                @include font-style(16px, $color-black, 500);
+                line-height: 1;
+                text-decoration: underline;
+                @include pc{
+                    font-size: 1.6rem;
+                }
+                @include tab{
+                    font-size: 2.8rem;
+                }
+            }
+        }
+    }
+    label{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        width: 18.75%;
+        display: inline-block;
+        vertical-align: middle;
+        @include pc{
+            font-size: 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            font-size: 2.8rem;
+            display: block;
+        }
+    }
+    input[type="text"]{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        width: 600px;
+        height: 40px;
+        border: solid 1px $color-border2;
+        border-radius: 4px;
+        padding: 0 16px;
+        @include pc{
+            font-size: 1.6rem;
+            width: 60rem;
+            height: 4rem;
+            border-radius: 0.4rem;
+            padding: 0 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 5rem;
+            font-size: 2.8rem;
+            margin-top: 1.1rem;
+        }
+    }
+    input[type="password"]{
+        @include font-style(16px, $color-black, 500);
+        line-height: 1;
+        width: 600px;
+        height: 40px;
+        border: solid 1px $color-border2;
+        border-radius: 4px;
+        padding: 0 16px;
+        @include pc{
+            font-size: 1.6rem;
+            width: 60rem;
+            height: 4rem;
+            border-radius: 0.4rem;
+            padding: 0 1.6rem;
+        }
+        @include tab{
+            width: 100%;
+            height: 5rem;
+            font-size: 2.8rem;
+            margin-top: 1.1rem;
+        }
+    }
+    input[type="checkbox"]{
+        width: 20px;
+        height: 20px;
+        border: solid 1px $color-black;
+        background-color: $color-white;
+        display: inline-block;
+        @include pc{
+            width: 2rem;
+            height: 2rem;
+        }
+        @include tab{
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+    &__lead-text{
+        @include font-style(16px, $color-black, 500);
+        text-align: center;
+    }
+}
+.new-entry{
+    margin: 37px auto;
+    @include pc{
+        margin: 3.7rem auto;
+    }
+    @include tab{
+        margin: 5.8rem auto 0 auto;
+    }
+    h2{
+        @include font-style(16px, $color-black, 500);
+        @include pc{
+            font-size: 2rem;
+        }
+        @include tab{
+            font-size: 2.8rem;
+        }
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e8e6e5;
+        gap: 47px;
+        height: 120px;
+        @include pc{
+            gap: 4.7rem;
+            height: 12rem;
+        }
+        @include tab{
+            height: 19rem;
+            flex-direction: column;
+            gap: 2.6rem;
+        }
+
+    }
+
+}

@@ -1,0 +1,257 @@
+.history-area__wrap{
+    width: 100%;
+    padding: 36px 0;
+    @include pc{
+        padding: 3.6rem 0;
+    }
+    @include tab{
+        padding: 2.4rem 0;
+    }
+    @include tab{
+        display: block;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+.history-area{
+    width: 100%;
+    @include tab{
+        width: 144rem;
+    }
+    @include sp{
+        width: 760px;
+    }
+}
+.history_head{
+    width: 100%;
+    margin-top: 60px;
+    @include pc{
+        margin-top: 6rem;
+    }
+    &:nth-child(1){
+        margin-top: 0;
+    }
+    th{
+        padding: 12px 6px;
+        @include font-style(16px, $color-black, 500);
+        vertical-align: middle;
+        background-color: rgba(95, 193, 199, 0.3);
+        @include pc{
+            font-size: 1.6rem;
+            padding: 1.2rem 0.6rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+        }
+        
+    }
+    td{
+        padding: 12px 6px;
+        @include font-style(16px, $color-black, 500);
+        vertical-align: middle;
+        @include pc{
+            font-size: 1.6rem;
+            padding: 1.2rem 0.6rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+        }
+    }
+    .purchase_price{
+        display: none;
+    }
+    .discount{
+        display: none;
+    }
+    .shipping{
+        text-align: center;
+    }
+    .tax{
+        text-align: center;
+    }
+    .cod{
+        display: none;
+    }
+    .used_point{
+
+            text-align: center;
+
+
+    }
+    .get_point{
+
+            text-align: center;
+
+    }
+}
+.retail{
+    width: 100%;
+    margin-top: 25px;
+    @include pc{
+        margin-top: 2.5rem;
+    }
+    th{
+        padding: 12px 6px;
+        @include font-style(16px, $color-black, 500);
+        vertical-align: middle;
+        background-color: rgba(95, 193, 199, 0.3);
+        @include pc{
+            font-size: 1.6rem;
+            padding: 1.2rem 0.6rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+        }
+    }
+    td{
+        padding: 12px 6px;
+        @include font-style(16px, $color-black, 500);
+        vertical-align: middle;
+        @include pc{
+            font-size: 1.6rem;
+            padding: 1.2rem 0.6rem;
+        }
+        @include tab{
+            font-size: 2.5rem;
+        }
+    }
+    img{
+        width: 97px;
+        height: 97px;
+        @include pc{
+            width: 9.7rem;
+            height: 9.7rem;
+        }
+        @include tab{
+            width: 17rem;
+            height: 17rem;
+        }
+    }
+    .cartrownum{
+        text-align: center;
+    }
+    .cartrownum{
+        width: 8%;
+        // text-align: center;
+    }
+    .thumbnail{
+        width: 20%;
+        text-align: center;
+    }
+    .price{
+        width: 18%;
+        text-align: center;
+    }
+    .quantity{
+        width: 10%;
+        text-align: center;
+    }
+    .subtotal{
+        width: 18%;
+        text-align: center;
+    }
+}
+
+.member-area__wrap{
+    width: 100%;
+    h3{
+        @include font-style(20px, $color-black, 600);
+        line-height: 1;
+        padding: 22px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 35px;
+        @include pc{
+            font-size: 2rem;
+            padding: 2.2rem 0;
+            margin-top: 3.5rem;
+        }
+        @include tab{
+            font-size: 3.6rem;
+        }
+        &:after{
+            content: "";
+            display: inline-block;
+            width: 800px;
+            height: 1px;
+            background-color: $color-gray;
+            @include pc{
+                width: 80rem;
+            }
+            @include tab{
+                width: 30rem;
+            }
+        }
+    }
+}
+.member-area{
+    width: 100%;
+    @include font-style(16px, $color-black, 500);
+    line-height: 1;
+    @include pc{
+        font-size: 1.6rem;
+    }
+    @include tab{
+        font-size: 2.8rem;
+    }
+    th{
+        width: 18.3%;
+        vertical-align: middle;
+        padding: 14px 0;
+        @include pc{
+            padding: 1.5rem 0;
+        }
+        @include tab{
+            width: 100%;
+            display: block;
+            padding: 2rem 0 1rem 0;
+        }
+    }
+    td{
+        vertical-align: middle;
+        @include tab{
+            display: block;
+            padding: 1rem 0 2rem 0;
+        }
+        
+    }
+}
+
+.edit-eria__wrap{
+    width: 100%;
+    margin-top: 46px;
+    h3{
+        @include font-style(20px, $color-black, 600);
+        line-height: 1;
+        padding: 22px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 35px;
+        @include pc{
+            font-size: 2rem;
+            padding: 2.2rem 0;
+            margin-top: 3.5rem;
+        }
+        @include tab{
+            font-size: 3.6rem;
+        }
+        &:after{
+            content: "";
+            display: inline-block;
+            width: 800px;
+            height: 1px;
+            background-color: $color-gray;
+            @include pc{
+                width: 80rem;
+            }
+            @include tab{
+                width: 30rem;
+            }
+        }
+    }
+}
+.edit-eria{
+    width: 100%;
+}

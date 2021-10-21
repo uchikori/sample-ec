@@ -1,0 +1,103 @@
+.page-template-uscesmember{
+    input[type="submit"]{
+        width: 280px;
+        height: 45px;
+        @include font-style(20px, $color-white, 600);
+        line-height: 45px;
+        text-align:center;
+        background-color: $color-blue;
+        border-radius: 12px;
+        @include pc{
+            font-size: 2.8rem;
+            width: 34rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: 1.2rem;
+        }
+        &.deletemember{
+            background-color: $color-blue2;
+        }
+    }
+    input[type="button"]{
+        width: 280px;
+        height: 45px;
+        @include font-style(20px, $color-white, 600);
+        line-height: 45px;
+        text-align:center;
+        background-color: $color-gray;
+        border-radius: 12px;
+        @include pc{
+            font-size: 2.8rem;
+            width: 34rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: 1.2rem;
+        }
+    }
+    .submit-btn{
+        width: 280px;
+        height: 45px;
+        @include font-style(20px, $color-white, 600);
+        line-height: 45px;
+        text-align:center;
+        background-color: $color-blue;
+        border-radius: 12px;
+        display: inline-block;
+        @include pc{
+            font-size: 2.8rem;
+            width: 34rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            border-radius: 1.2rem;
+        }
+    }
+}
+.member-page-text{
+    text-align: center;
+    @include font-style(16px, $color-black, 500);
+    line-height: 1;
+    padding: 10px 0;
+    @include pc{
+        font-size: 1.6rem;
+        padding: 1rem 0;
+    }
+    @include tab{
+        font-size: 2.8rem;
+        line-height: 4.4rem;
+    }
+    &__lost-page{
+        padding: 22px 0;
+        @include tab{
+            text-align: left;
+        }
+    }
+}
+.member-page{
+    margin-top: 80px;
+    @include pc{
+        margin-top: 8rem;
+    }
+    @include tab{
+        margin-top: 14rem;
+    }
+}
+#memberpages{
+    margin-top: 13px;
+    @include pc{
+        margin-top: 1.3rem;
+    }
+    @include tab{
+        margin-top: 3rem;
+    }
+}
+.member_page_title{
+    @include font-style(20px, $color-black, 600);
+    line-height: 1;
+    @include pc{
+        font-size: 2rem;
+    }
+    @include tab{
+        font-size: 3.6rem;
+        line-height: 4.4rem;
+    }
+}

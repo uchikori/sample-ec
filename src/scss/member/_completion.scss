@@ -1,0 +1,27 @@
+.go_to_mypage{
+    display: inline-block;
+    text-align: center;
+    width: 280px;
+    height: 45px;
+    line-height: 45px;
+    @include font-style(20px, $color-white, 600);
+    background-color: $color-submit;
+    border-radius: 12px;
+}
+.completion{
+    &__title{
+        text-align: center;
+        @include font-style(36px, $color-blue2, 600);
+        line-height: 1;
+        padding: 27px 0;
+        @include pc{
+            font-size: 3.6rem;
+            padding: 2.7rem 0;
+        }
+        @include tab{
+            font-size: 4.1rem;
+            line-height: 5.1rem;
+            padding: 3.1rem 0;
+        }
+    }
+}
