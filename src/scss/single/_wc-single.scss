@@ -167,7 +167,7 @@
         color: $color-white;
         text-align: center;
         border-radius: 12px;
-        font-family: FontAwesome;
+        font-family: FontAwesome,sans-serif;
         font-weight: bold;
         transition: background-color 0.3s ease;
         @include pc{
@@ -285,6 +285,7 @@
         display: block;
     }
 }
+
 .comments{
     h3{
         @include font-style(18px, $color-black, 600);
@@ -304,7 +305,7 @@
             padding-bottom: 2.3rem;
             margin-bottom: 2.3rem;
         }
-        .reply-title{
+        #reply-title{
             color: $color-blue;
         }
         .comment-form{
