@@ -795,8 +795,8 @@
     &__title-inner{
         width: 500px;
         height: auto;
-        // margin: 0 auto;
-        margin-left: 240px;
+        margin: 0 auto;
+        // margin-left: 240px;
         @include pc{
             width: 50rem;
             // height: 1.3rem;
@@ -836,6 +836,9 @@
     }
     &__empty{
         width: 36.46%;
+        @include pc{
+            width: 28.33%;
+        }
         @include tab{
             width: 100%;
             order: 2;
@@ -846,8 +849,8 @@
         height: 400px;
         position: absolute;
         @include pc{
-            width: 60rem;
-            height: 30rem;
+            width: 44rem;
+            height: 40rem;
         }
         @include tab{
             width: 100%;
@@ -857,6 +860,9 @@
     &__body{
         width: 63.54%;
         display: initial;
+        @include pc{
+            width: 71.67%;
+        }
         @include tab{
             display: contents;
         }
@@ -915,7 +921,7 @@
             display: flex;
             flex-direction: column;
             @include pc{
-                width: 54rem;
+                width: 59rem;
             }
             @include tab{
                 margin: 0 auto;
