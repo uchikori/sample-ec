@@ -157,14 +157,18 @@
 
                 <!-- end カートページ共通 -->
                 <form action="/wc_customer_page.html" method="post" onkeydown="if(event.keyCode == 13){return false;}">
+                  
                     <div class="cart">
+
                         <!-- 数量更新 -->
                         <div class="upbutton">
                             数量を変更した場合は必ず<br class="br-tab">更新ボタンを押してください
                             <input name="upbutton" type="submit" value="数量更新" onclick="return uscesCart.upCart()">
                         </div>
-                        <!-- //数量更新 -->
+
                         <div class="caption">※横スクロールで確認できます。</div>
+
+                        <!-- カートの中身テーブル -->
                         <div class="cart-table__wrap">
                             <table cellspacing="0" id="cart_table">
                                 <thead>
@@ -203,26 +207,36 @@
                                 </tbody>
                             </table>
                         </div>
+
                         <div class="currency_code">通貨：円</div>
-                        <!-- <div class="caption">※横スクロールで確認できます。</div> -->
+
+                        <!-- 合計金額表示 -->
                         <table class="total-amount">
                           <tr>
                             <th class="total-amount__h">商品合計<em class="tax">（税込み）</em></th>
                             <td class="total-amount__d">￥00,000</td>
                           </tr>
                         </table>
+
+                        <!-- 業務パック割引 -->
+                        <div class="gp"></div>
+
                     </div>
+
+                    <div class="no-cart"></div>
+
                     <div class="send send__cart-page">
                         <input name="previous" type="button" id="previouscart" class="continue_shopping_button" value="買い物を続ける" onclick="uscesCart.previousCart();">
                         <input name="customerinfo" type="submit" class="to_customerinfo_button" value="次へ" onclick="return uscesCart.cartNext();">
                     </div>
+
                 </form>
                 <div class="footer_explanation"></div>
             </article>
         </div>
     </section>
 
-    <!-- end product -->
+    <!-- end cart -->
 
     <!-- cta -->
     <section class="cta-sec">
@@ -244,7 +258,6 @@
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
