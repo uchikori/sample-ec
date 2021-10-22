@@ -9,17 +9,8 @@
   <title>新規Webサイトタイトル</title>
   <!-- メインCSS読み込み -->
   <link rel="stylesheet" href="dist/css/style.css">
-  <!-- AdobeFonts -->
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'vjz0zoc',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/2bcc27253a.js" crossorigin="anonymous"></script>
   <!-- jQuery読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -149,7 +140,7 @@
       <div class="page-main-visual-sec__inner">
         <picture class="page-main-visual-sec__image">
           <source media="(max-width: 640px)" srcset="dist/images/company-main-visual_sp.jpg"> 
-          <img srcset="dist/images/company-main-visual.jpg" src="dist/images/company-main-visual.jpg" alt="家族が笑顔で団らんしている様子">
+          <img srcset="dist/images/company-main-visual.jpg" src="dist/images/company-main-visual.jpg" alt="company profile">
         </picture>
         <h1 class="title page__h1-title">
             会社案内
@@ -158,7 +149,7 @@
     </section>
     <!-- //main-visual -->
 
-    <!-- company prifile -->
+    <!-- company profile -->
     <section class="company-top-sec">
         <div class="company-top-sec__inner container--size-s">
            <ul class="company-top-sec__items">
@@ -198,7 +189,7 @@
             </h2>
             <picture class="company-middle-sec__h2-title--en">
                 <source media="(max-width: 640px)" srcset="dist/images/svg/overview-title_sp.svg">
-                <img srcset="dist/images/svg/overview-title.svg" src="dist/images/svg/overview-title.svg" alt="news">
+                <img srcset="dist/images/svg/overview-title.svg" src="dist/images/svg/overview-title.svg" alt="company overview">
             </picture>
             <div class="company-overview">
                 <table>
@@ -313,7 +304,7 @@
             </div>
         </div>
     </section>
-    <!-- end company prifile -->
+    <!-- end company profile -->
 
     <!-- cta -->
     <section class="cta-sec">

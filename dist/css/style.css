@@ -2130,6 +2130,59 @@ input[type="radio"] {
   line-height: 1;
 }
 
+.page_navi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  gap: 22px;
+  position: relative;
+}
+
+.page_navi a {
+  display: block;
+  border: solid 1px #9e9997;
+  color: #9e9997;
+  padding: 4px 7px;
+  line-height: 1;
+  text-align: center;
+  font-size: 21px;
+}
+
+.page_navi .current a {
+  border: solid 1px #231815;
+  color: #231815;
+}
+
+.page_navi .previous, .page_navi .next {
+  position: absolute;
+  top: 0;
+  padding: 0 11px;
+  background-color: #5fc1c7;
+  border-radius: 7px;
+}
+
+.page_navi .previous {
+  left: 0;
+}
+
+.page_navi .previous a {
+  border: none;
+  color: #ffffff;
+}
+
+.page_navi .next {
+  right: 0;
+}
+
+.page_navi .next a {
+  border: none;
+  color: #ffffff;
+}
+
 /***会社案内ページスタイル***/
 .company-top-sec {
   background-image: url("../images/svg/background05.svg");
@@ -2751,59 +2804,6 @@ input[type="radio"] {
 .category-news .archive-title {
   padding: 0 0 37px;
   margin-top: -7px;
-}
-
-.page-navi {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  gap: 22px;
-  position: relative;
-}
-
-.page-navi a {
-  display: block;
-  border: solid 1px #9e9997;
-  color: #9e9997;
-  padding: 4px 7px;
-  line-height: 1;
-  text-align: center;
-  font-size: 21px;
-}
-
-.page-navi .current a {
-  border: solid 1px #231815;
-  color: #231815;
-}
-
-.page-navi .previous, .page-navi .next {
-  position: absolute;
-  top: 0;
-  padding: 0 11px;
-  background-color: #5fc1c7;
-  border-radius: 7px;
-}
-
-.page-navi .previous {
-  left: 0;
-}
-
-.page-navi .previous a {
-  border: none;
-  color: #ffffff;
-}
-
-.page-navi .next {
-  right: 0;
-}
-
-.page-navi .next a {
-  border: none;
-  color: #ffffff;
 }
 
 /***記事詳細ページスタイル***/
@@ -5271,7 +5271,7 @@ input[type="radio"] {
     margin-bottom: 1.2rem;
   }
   .product-list__description {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 27.5rem;
     line-height: 2.5rem;
   }
@@ -5468,6 +5468,17 @@ input[type="radio"] {
   .category__h1-title {
     font-size: 3.2rem;
   }
+  .page_navi {
+    gap: 2.2rem;
+  }
+  .page_navi a {
+    padding: 0.4rem 0.7rem;
+    font-size: 2.1rem;
+  }
+  .page_navi .previous, .page_navi .next {
+    padding: 0 1.1rem;
+    border-radius: 0.7rem;
+  }
   .company-top-sec {
     margin-top: 12rem;
     padding-bottom: 5.2rem;
@@ -5503,6 +5514,10 @@ input[type="radio"] {
     font-size: 2.2rem;
     padding: 2.5rem 0 2.5rem 4rem;
   }
+  .company-overview td {
+    font-size: 2.2rem;
+    padding: 2.5rem 0 2.5rem 3.7rem;
+  }
   .company-bottom-sec {
     margin-top: 8rem;
     margin-bottom: 2.5rem;
@@ -5521,6 +5536,10 @@ input[type="radio"] {
     width: 20rem;
     font-size: 2.2rem;
     padding: 0.9rem 0;
+  }
+  .about-tokuteishou td {
+    font-size: 2.2rem;
+    padding: 0.9rem 0 0.9rem 3.7rem;
   }
   .water-intro-sec {
     margin-top: 7.2rem;
@@ -5686,17 +5705,6 @@ input[type="radio"] {
     padding: 0 0 3.7rem;
     margin-top: -0.7rem;
   }
-  .page-navi {
-    gap: 2.2rem;
-  }
-  .page-navi a {
-    padding: 0.4rem 0.7rem;
-    font-size: 2.1rem;
-  }
-  .page-navi .previous, .page-navi .next {
-    padding: 0 1.1rem;
-    border-radius: 0.7rem;
-  }
   .article__inner {
     margin-top: 16rem;
   }
@@ -5719,7 +5727,7 @@ input[type="radio"] {
     margin: 4rem 0;
   }
   .article h4 {
-    font-size: 20rem;
+    font-size: 2rem;
     padding: 1rem 1.6rem;
     margin: 4rem 0;
   }
@@ -6928,6 +6936,18 @@ input[type="radio"] {
   .category__h1-title {
     font-size: 4.6rem;
   }
+  .page_navi {
+    gap: 4.4rem;
+  }
+  .page_navi a {
+    font-size: 2.9rem;
+    padding: 0.45rem 0.95rem;
+  }
+  .page_navi .previous, .page_navi .next {
+    top: 200%;
+    padding: 0 2.9rem;
+    border-radius: 0.7rem;
+  }
   .company-top-sec {
     margin-top: 10.3rem;
     padding-bottom: 5.6rem;
@@ -7230,18 +7250,6 @@ input[type="radio"] {
   }
   .archive-title {
     padding: 2.3rem 0;
-  }
-  .page-navi {
-    gap: 4.4rem;
-  }
-  .page-navi a {
-    font-size: 2.9rem;
-    padding: 0.45rem 0.95rem;
-  }
-  .page-navi .previous, .page-navi .next {
-    top: 200%;
-    padding: 0 2.9rem;
-    border-radius: 0.7rem;
   }
   .article__inner {
     margin-top: 24rem;

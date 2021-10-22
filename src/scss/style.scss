@@ -464,6 +464,72 @@ input[type="radio"]{
         font-size: 4.6rem;
     }
 }
+.page_navi{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 22px;
+    position: relative;
+    @include pc{
+        gap: 2.2rem;
+    }
+    @include tab{
+        gap: 4.4rem;
+    }
+    a{
+        display: block;
+        border: solid 1px #9e9997;
+        color: #9e9997;
+        padding: 4px 7px;
+        line-height: 1;
+        text-align: center;
+        font-size: 21px;
+        @include pc{
+            padding: 0.4rem 0.7rem;
+            font-size: 2.1rem;
+        }
+        @include tab{
+            font-size: 2.9rem;
+            padding: 0.45rem 0.95rem;
+        }
+    }
+    .current{
+        a{
+            border: solid 1px $color-black;
+            color: $color-black;
+        }
+    }
+    .previous,.next{
+        position: absolute;
+        top: 0;
+        padding: 0 11px;
+        background-color: $color-blue;
+        border-radius: 7px;
+        @include pc{
+            padding: 0 1.1rem;
+            border-radius: 0.7rem;
+        }
+        @include tab{
+            top: 200%;
+            padding: 0 2.9rem;
+            border-radius: 0.7rem;
+        }
+    }
+    .previous{
+        left: 0;
+        a{
+            border: none;
+            color: $color-white;
+        }
+    }
+    .next{
+        right: 0;
+        a{
+            border: none;
+            color: $color-white;
+        }
+    }
+}
 /***会社案内ページスタイル***/
 @import 'page/_company.scss';
 

@@ -9,17 +9,8 @@
   <title>新規Webサイトタイトル</title>
   <!-- メインCSS読み込み -->
   <link rel="stylesheet" href="dist/css/style.css">
-  <!-- AdobeFonts -->
-  <script>
-    (function(d) {
-      var config = {
-        kitId: 'vjz0zoc',
-        scriptTimeout: 3000,
-        async: true
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/2bcc27253a.js" crossorigin="anonymous"></script>
   <!-- jQuery読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -149,7 +140,7 @@
       <div class="page-main-visual-sec__inner">
         <picture class="page-main-visual-sec__image">
           <source media="(max-width: 640px)" srcset="dist/images/management-main-visual_sp.jpg"> 
-          <img srcset="dist/images/management-main-visual.jpg" src="dist/images/management-main-visual.jpg" alt="家族が笑顔で団らんしている様子">
+          <img srcset="dist/images/management-main-visual.jpg" src="dist/images/management-main-visual.jpg" alt="management support">
         </picture>
         <h1 class="title page__h1-title">
             衛生管理トータルサポート
@@ -160,46 +151,46 @@
 
     <!-- management -->
     <section class="management-intro-sec">
-        <div class="management-intro-sec__inner container--size-s">
-            <p class="paragraph management-intro-sec__text">
-                弊社はお客様のニーズに合わせた衛生機器・備品販売に限らず、
-                <br class="br-pc">
-                検便・ノロウイルス等の菌検査業務、
-                <br class="br-pc">
-                さらにHACCPに適応した衛生指導と継続支援など、
-                <br class="br-pc">
-                様々な施設における衛生管理を効率的に
-                <br class="br-pc">
-                トータルサポートいたします。
-            </p>
-        </div>
+      <div class="management-intro-sec__inner container--size-s">
+          <p class="paragraph management-intro-sec__text">
+              弊社はお客様のニーズに合わせた衛生機器・備品販売に限らず、
+              <br class="br-pc">
+              検便・ノロウイルス等の菌検査業務、
+              <br class="br-pc">
+              さらにHACCPに適応した衛生指導と継続支援など、
+              <br class="br-pc">
+              様々な施設における衛生管理を効率的に
+              <br class="br-pc">
+              トータルサポートいたします。
+          </p>
+      </div>
     </section>
 
     <section class="management-flow-sec">
-        <div class="management-flow-sec__inner container--size-s">
-            <h2 class="h2-title--size-l management-flow-sec__h2-title">
-                衛生管理・認証フロー
-            </h2>
-            <picture class="management-flow-sec__image container--size-s">
-                <source media="(max-width: 640px)" srcset="dist/images/svg/management-flow_sp.svg"> 
-                <img srcset="dist/images/svg/management-flow.svg" src="dist/images/svg/management-flow.svg" alt="家族が笑顔で団らんしている様子">
-            </picture>
-        </div>
+      <div class="management-flow-sec__inner container--size-s">
+          <h2 class="h2-title--size-l management-flow-sec__h2-title">
+              衛生管理・認証フロー
+          </h2>
+          <picture class="management-flow-sec__image container--size-s">
+              <source media="(max-width: 640px)" srcset="dist/images/svg/management-flow_sp.svg"> 
+              <img srcset="dist/images/svg/management-flow.svg" src="dist/images/svg/management-flow.svg" alt="step1:食品衛生監査、ヒアリング、現地調査 step2:改善指導、運営協議 step3:フローダイアグラム作成、ハザード分析、マニュアル作成 step4:マニュアル実施支援、チェック step5:認証">
+          </picture>
+      </div>
     </section>
 
     <section class="support-flow-sec">
-        <div class="support-flow-sec__inner container--size-s">
-            <h2 class="h2-title--size-l support-flow-sec__h2-title">
-                継続支援フロー
-            </h2>
-            <picture class="support-flow-sec__image container--size-s">
-                <source media="(max-width: 640px)" srcset="dist/images/svg/support-flow_sp.svg"> 
-                <img srcset="dist/images/svg/support-flow.svg" src="dist/images/svg/support-flow.svg" alt="家族が笑顔で団らんしている様子">
-            </picture>
-            <div class="support-flow-sec__caption">
-                定期訪問の中で、衛生チェックと衛生検査を継続して記録します。
-            </div>
-        </div>
+      <div class="support-flow-sec__inner container--size-s">
+          <h2 class="h2-title--size-l support-flow-sec__h2-title">
+              継続支援フロー
+          </h2>
+          <picture class="support-flow-sec__image container--size-s">
+              <source media="(max-width: 640px)" srcset="dist/images/svg/support-flow_sp.svg"> 
+              <img srcset="dist/images/svg/support-flow.svg" src="dist/images/svg/support-flow.svg" alt="step1:マニュアルに基づく運用チェック step2:データの記録、保管、チェック step3:衛生指導、各種ご相談 step4:検便検査、ノロウィルス検査、ATP検査、抜き取り検査 step5:レポート提出">
+          </picture>
+          <div class="support-flow-sec__caption">
+              定期訪問の中で、衛生チェックと衛生検査を継続して記録します。
+          </div>
+      </div>
     </section>
 
     <div class="works-link-sec">
