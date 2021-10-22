@@ -133,7 +133,6 @@ input[type="radio"]{
 //-------------------------------
 //  Components
 //-------------------------------
-
 //
 //logo
 //
@@ -249,7 +248,7 @@ input[type="radio"]{
     }
 }
 .page-paragraph{
-    @include font-style(22px, $color-black, 300);
+    @include font-style(22px, $color-black, 500);
     line-height: 36px;
     letter-spacing: 0.05em;
     @include pc{
@@ -265,7 +264,7 @@ input[type="radio"]{
 // link
 //
 .link{
-    @include font-style(20px, $color-blue2, 500);
+    @include font-style(20px, $color-blue2, 600);
     height: 60px;
     line-height: 60px;
     text-align: center;
@@ -484,6 +483,7 @@ input[type="radio"]{
         line-height: 1;
         text-align: center;
         font-size: 21px;
+        font-weight: 500;
         @include pc{
             padding: 0.4rem 0.7rem;
             font-size: 2.1rem;

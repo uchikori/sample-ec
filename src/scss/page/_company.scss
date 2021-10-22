@@ -96,7 +96,7 @@
     }
     th{
         width: 200px;
-        @include font-style(22px, $color-white, 300);
+        @include font-style(22px, $color-white, 500);
         padding: 25px 0 25px 40px;
         background-color: $color-blue;
         display: table-cell;
@@ -115,7 +115,7 @@
         }
     }
     td{
-        @include font-style(22px, $color-black, 300);
+        @include font-style(22px, $color-black, 500);
         display: table-cell;
         vertical-align: middle;
         padding: 25px 0 25px 37px;
@@ -200,7 +200,7 @@
     }
     th{
         width: 200px;
-        @include font-style(22px, $color-black, 300);
+        @include font-style(22px, $color-black, 500);
         padding: 9px 0;
         display: table-cell;
         // vertical-align: middle;
@@ -218,7 +218,7 @@
         }
     }
     td{
-        @include font-style(22px, $color-black, 300);
+        @include font-style(22px, $color-black, 500);
         display: table-cell;
         vertical-align: top;
         padding: 9px 0 9px 37px;

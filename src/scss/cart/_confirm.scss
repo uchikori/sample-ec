@@ -41,7 +41,7 @@
     }
     td{
         vertical-align: middle;
-        @include font-style(20px, $color-black, normal);
+        @include font-style(20px, $color-black, 500);
         font-family: $font-h;
         @include pc{
             font-size: 2rem;
@@ -146,5 +146,8 @@
     }
     input[type="submit"]{
         background-color: $color-submit;
+        &.back_to_delivery_button{
+            background-color: $color-gray;
+        }
     }
 }

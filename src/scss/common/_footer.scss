@@ -38,7 +38,7 @@
         letter-spacing: 0;
     }
     &__address{
-        @include font-style(14px, $color-black, 300);
+        @include font-style(14px, $color-black, 500);
         line-height: 1;
         letter-spacing: 0em;
         margin-top: 12px;

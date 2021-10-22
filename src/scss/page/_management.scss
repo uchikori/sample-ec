@@ -84,7 +84,7 @@
         }
     }
     &__caption{
-        @include font-style(22px, $color-black, 300);
+        @include font-style(22px, $color-black, 500);
         line-height: 1;
         text-align: right;
         margin-top: 51px;

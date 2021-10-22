@@ -156,7 +156,7 @@
 .cart{
     .upbutton{
         text-align: right;
-        @include font-style(16px, $color-black, 300);
+        @include font-style(16px, $color-black, 500);
         line-height: 40px;
         padding: 26.5px 0;
         @include pc{
@@ -283,7 +283,7 @@
             font-size: 20px;
             padding: 4px 6px;
             border: solid 1px $color-black;
-            font-weight: 300;
+            font-weight: 500;
             line-height: 1;
             border-radius: 4px;
             @include pc{
@@ -327,7 +327,7 @@
     }
 }
 .currency_code{
-    @include font-style(14px, $color-black, 300);
+    @include font-style(14px, $color-black, 500);
     line-height: 1;
     padding: 5px;
     @include pc{
@@ -394,7 +394,7 @@
     .other-amount{
         &__h{
             text-align: left;
-            @include font-style(16px, $color-black, 300);
+            @include font-style(16px, $color-black, 500);
             line-height: 1;
             vertical-align: middle;
             @include pc{
@@ -406,7 +406,7 @@
         }
         &__d{
             text-align: right;
-            @include font-style(20px, $color-black, 300);
+            @include font-style(20px, $color-black, 500);
             line-height: 1;
             font-family: $font-h;
             vertical-align: middle;
@@ -419,4 +419,3 @@
         }
     }
 }
-

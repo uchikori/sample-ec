@@ -71,7 +71,7 @@
     }
 }
 .archive-time{
-    @include font-style(13px, $color-black, 400);
+    @include font-style(13px, $color-black, 500);
     line-height: 1;  
     display: inline-block;
     @include pc{

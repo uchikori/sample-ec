@@ -42,7 +42,7 @@
         line-height: 1;
     }
     &__lead-text{
-        @include font-style(15px, $color-white, 300);
+        @include font-style(15px, $color-white, 500);
         line-height: 21px;
         letter-spacing: 0.06em;
         text-align: center;
@@ -97,7 +97,7 @@
     }
 }
 .mail-btn{
-    @include font-style(15px, $color-white, 300);
+    @include font-style(15px, $color-white, 500);
     height: 45px;
     display: flex;
     align-items: center;
