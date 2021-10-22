@@ -101,3 +101,12 @@
         line-height: 4.4rem;
     }
 }
+.newmember-box{
+    margin-top: 14px;
+    @include pc{
+        margin-top: 1.4rem;
+    }
+    @include tab{
+        margin-top: 3.6rem;
+    }
+}

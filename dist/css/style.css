@@ -3610,6 +3610,14 @@ input[type="radio"] {
   margin-bottom: 20px;
 }
 
+.send__confirm-page {
+  gap: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
 .send__completion-page {
   gap: 60px;
   -webkit-box-pack: center;
@@ -4379,6 +4387,10 @@ input[type="radio"] {
   color: #231815;
   font-weight: 600;
   line-height: 1;
+}
+
+.newmember-box {
+  margin-top: 14px;
 }
 
 .loginbox {
@@ -5992,6 +6004,10 @@ input[type="radio"] {
     gap: 6rem;
     margin-bottom: 2rem;
   }
+  .send__confirm-page {
+    gap: 6rem;
+    margin-bottom: 2rem;
+  }
   .send__completion-page {
     gap: 6rem;
     margin-bottom: 2rem;
@@ -6240,6 +6256,13 @@ input[type="radio"] {
   .cart_completion .send {
     margin-top: 5.2rem;
   }
+  .back_to_top_button {
+    font-size: 2.8rem;
+    width: 28rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 1.2rem;
+  }
   .page-template-uscesmember input[type="submit"] {
     font-size: 2.8rem;
     width: 34rem;
@@ -6273,6 +6296,9 @@ input[type="radio"] {
   }
   .member_page_title {
     font-size: 2rem;
+  }
+  .newmember-box {
+    margin-top: 1.4rem;
   }
   .loginbox {
     margin-top: 1.5rem;
@@ -7539,6 +7565,11 @@ input[type="radio"] {
     margin-top: 2.6rem;
     margin: 0;
   }
+  .send__confirm-page {
+    gap: 3.2rem;
+    margin-top: 2.6rem;
+    margin: 0;
+  }
   .send__completion-page {
     gap: 3.2rem;
     margin-top: 4rem;
@@ -7801,6 +7832,9 @@ input[type="radio"] {
   .member_page_title {
     font-size: 3.6rem;
     line-height: 4.4rem;
+  }
+  .newmember-box {
+    margin-top: 3.6rem;
   }
   .loginbox {
     margin-top: 1.5rem;

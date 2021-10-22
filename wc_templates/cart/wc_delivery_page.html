@@ -158,7 +158,9 @@
                 <!-- end カートページ共通 -->
 
                 <form action="/" method="post" class="derivery-form">
+
                     <div class="derivery-form__table-wrap">
+
                         <table class="customer_form" id="delivery_flag">
                             <tr>
                                 <th rowspan="2" scope="row">発送先</th>
@@ -174,6 +176,7 @@
                                 </td>
                             </tr>
                         </table>
+
                     </div>
 
                      <!-- [別の配送先を指定する]にチェックを入れた場合のみ表示される -->
@@ -294,25 +297,25 @@
                                 <th scope="row">配送方法</th>
                                 <td colspan="2">
                                     <select name="offer[delivery_method]"  id="delivery_method_select" class="delivery_time" onKeyDown="if (event.keyCode == 13) {return false;}">
-                                        <option value='1' selected="selected">通常配送</option>
+                                        <option value="1" selected="selected">通常配送</option>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">配送希望日</th>
                                 <td colspan="2">
-                                    <select name='offer[delivery_date]' id='delivery_date_select' class='delivery_date'>
-                                        <option value='1' selected="selected">2021-10-22</option>
-                                        <option value='1' selected="selected">2021-10-23</option>
-                                        <option value='1' selected="selected">2021-10-24</option>
+                                    <select name="offer[delivery_date]" id="delivery_date_select" class="delivery_date">
+                                        <option value="2021-10-22" selected="selected">2021-10-22</option>
+                                        <option value="2021-10-23" selected="selected">2021-10-23</option>
+                                        <option value="2021-10-24" selected="selected">2021-10-24</option>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">配送希望時間</th>
                                     <td colspan="2">
-                                        <div id='delivery_time_limit_message'></div>
-                                            <select name='offer[delivery_time]' id='delivery_time_select' class='delivery_time'>
+                                        <div id="delivery_time_limit_message"></div>
+                                            <select name="offer[delivery_time]" id="delivery_time_select" class="delivery_time">
                                                 <option value="指定しない">指定しない</option>]
                                                 <option value="8:00~12:00">8:00~12:00</option>]
                                                 <option value="12:00~18:00">12:00~18:00</option>]
@@ -346,6 +349,7 @@
                     <!-- カスタムフィールドで追加した項目を追加 -->
                     <table class="customer_form" id="custom_order"></table>
 
+                    <!-- 備考欄 -->
                     <div class="derivery-form__table-wrap">
                         <table class="customer_form" id="notes_table">
                             <tr>
@@ -356,14 +360,21 @@
                             </tr>
                         </table>
                     </div>
+
                     <div class="send send__derivery-page">
-                        <input name="previous" type="submit" id="previouscart" class="continue_shopping_button" value="戻る" onclick="uscesCart.previousCart();">
-                        <input name="customerinfo" type="submit" class="to_confirm_button" value="次へ" onclick="return uscesCart.cartNext();">
+                        <input name="offer[cus_id]" type="hidden" value="" />
+                        <input name="backCustomer" type="submit" id="previouscart" class="back_to_customer_button" value="戻る">
+                        <input name="confirm" type="submit" class="to_confirm_button" value="次へ">
                     </div>
 
                 </form>
+
+                <div class="footer_explanation"></div>
               
             </article>
+
+            <p></p>
+            
         </div>
     </section>
 

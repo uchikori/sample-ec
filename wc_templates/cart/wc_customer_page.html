@@ -155,11 +155,13 @@
 
                 <div class="error_message"></div>
 
-                <h2 class="customer-info-title">会員の方はこちら</h2>
                 <!-- end カートページ共通 -->
+
+                <h2 class="customer-info-title">会員の方はこちら</h2>
 
                 <!-- 会員の方 -->
                 <form class="customer_loginform" name="customer_loginform" action="/" method="post" onkeydown="if(event.keyCode == 13){return false;}">
+
                     <table class="customer_form">
                         <tbody>
                             <tr>
@@ -172,15 +174,19 @@
                             </tr>
                         </tbody>
                     </table>
+
                     <div class="send send__loginform">
                       <input name="customerlogin" type="submit" class="to_memberlogin_button" value="次へ">
                     </div>
+
                 </form>
-                <!-- end 会員の方 -->
+
 
                 <!-- 非会員の方 -->
                 <h2 class="non-customer-info-title">非会員の方はこちら</h2>
+
                 <form class="non-customer_form" name="customer_form" action="/" method="post" onkeydown="if(event.keyCode == 13){return false;}">
+
                     <table class="customer_form--ptn--2 customer_form">
                       <tbody>
                         <tr class="customkey_company-name">
@@ -306,6 +312,7 @@
 
                       </tbody>
                     </table>
+
                     <table class="customer_form--ptn--2 customer_form">
                       <tbody>
                         <h2 class="non-customer-info-title">新規会員登録する場合にご記入ください</h2>
@@ -317,10 +324,12 @@
                           <th scope="row">パスワード（確認用）</th>
                           <td colspan="2"><input name="customer[password2]" type="password" value="" />半角英数8～12文字</td>
                         </tr>
-
                       </tbody>
                     </table>
+
                     <input type="hidden">
+
+                    <!-- 会員規約 -->
                     <div class="agree_member_area">
                       <div class="at_exp_text">会員規約</div>
                       <textarea name="at_cont_text" class="at_cont_text" readonly="readonly">
@@ -429,13 +438,19 @@
                         <label for="agree_member_check" style="cursor:pointer;"> 会員規約に同意する</label>
                       </div>
                     </div>
+
                     <div class="send send__non-customerform">
                         <input name="previous" type="submit" id="previouscart" class="continue_shopping_button" value="戻る" onclick="uscesCart.previousCart();">
                         <input name="customerinfo" type="submit" class="to_deliveryinfo_button" value="次へ" onclick="return uscesCart.cartNext();">
                     </div>
                 </form>
-                <!-- end 非会員の方 -->
+
+                <div class="footer_explanation"></div>
+
             </article>
+
+            <p></p>
+            
         </div>
     </section>
 

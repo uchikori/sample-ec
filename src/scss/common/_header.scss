@@ -1,0 +1,403 @@
+.header{
+    width: 100%;
+    height: 85px;
+    background-color: $color-white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .page &{
+        background-color: rgba(255, 255, 255, 0.8);
+        @include tab{
+            position: relative;
+        }
+    }
+    .page-template-uscescart &{
+        position: relative;
+    }
+    .page-template-uscesmember &{
+        background-color: rgba(255, 255, 255, 0.8);
+        @include tab{
+            position: relative;
+        }
+    }
+    .single &{
+        position: relative;
+    }
+    .archive &{
+        background-color: rgba(255, 255, 255, 0.8);
+        @include tab{
+            position: relative;
+        }
+    }
+    .category-eisei &{
+        position: relative;
+    }
+    .category-eiseikanri &{
+        position: relative;
+    }
+    .category-kukan &{
+        position: relative;
+    }
+    .category-jokin &{
+        position: relative;
+    }
+
+    @include pc{
+        height: 8rem;
+    }
+    @include tab{
+        width: 100%;
+        height: 8rem;
+        top: 0;
+    }
+    &__inner{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__left{
+        z-index: 9;
+    }
+    &__logo{
+        width: 290px;
+        height: auto;
+        margin-left: 140px;
+        @include pc{
+            width: 30rem;
+            margin-left: 6rem;
+        }
+    }
+    &__cart-btn{
+        margin-right: 63px;
+        z-index: 9;
+        @include pc{
+            margin-right: 6.3rem;
+        }
+        @include tab{
+            margin-right: 4.7rem;
+        }
+    }
+    &__right{
+       display: flex;
+       align-items: center;
+       margin-left: auto;
+    //    z-index: 15;
+    }
+}
+.header__custom{
+    position: relative;
+}
+.global-navi{
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+    .menu-item{
+        width: 100%;
+        display: inline-block;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 26px;
+        &.js-accordion{
+            cursor: pointer;
+        }
+        @include pc{
+            margin-bottom: 2.6rem;
+        }
+        @include sp{
+            margin-bottom: 26px;
+        }
+    }
+    .nav-link{
+        @include font-style(16px, $color-blue2, 500);
+        font-family: $font;
+        width: 100%;
+        display: flex;
+        justify-content:space-between;
+        align-items:center;
+        line-height: 23px;
+        transition: filter 0.2s ease, color 0.2s ease;
+        border-bottom: solid 1px $color-blue2;
+        @include pc{
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+        }
+        @include sp{
+            font-size: 16px;
+            line-height: 23px;
+        }
+        &:hover{
+            filter: brightness(120%);
+            color: $color-blue2;
+            transition: filter 0.2s ease, color 0.2s ease;
+        }
+        &.is-active{
+            color: $color-green;
+            @include tab{
+                color: $color-white;
+            }
+        }
+    }
+    .sub-menu{
+        width: 221px;
+        margin: 12px auto 0 auto;
+        @include pc{
+            width: 22.1rem;
+            margin: 1.2rem auto 0.2rem auto;
+        }
+        @include sp{
+            width: 221px;
+            margin: 12px auto 0 auto;
+        }
+        .menu-item{
+            margin-bottom: 13px;
+            @include pc{
+                margin-bottom: 1.3rem;
+            }
+            @include pc{
+                margin-bottom: 13px;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__navi-icon{
+        width: 6px;
+        height: 13px;
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+        img{
+            position: absolute;
+            top: 0;
+        }
+        @include pc{
+            width: 0.6rem;
+            height: 1.3rem;
+            margin-right: 1rem;
+        }
+        @include pc{
+            width: 6px;
+            height: 13px;
+            margin-right: 10px;
+        }
+    }
+}
+.cf{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    @include pc{
+        margin-top: 1.6rem;
+    }
+    @include sp{
+        margin-top: 16px;
+    }
+    li{
+        width: 100%;
+    }
+    .user_name{
+        @include font-style(12px, $color-blue2, 500);
+        padding: 8px 0;
+        @include pc{
+            font-size: 1.2rem;
+            padding: 0.6rem 0;
+        }
+        @include sp{
+            font-size: 12px;
+            padding: 8px 0;
+        }
+    }
+    .user_login_icon{
+        display: inline-block;
+        width: 20px;
+        height: 23px;
+        margin-right: 6px;
+        @include pc{
+            width: 2rem;
+            height: 2.3rem;
+            margin-right: 0.6rem;
+        }
+        @include sp{
+            width: 20px;
+            height: 23px;
+            margin-right: 6px;
+        }
+    }
+}
+.js-sitemap{
+    display: none;
+}
+.user-btn{
+    width: 100%;
+    height: 35px;
+    border: solid 2px $color-blue2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include font-style(16px, $color-blue2, 500);
+    @include pc{
+        height: 3.5rem;
+        font-size: 1.6rem;
+    }
+    @include sp{
+        height: 35px;
+        font-size: 16px;
+    }
+}
+.user_new_regist{
+    background-color: #eeeeee;
+    margin-top: 25px;
+    @include pc{
+        margin-top: 2.5rem;
+    }
+}
+.navi{
+    width: 351px;
+    height: 100%;
+    background-color: $color-white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    z-index: 11;
+    padding: 80px 50px 0;
+    overflow-y: scroll;
+    @include pc{
+        width: 35.1rem;
+        padding: 8rem 5rem 0;
+    }
+    @include sp{
+        width: 100%;
+        padding: 80px 50px 0;
+    }
+    &.menu-open{
+        transform: translateX(0%);
+        transition: transform 0.5s ease;
+    }
+    &__logo{
+        width: 100%;
+        margin: 0 auto 35px auto;
+        @include pc{
+            // width: 23rem;
+            margin: 0 auto 3.5rem auto;
+        }
+        @include sp{
+            width: 46rem;
+            margin: 0 auto 35px auto;
+        }
+    }
+}
+.cart-btn{
+    &:hover{
+        filter: brightness(120%);
+        transition: filter 0.3s ease;
+    }
+    a{
+        display: inline-block;
+        width: 50px;
+        height: 43px;
+        position: relative;
+        @include pc{
+            width: 5rem;
+            height: 4.3rem;
+        }
+    }
+    .total-quant{
+        @include font-style(12px, $color-white, 300);
+        position: absolute;
+        display: flex;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        top: -5px;
+        right: -10px;
+        border-radius: 100%;
+        background-color: $color-blue;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        @include pc{
+            font-size: 1.2rem;
+            width: 2rem;
+            height: 2rem;
+            top: -0.5rem;
+            right: -1rem;
+            line-height: 2rem;
+        }
+    }
+}
+.humberger{
+    width: 70px;
+    height: 60px;
+    border-radius: 4px 0 0 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    cursor: pointer;
+    position: relative;
+    background-color: $color-blue2;
+    @include pc{
+        width: 7rem;
+        height: 6rem;
+        border-radius: 0.4rem 0 0 0.4rem;
+    }
+    &__line{
+        width: 35px;
+        height: 3px;
+        background-color: $color-white;
+        margin-bottom: 7px;
+        display: block;
+        @include pc{
+            width: 3.5rem;
+            height: 0.3rem;
+            margin-bottom: 0.7rem;
+        }
+        &:first-child{
+            transition: transform 0.5s ease;
+        }
+        &:nth-child(2){
+            opacity: 1.0;
+            transition: opacity 0.3s ease;
+        }
+        &:last-child{
+            margin-bottom: 0;
+            transition: transform 0.5s ease;
+        }
+        .menu-active &{
+            &:first-child{
+                transition: transform 0.5s ease;
+                transform: translateY(10px) rotate(45deg);
+                @include pc{
+                    transform: translateY(1rem) rotate(45deg);
+                }
+            }
+            &:nth-child(2){
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            &:last-child{
+                transition: transform 0.5s ease;
+                transform: translateY(-10px) rotate(-45deg);
+                @include pc{
+                    transform: translateY(-1rem) rotate(-45deg);
+                }
+            }
+        }
+    }
+    &:before{
+        content: "MENU";
+        @include font-style(10px, $color-white, 400);
+        font-family: $font;
+        display: block;
+        text-align: center;
+        line-height: 1;
+        letter-spacing: 0;
+        margin-bottom: 5px;
+    }
+}

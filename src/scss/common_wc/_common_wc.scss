@@ -55,6 +55,20 @@
             margin: 0;
         }
     }
+    &__confirm-page{
+        gap: 60px;
+        justify-content: center;
+        margin-bottom: 20px;
+        @include pc{
+            gap: 6rem;
+            margin-bottom: 2rem;
+        }
+        @include tab{
+            gap: 3.2rem;
+            margin-top: 2.6rem;
+            margin: 0;
+        }
+    }
     &__completion-page{
         gap: 60px;
         justify-content: center;

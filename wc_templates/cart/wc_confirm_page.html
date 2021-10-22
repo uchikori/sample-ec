@@ -159,6 +159,7 @@
 
                 <!-- カート内容確認テーブル -->
                 <div class="cart">
+
                     <div class="cart-table__wrap">
                         <table cellspacing="0" id="cart_table">
                             <thead>
@@ -197,6 +198,7 @@
                             </tbody>
                         </table>
                     </div>
+
                     <div class="currency_code">通貨：円</div>
                     <div class="caption">※横スクロールで確認できます。</div>
 
@@ -241,22 +243,22 @@
 
                     <!-- ポイント利用 -->
                     <form action="https://sample-ec.uchiwa-design.net/usces-cart/" method="post" onKeyDown="if(event.keyCode == 13){return false;}" class="point-form">
-						<div class="error_message"></div>
-						<table cellspacing="0" id="point_table">
-							<tr>
-								<th class="c-point">現在のポイント</th>
-								<td><span class="point">1363</span>pt</td>
-                            </tr>
-                            <tr>
-                                <th class="u-point">利用するポイント</th>
-								<td><input name="offer[usedpoint]" class="used_point" type="text" value="100" />pt</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="point-btn"><input name="use_point" type="submit" class="use_point_button" value="ポイントを使用する" /></td>
-                            </tr>
-						</table>
-						<input type="hidden" id="wc_nonce" name="wc_nonce" value="3867b06a6b" /><input type="hidden" name="_wp_http_referer" value="/usces-cart/" />
-					</form>
+                      <div class="error_message"></div>
+                      <table cellspacing="0" id="point_table">
+                        <tr>
+                          <th class="c-point">現在のポイント</th>
+                          <td><span class="point">1363</span>pt</td>
+                        </tr>
+                        <tr>
+                          <th class="u-point">利用するポイント</th>
+                          <td><input name="offer[usedpoint]" class="used_point" type="text" value="100" />pt</td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" class="point-btn"><input name="use_point" type="submit" class="use_point_button" value="ポイントを使用する" /></td>
+                        </tr>
+                      </table>
+                      <input type="hidden" id="wc_nonce" name="wc_nonce" value="3867b06a6b" /><input type="hidden" name="_wp_http_referer" value="/usces-cart/" />
+                    </form>
 
                     <!-- 総合計金額 -->
                     <table class="total-amount">
@@ -266,7 +268,6 @@
                         </tr>
                     </table>
 
-
                 </div>
 
                 <!-- 内容確認テーブル -->
@@ -275,12 +276,12 @@
                         <td colspan="2"><h3>お客様情報</h3></td>
                     </tr>
                     <tr>
-                        <th>メールアドレス</th>
-                        <td></td>
+                      <th>メールアドレス</th>
+                      <td>sample@email.com</td>
                     </tr>
                     <tr>
                         <th>会社名</th>
-                        <td>sample@email.com</td>
+                        <td>○○ ○○</td>
                     </tr>
                     <tr class="name-row member-name-row">
                         <th>お名前</th>
@@ -372,7 +373,7 @@
                         <th>配送希望時間</th>
                         <td>指定しない</td>
                     </tr>
-                                    <tr>
+                    <tr>
                         <th>支払方法</th>
                         <td>代金引換</td>
                     </tr>
@@ -383,14 +384,18 @@
                 </table>
 
                 <!-- 送信ボタン -->
-                <form id="purchace_form" action="/">
-                    <div class="send">
-                        <input name="previous" type="button" id="previouscart" class="continue_shopping_button" value="戻る" onclick="uscesCart.previousCart();">
-                        <input name="customerinfo" type="submit" class="checkout_button" value="上記内容で注文する" onclick="return uscesCart.cartNext();">
+                <form id="purchace_form" action="/" method="post">
+                    <div class="send send__confirm-page">
+                        <input name="backDelivery" type="submit" id="back_button" class="back_to_delivery_button" value="戻る" onclick="uscesCart.previousCart();">
+                        <input name="purchase" type="submit" class="checkout_button" value="上記内容で注文する" onclick="return uscesCart.cartNext();">
                     </div>
                 </form>
+
                 <div class="footer_explanation"></div>
             </article>
+
+            <p></p>
+            
         </div>
     </section>
 
