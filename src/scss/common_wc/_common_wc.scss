@@ -270,25 +270,47 @@
             font-size: 2.8rem;
         }
     }
-    .name_td{
-        input{
-            width: 280px;
-            @include pc{
-                width: 28rem;
+    #name_row{
+        td{
+            &:last-child{
+                transform: translateX(-87px);
+                @include pc{
+                    transform: translateX(-8.7rem);
+                }
+                @include tab{
+                    transform: translateX(0);
+                }
             }
-            @include tab{
-                width: 51rem;
+            input{
+                width: 280px;
+                @include pc{
+                    width: 28rem;
+                }
+                @include tab{
+                    width: 51rem;
+                }
             }
         }
     }
     #furikana_row{
-        input{
-            width: 280px;
-            @include pc{
-                width: 28rem;
+        td{
+            &:last-child{
+                transform: translateX(-87px);
+                @include pc{
+                    transform: translateX(-8.7rem);
+                }
+                @include tab{
+                    transform: translateX(0);
+                }
             }
-            @include tab{
-                width: 51rem;
+            input{
+                width: 280px;
+                @include pc{
+                    width: 28rem;
+                }
+                @include tab{
+                    width: 51rem;
+                }
             }
         }
     }

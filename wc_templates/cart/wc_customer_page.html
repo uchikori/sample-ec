@@ -195,7 +195,7 @@
                         </tr>
 
                         <tr id="name_row" class="inp1">
-                          <th width="127" scope="rpw"><em>※</em>お名前</th>
+                          <th width="127" scope="rpw"><em>＊</em>お名前</th>
                           <td class="name_td">姓<input id="name1" type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
                           <td class="name_td">名<input id="name2" type="text" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active"></td>
                         </tr>
@@ -207,7 +207,7 @@
                         </tr>
 
                         <tr id="zipcode_row">
-                          <th scope="row"><em>※</em>郵便番号</th>
+                          <th scope="row"><em>＊</em>郵便番号</th>
                           <td colspan="2">
                             <input type="text" id="zipcode" value="" onkeydown="if (event.keyCode == 13) {return false;}" style="ime-mode: active">
                             <input type="button" id="search_zipcode" class="search-zipcode button" value="住所検索" onclick="AjaxZip3.zip2addr('customer[zipcode]', '', 'customer[pref]', 'customer[address1]');">
@@ -215,7 +215,7 @@
                         </tr>
 
                         <tr id="status_row">
-                          <th scope="row"><em>※</em>都道府県</th>
+                          <th scope="row"><em>＊</em>都道府県</th>
                           <td colspan="2">
                             <select name="customer[pref]" id="customer_pref" class="pref">
                               <option value="選択">選択</option>
@@ -271,7 +271,7 @@
                         </tr>
 
                         <tr id="address1_row" class="inp2">
-                          <th scope="row"><em>※</em>市区郡町村</th>
+                          <th scope="row"><em>＊</em>市区郡町村</th>
                           <td colspan="2"><input name="customer[address1]" id="address1" type="text" value="" onKeyDown="if (event.keyCode == 13) {return false;}" style="ime-mode: active" />横浜市上北町</td>
                         </tr>
 

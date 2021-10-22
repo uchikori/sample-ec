@@ -1539,7 +1539,7 @@ input[type="radio"] {
 .product-list__h3-title {
   font-size: 22px;
   color: #231815;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: 0.16em;
   margin-bottom: 12px;
@@ -3741,11 +3741,21 @@ input[type="radio"] {
   padding: 16px;
 }
 
-.customer_form .name_td input {
+.customer_form #name_row td:last-child {
+  -webkit-transform: translateX(-87px);
+          transform: translateX(-87px);
+}
+
+.customer_form #name_row td input {
   width: 280px;
 }
 
-.customer_form #furikana_row input {
+.customer_form #furikana_row td:last-child {
+  -webkit-transform: translateX(-87px);
+          transform: translateX(-87px);
+}
+
+.customer_form #furikana_row td input {
   width: 280px;
 }
 
@@ -4405,7 +4415,9 @@ input[type="radio"] {
 
 .member-box p {
   padding: 11px 0;
+  font-size: 16px;
   color: #6c8485;
+  font-weight: 300;
 }
 
 .member-box p.forgetmenot {
@@ -6078,10 +6090,18 @@ input[type="radio"] {
     border-radius: 0.4rem;
     padding: 1.6rem;
   }
-  .customer_form .name_td input {
+  .customer_form #name_row td:last-child {
+    -webkit-transform: translateX(-8.7rem);
+            transform: translateX(-8.7rem);
+  }
+  .customer_form #name_row td input {
     width: 28rem;
   }
-  .customer_form #furikana_row input {
+  .customer_form #furikana_row td:last-child {
+    -webkit-transform: translateX(-8.7rem);
+            transform: translateX(-8.7rem);
+  }
+  .customer_form #furikana_row td input {
     width: 28rem;
   }
   .customer_form #zipcode {
@@ -6319,6 +6339,7 @@ input[type="radio"] {
   }
   .member-box p {
     padding: 1.1rem 0;
+    font-size: 1.6rem;
   }
   .member-box p.forgetmenot {
     padding: 0.5rem 0;
@@ -7638,10 +7659,18 @@ input[type="radio"] {
     height: 54rem;
     font-size: 2.8rem;
   }
-  .customer_form .name_td input {
+  .customer_form #name_row td:last-child {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .customer_form #name_row td input {
     width: 51rem;
   }
-  .customer_form #furikana_row input {
+  .customer_form #furikana_row td:last-child {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .customer_form #furikana_row td input {
     width: 51rem;
   }
   .customer_form #zipcode {
@@ -7855,6 +7884,7 @@ input[type="radio"] {
   }
   .member-box p {
     padding: 2.1rem 0;
+    font-size: 2.8rem;
   }
   .member-box p.forgetmenot {
     padding: 0;

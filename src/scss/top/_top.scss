@@ -645,7 +645,7 @@
         }
     }
     &__h3-title{
-        @include font-style(22px, $color-black, 500);
+        @include font-style(22px, $color-black, 600);
         line-height: 1;
         letter-spacing: 0.16em;
         margin-bottom: 12px;
