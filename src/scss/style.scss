@@ -505,6 +505,11 @@ input[type="radio"]{
         padding: 0 11px;
         background-color: $color-blue;
         border-radius: 7px;
+        transition: background-color 0.3s ease;
+        &:hover{
+            background-color: $color-hover;
+            transition: background-color 0.3s ease;
+        }
         @include pc{
             padding: 0 1.1rem;
             border-radius: 0.7rem;

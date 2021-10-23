@@ -7,6 +7,7 @@
         text-align:center;
         background-color: $color-gray;
         border-radius: 12px;
+        transition: background-color 0.3s ease;
         @include pc{
             font-size: 2.8rem;
             width: 28rem;
@@ -16,18 +17,42 @@
         }
         &.to_customerinfo_button{
             background-color: $color-blue;
+            &:hover{
+                background-color: $color-hover;
+                transition: background-color 0.3s ease;
+            }
         }
         &.to_memberlogin_button{
             background-color: $color-blue;
+            &:hover{
+                background-color: $color-hover;
+                transition: background-color 0.3s ease;
+            }
         }
         &.to_deliveryinfo_button{
             background-color: $color-blue;
+            &:hover{
+                background-color: $color-hover;
+                transition: background-color 0.3s ease;
+            }
         }
         &.to_confirm_button{
             background-color: $color-blue;
+            &:hover{
+                background-color: $color-hover;
+                transition: background-color 0.3s ease;
+            }
         }
         &.checkout_button{
             background-color: $color-blue;
+            &:hover{
+                background-color: $color-hover;
+                transition: background-color 0.3s ease;
+            }
+        }
+        &:hover{
+            background-color: $color-hover3;
+            transition: background-color 0.3s ease;
         }
     }
     input[type="button"]{
@@ -44,6 +69,10 @@
             height: 4.5rem;
             line-height: 4.5rem;
             border-radius: 1.2rem;
+        }
+        &:hover{
+            background-color: $color-hover3;
+            transition: background-color 0.3s ease;
         }
     }
 }

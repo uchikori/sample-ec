@@ -54,6 +54,11 @@
     }
     input[type="submit"]{
         background-color: $color-blue;
+        transition: background-color 0.3s ease;
+        &:hover{
+            background-color: $color-hover;
+            transition: background-color 0.3s ease;
+        }
     }
     input[type="text"]{
         @include font-style(20px, $color-black, normal00);
@@ -139,15 +144,40 @@
         
     }
 }
+#wc-confirm{
+    .send{
+        gap: 60px;
+        justify-content: center;
+        margin-bottom: 20px;
+        input[type="submit"]{
+            background-color: $color-submit;
+            transition: background-color 0.3s ease;
+            &:hover{
+                background-color: #334f75;
+            }
+            &.back_to_delivery_button{
+                background-color: $color-gray;
+                transition: background-color 0.3s ease;
+                &:hover{
+                    background-color: $color-hover3;
+                    transition: background-color 0.3s ease;
+                }
+            }
+        }
+        @include pc{
+            gap: 6rem;
+            margin-bottom: 2rem;
+        }
+        @include tab{
+            margin-top: 6rem;
+            gap: 3.2rem;
+            flex-direction: column-reverse;
+        }
+    }
+}
 #purchace_form{
     padding-top: 26px;
     @include pc{
         padding-top: 2.6rem;
-    }
-    input[type="submit"]{
-        background-color: $color-submit;
-        &.back_to_delivery_button{
-            background-color: $color-gray;
-        }
     }
 }

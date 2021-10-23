@@ -876,13 +876,10 @@ input[type="radio"] {
   width: 6px;
   height: 13px;
   display: inline-block;
-  position: relative;
+  background-image: url("../images/svg/arrow.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-right: 10px;
-}
-
-.global-navi__navi-icon img {
-  position: absolute;
-  top: 0;
 }
 
 .cf {
@@ -1414,15 +1411,33 @@ input[type="radio"] {
   margin-top: -16px;
 }
 
+.product-list__item:hover .product-list__image img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.9" /><feFuncG type="linear" slope="0.9" /><feFuncB type="linear" slope="0.9" /></feComponentTransfer></filter></svg>#filter');
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
+}
+
 .product-list__image {
   width: 100%;
   height: 245px;
   position: relative;
+  background-color: #231815;
 }
 
 .product-list__image img {
   position: relative;
   z-index: 1;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="1" /><feFuncG type="linear" slope="1" /><feFuncB type="linear" slope="1" /></feComponentTransfer></filter></svg>#filter');
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
 }
 
 .product-list__image:before {
@@ -2164,6 +2179,14 @@ input[type="radio"] {
   padding: 0 11px;
   background-color: #5fc1c7;
   border-radius: 7px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.page_navi .previous:hover, .page_navi .next:hover {
+  background-color: #4c9a9f;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .page_navi .previous {
@@ -2816,6 +2839,9 @@ input[type="radio"] {
   display: inline-block;
   width: 13px;
   height: 13px;
+  background-image: url("../images/svg/time.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .article figure {
@@ -3347,7 +3373,7 @@ input[type="radio"] {
 }
 
 .c-box .skubutton:hover {
-  background-color: #5fc1c7;
+  background-color: #305d5e;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
@@ -3836,26 +3862,64 @@ input[type="radio"] {
   text-align: center;
   background-color: #d8d6d6;
   border-radius: 12px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .page-template-uscescart input[type="submit"].to_customerinfo_button {
   background-color: #5fc1c7;
 }
 
+.page-template-uscescart input[type="submit"].to_customerinfo_button:hover {
+  background-color: #4c9a9f;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
 .page-template-uscescart input[type="submit"].to_memberlogin_button {
   background-color: #5fc1c7;
+}
+
+.page-template-uscescart input[type="submit"].to_memberlogin_button:hover {
+  background-color: #4c9a9f;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .page-template-uscescart input[type="submit"].to_deliveryinfo_button {
   background-color: #5fc1c7;
 }
 
+.page-template-uscescart input[type="submit"].to_deliveryinfo_button:hover {
+  background-color: #4c9a9f;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
 .page-template-uscescart input[type="submit"].to_confirm_button {
   background-color: #5fc1c7;
 }
 
+.page-template-uscescart input[type="submit"].to_confirm_button:hover {
+  background-color: #4c9a9f;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
 .page-template-uscescart input[type="submit"].checkout_button {
   background-color: #5fc1c7;
+}
+
+.page-template-uscescart input[type="submit"].checkout_button:hover {
+  background-color: #4c9a9f;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.page-template-uscescart input[type="submit"]:hover {
+  background-color: #969392;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .page-template-uscescart input[type="button"] {
@@ -3868,6 +3932,12 @@ input[type="radio"] {
   text-align: center;
   background-color: #d8d6d6;
   border-radius: 12px;
+}
+
+.page-template-uscescart input[type="button"]:hover {
+  background-color: #969392;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .cart-page {
@@ -4223,6 +4293,14 @@ input[type="radio"] {
 
 #point_table input[type="submit"] {
   background-color: #5fc1c7;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+#point_table input[type="submit"]:hover {
+  background-color: #4c9a9f;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 #point_table input[type="text"] {
@@ -4282,16 +4360,38 @@ input[type="radio"] {
   vertical-align: middle;
 }
 
+#wc-confirm .send {
+  gap: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+
+#wc-confirm .send input[type="submit"] {
+  background-color: #406392;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+#wc-confirm .send input[type="submit"]:hover {
+  background-color: #334f75;
+}
+
+#wc-confirm .send input[type="submit"].back_to_delivery_button {
+  background-color: #d8d6d6;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+#wc-confirm .send input[type="submit"].back_to_delivery_button:hover {
+  background-color: #969392;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
 #purchace_form {
   padding-top: 26px;
-}
-
-#purchace_form input[type="submit"] {
-  background-color: #406392;
-}
-
-#purchace_form input[type="submit"].back_to_delivery_button {
-  background-color: #d8d6d6;
 }
 
 .cart_completion {
@@ -4333,6 +4433,14 @@ input[type="radio"] {
   font-weight: 600;
   background-color: #5fc1c7;
   border-radius: 12px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.back_to_top_button:hover {
+  background-color: #4c9a9f;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 /***メンバーページスタイル***/
@@ -4346,10 +4454,26 @@ input[type="radio"] {
   text-align: center;
   background-color: #5fc1c7;
   border-radius: 12px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.page-template-uscesmember input[type="submit"]:hover {
+  background-color: #4c9a9f;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .page-template-uscesmember input[type="submit"].deletemember {
   background-color: #6c8485;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.page-template-uscesmember input[type="submit"].deletemember:hover {
+  background-color: #305d5e;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .page-template-uscesmember input[type="button"] {
@@ -4362,6 +4486,14 @@ input[type="radio"] {
   text-align: center;
   background-color: #d8d6d6;
   border-radius: 12px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.page-template-uscesmember input[type="button"]:hover {
+  background-color: #969392;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .page-template-uscesmember .submit-btn {
@@ -4375,6 +4507,14 @@ input[type="radio"] {
   background-color: #5fc1c7;
   border-radius: 12px;
   display: inline-block;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.page-template-uscesmember .submit-btn:hover {
+  background-color: #4c9a9f;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .member-page-text {
@@ -4525,6 +4665,14 @@ input[type="radio"] {
   font-weight: 600;
   background-color: #406392;
   border-radius: 12px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.go_to_mypage:hover {
+  background-color: #334f75;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .completion__title {
@@ -6272,6 +6420,10 @@ input[type="radio"] {
   #confirm_table th {
     padding: 2.5rem 0;
   }
+  #wc-confirm .send {
+    gap: 6rem;
+    margin-bottom: 2rem;
+  }
   #purchace_form {
     padding-top: 2.6rem;
   }
@@ -6380,6 +6532,13 @@ input[type="radio"] {
   .new-entry__inner {
     gap: 4.7rem;
     height: 12rem;
+  }
+  .go_to_mypage {
+    width: 28rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 2.8rem;
+    border-radius: 1.2rem;
   }
   .completion__title {
     font-size: 3.6rem;
@@ -7594,20 +7753,36 @@ input[type="radio"] {
   .send__non-customerform {
     margin-top: 6rem;
     gap: 3.2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .send__derivery-page {
     gap: 3.2rem;
     margin-top: 2.6rem;
     margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .send__confirm-page {
     gap: 3.2rem;
     margin-top: 2.6rem;
     margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .send__completion-page {
     gap: 3.2rem;
     margin-top: 4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .send__member-page {
     gap: 3.2rem;
@@ -7845,6 +8020,14 @@ input[type="radio"] {
   #confirm_table td {
     display: block;
     padding: 1rem 0 2rem 0;
+  }
+  #wc-confirm .send {
+    margin-top: 6rem;
+    gap: 3.2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .cart_completion {
     margin-top: 2.6rem;

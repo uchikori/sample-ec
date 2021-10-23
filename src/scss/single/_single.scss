@@ -12,6 +12,9 @@
         display: inline-block;
         width: 13px;
         height: 13px;
+        background-image: url('../images/svg/time.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
         @include pc{
             width: 1.3rem;
             height: 1.3rem;

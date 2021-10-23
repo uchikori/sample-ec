@@ -7,6 +7,18 @@
     @include font-style(20px, $color-white, 600);
     background-color: $color-submit;
     border-radius: 12px;
+    transition: background-color 0.3s ease;
+    @include pc{
+        width: 28rem;
+        height: 4.5rem;
+        line-height: 4.5rem;
+        font-size: 2.8rem;
+        border-radius: 1.2rem;
+    }
+    &:hover{
+        background-color: #334f75;
+        transition: background-color 0.3s ease;
+    }
 }
 .completion{
     &__title{

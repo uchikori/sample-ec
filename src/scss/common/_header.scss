@@ -166,12 +166,15 @@
         width: 6px;
         height: 13px;
         display: inline-block;
-        position: relative;
+        // position: relative;
+        background-image: url('../images/svg/arrow.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
         margin-right: 10px;
-        img{
-            position: absolute;
-            top: 0;
-        }
+        // img{
+        //     position: absolute;
+        //     top: 0;
+        // }
         @include pc{
             width: 0.6rem;
             height: 1.3rem;

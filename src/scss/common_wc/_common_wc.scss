@@ -39,6 +39,7 @@
         @include tab{
             margin-top: 6rem;
             gap: 3.2rem;
+            flex-direction: column-reverse;
         }
     }
     &__derivery-page{
@@ -53,6 +54,7 @@
             gap: 3.2rem;
             margin-top: 2.6rem;
             margin: 0;
+            flex-direction: column-reverse;
         }
     }
     &__confirm-page{
@@ -67,6 +69,7 @@
             gap: 3.2rem;
             margin-top: 2.6rem;
             margin: 0;
+            flex-direction: column-reverse;
         }
     }
     &__completion-page{
@@ -82,6 +85,7 @@
         @include tab{
             gap: 3.2rem;
             margin-top: 4rem;
+            flex-direction: column-reverse;
         }
     }
     &__member-page{
