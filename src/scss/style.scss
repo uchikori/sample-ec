@@ -503,13 +503,7 @@ input[type="radio"]{
         position: absolute;
         top: 0;
         padding: 0 11px;
-        background-color: $color-blue;
         border-radius: 7px;
-        transition: background-color 0.3s ease;
-        &:hover{
-            background-color: $color-hover;
-            transition: background-color 0.3s ease;
-        }
         @include pc{
             padding: 0 1.1rem;
             border-radius: 0.7rem;
@@ -522,6 +516,12 @@ input[type="radio"]{
     }
     .previous{
         left: 0;
+        background-color: $color-gray;
+        transition: background-color 0.3s ease;
+        &:hover{
+            background-color: $color-hover3;
+            transition: background-color 0.3s ease;
+        }
         a{
             border: none;
             color: $color-white;
@@ -529,6 +529,12 @@ input[type="radio"]{
     }
     .next{
         right: 0;
+        background-color: $color-blue;
+        transition: background-color 0.3s ease;
+        &:hover{
+            background-color: $color-hover;
+            transition: background-color 0.3s ease;
+        }
         a{
             border: none;
             color: $color-white;

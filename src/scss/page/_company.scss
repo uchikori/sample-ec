@@ -237,9 +237,13 @@
             line-height: 1;
             position: relative;
             margin-bottom: 16px;
+            @include pc{
+                padding-left: 1.8rem;
+                margin-bottom: 1.6rem;
+            }
             @include tab{
                 display: inline-block;
-                margin-bottom: 0;
+                // margin-bottom: 0;
             }
             &:before{
                 content: " ";
@@ -251,14 +255,26 @@
                 width: 16px;
                 height: 16px;
                 background-color: $color-blue2;
+                @include pc{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                }
             }
             &:last-child{
                 margin-bottom: 0;
             }
         }
         p{
-            line-height: 1;
+            line-height: 35px;
             margin-bottom: 11px;
+            padding-left: 18px;
+            @include pc{
+                margin-bottom: 1.1rem;
+                padding-left: 1.8rem;
+                line-height: 3.5rem;
+            }&.returns{
+                padding-left: 0;
+            }
         }
         @include tab{
             display: block;

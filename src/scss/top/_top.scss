@@ -1252,9 +1252,13 @@
             background-color: $color-black;
             transform: rotate(-22deg);
             margin-right: 42px;
+            @include pc{
+                height: 3.1rem;
+                margin-right: 3.1rem;
+            }
             @include tab{
                 margin-top: 1rem;
-                margin-right: 5rem;
+                margin-right: 3.3rem;
             }
         }
         &:after{
@@ -1265,9 +1269,13 @@
             background-color: $color-black;
             transform: rotate(22deg);
             margin-left: 42px;
+            @include pc{
+                height: 3.1rem;
+                margin-left: 2.8rem;
+            }
             @include tab{
                 margin-top: 1rem;
-                margin-left: 5rem;
+                margin-left: 2.2rem;
             }
         }
         &--en{

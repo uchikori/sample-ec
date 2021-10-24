@@ -22,6 +22,12 @@
             width: 100%;
             margin-top: 3.9rem;
         }
+        &:hover{
+            img{
+                filter: brightness(80%);
+                transition: filter 0.3s ease;
+            }
+        }
     }
     &__caption{
         text-align: center;

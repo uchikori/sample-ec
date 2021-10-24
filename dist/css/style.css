@@ -2177,20 +2177,20 @@ input[type="radio"] {
   position: absolute;
   top: 0;
   padding: 0 11px;
-  background-color: #5fc1c7;
   border-radius: 7px;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-}
-
-.page_navi .previous:hover, .page_navi .next:hover {
-  background-color: #4c9a9f;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
 }
 
 .page_navi .previous {
   left: 0;
+  background-color: #d8d6d6;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.page_navi .previous:hover {
+  background-color: #969392;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .page_navi .previous a {
@@ -2200,6 +2200,15 @@ input[type="radio"] {
 
 .page_navi .next {
   right: 0;
+  background-color: #5fc1c7;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.page_navi .next:hover {
+  background-color: #4c9a9f;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .page_navi .next a {
@@ -2374,8 +2383,13 @@ input[type="radio"] {
 }
 
 .about-tokuteishou td p {
-  line-height: 1;
+  line-height: 35px;
   margin-bottom: 11px;
+  padding-left: 18px;
+}
+
+.about-tokuteishou td p.returns {
+  padding-left: 0;
 }
 
 /***機能水ページスタイル***/
@@ -3022,6 +3036,16 @@ input[type="radio"] {
   margin: 50px auto 0 auto;
 }
 
+.contact-intro-sec__tel:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.8" /><feFuncG type="linear" slope="0.8" /><feFuncB type="linear" slope="0.8" /></feComponentTransfer></filter></svg>#filter');
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
+}
+
 .contact-intro-sec__caption {
   text-align: center;
   margin-top: 37px;
@@ -3494,7 +3518,7 @@ input[type="radio"] {
   font-size: 18px;
   color: #231815;
   font-weight: 300;
-  background-color: #78716e;
+  background-color: #d8d6d6;
   color: #ffffff;
   text-align: center;
   border-radius: 8px;
@@ -3504,7 +3528,7 @@ input[type="radio"] {
 }
 
 .comments .comment-respond .comment-form input[type="submit"]:hover {
-  background-color: #5fc1c7;
+  background-color: #969392;
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
@@ -5122,6 +5146,16 @@ input[type="radio"] {
   margin-top: 6px;
 }
 
+.footer-tel__num:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.8" /><feFuncG type="linear" slope="0.8" /><feFuncB type="linear" slope="0.8" /></feComponentTransfer></filter></svg>#filter');
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
+}
+
 @media (max-width: 1199px) {
   html {
     font-size: 0.83333vw;
@@ -5575,6 +5609,14 @@ input[type="radio"] {
   .news-sec__h2-title {
     margin-bottom: 0.8rem;
   }
+  .news-sec__h2-title:before {
+    height: 3.1rem;
+    margin-right: 3.1rem;
+  }
+  .news-sec__h2-title:after {
+    height: 3.1rem;
+    margin-left: 2.8rem;
+  }
   .news-sec__h2-title--en {
     width: 7.4rem;
   }
@@ -5706,6 +5748,19 @@ input[type="radio"] {
   .about-tokuteishou td {
     font-size: 2.2rem;
     padding: 0.9rem 0 0.9rem 3.7rem;
+  }
+  .about-tokuteishou td li {
+    padding-left: 1.8rem;
+    margin-bottom: 1.6rem;
+  }
+  .about-tokuteishou td li:before {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .about-tokuteishou td p {
+    margin-bottom: 1.1rem;
+    padding-left: 1.8rem;
+    line-height: 3.5rem;
   }
   .water-intro-sec {
     margin-top: 7.2rem;
@@ -7069,11 +7124,11 @@ input[type="radio"] {
   }
   .news-sec__h2-title:before {
     margin-top: 1rem;
-    margin-right: 5rem;
+    margin-right: 3.3rem;
   }
   .news-sec__h2-title:after {
     margin-top: 1rem;
-    margin-left: 5rem;
+    margin-left: 2.2rem;
   }
   .news-sec__h2-title--en {
     width: 9.2rem;
@@ -7192,7 +7247,6 @@ input[type="radio"] {
   }
   .about-tokuteishou td li {
     display: inline-block;
-    margin-bottom: 0;
   }
   .about-tokuteishou td {
     display: block;

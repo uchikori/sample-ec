@@ -107,5 +107,11 @@
             font-size: 5.2rem;
             margin-top: 0.6rem;
         }
+        &:hover{
+            img{
+                filter: brightness(80%);
+                transition: filter 0.3s ease;
+            }
+        }
     }
 }
